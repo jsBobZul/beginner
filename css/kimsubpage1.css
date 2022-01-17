@@ -1,0 +1,439 @@
+@charset "utf-8";
+body {
+    background: oldlace;
+}
+.mNav{
+    display: none;
+}
+/* 헤더 */
+header {
+    width: 100%;
+    padding: 20px 0;
+    z-index: 10000;
+    position: fixed;
+    background: #2F2E33;
+}
+.header_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.header_inner > a{
+    display: block;
+    width: 154px;
+    height: 50px;
+    background: url(../img/chungjukim/logo.svg) no-repeat 50% 50% /contain;
+}
+.close{
+    display: none;
+}
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav > div {
+    color: white;
+    margin: 0 10px;
+}
+
+.menu > a {
+    color: white;
+}
+
+.header_inner > div > a {
+    color: white;
+    margin: 0 10px;
+}
+
+.drop_menu {
+    width: 100%;
+    left: 0px;
+    position: absolute;
+    display: none;
+    text-align: center;
+}
+
+.drop_menu > div {
+    width: 100%;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.drop_menu > div > a {
+    color: white;
+    margin: 0 15px;
+}
+
+.menu:hover > div {
+    display: block;
+}
+
+/* 아티클1 */
+.article1 {
+    max-width: 1200px;
+    height: 750px;
+    padding: 135px 0 20px 0;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.687)
+}
+.article1 > h1 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.article1 > h1::after {
+    content: "\f12a";
+    display: inline-block;
+    animation: rotate 0.5s linear infinite alternate-reverse;
+    margin-left: 5px;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(10deg);
+    }
+
+    from {
+        transform: rotate(-8deg);
+    }
+}
+
+.article1 > section{
+    position: relative;
+}
+.article1 > section > h2 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.article1 > section > h2 > span {
+    color: orange
+}
+.article1 > section > div:nth-child(2) {
+    border: 20px solid rgba(245, 222, 179, 0.75);
+    border-radius: 100%;
+    box-sizing: content-box;
+    padding: 110px 70px;
+    color: wheat;
+    font-size: 2rem;
+    font-weight: 700;
+    position: absolute;
+    top: 50px;
+    left: 220px;
+}
+
+.article1 > section > div:nth-child(3) {
+    border: 20px solid orange;
+    border-radius: 100%;
+    box-sizing: content-box;
+    padding: 130px 70px;
+    color: orange;
+    font-size: 2rem;
+    font-weight: 700;
+    position: absolute;
+    top: 100px;
+    right: 200px;
+}
+/* 아티클2 */
+.article2 {
+    max-width: 1200px;
+    height: 560px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.687);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.article2_content > h2 {
+    color: white;
+    font-family: 'Noto Serif Kr', serif;
+    font-size: 1.88rem;
+    text-align: center;
+}
+
+.article2_content > h2 > span {
+    font-family: 'Noto Serif Kr', serif;
+    font-size: 2.25rem;
+    color: tomato;
+}
+
+.article2_content_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.article2_content_inner > div {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0 0 20px;
+    word-break: keep-all;
+}
+.article2_content_inner > div > div:nth-of-type(1) {
+    display: flex;
+    align-items: center;
+}
+
+.article2_content_inner > div > div:nth-of-type(1) > p:nth-child(1) {
+    background: tomato;
+    color: white;
+    padding: 5px;
+    border-radius: 12px;
+    margin-right: 10px;
+}
+
+.article2_content_inner > div > div:nth-of-type(1) > p:nth-child(2) {
+    color: white;
+    font-weight: 500;
+    font-size: 1.125rem;
+}
+
+.article2_content_inner > div > div:nth-of-type(2) {
+    display: flex;
+}
+
+.article2_content_inner > div > div:nth-of-type(2) > p {
+    color: #9C9C9C;
+    margin-left: 5px;
+}
+
+.article2_content_inner > div:nth-of-type(1) > div:nth-of-type(2) > p > span {
+    display: inline-block;
+    color: #E8E8E8;
+}
+.article2_content_inner > div > div:nth-of-type(2) > p > span {
+    color: #E8E8E8;
+}
+
+.article2_content_inner > div > div:nth-of-type(2) > p > b {
+    color: #E8E8E8;
+}
+
+.rasec {
+    display: block;
+    width: 300px;
+    height: 100px;
+    background: url(../img/chungjukim/sub1_2.png) no-repeat 50% 50% /contain;
+}
+
+.rasic {
+    display: block;
+    width: 300px;
+    height: 100px;
+    background: url(../img/chungjukim/sub1_3.png) no-repeat 50% 50% /contain;
+}
+/* 아티클3 */
+.article3 {
+    max-width: 1200px;
+    height: 550px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.687);
+    margin-top: 50px;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.article3 > h2 {
+    color: wheat;
+    font-size: 1.4rem;
+}
+.article3 > div {
+    width: 430px;
+    height: 100%;
+    background: url(../img/chungjukim/sub1_1.png) no-repeat 50% 50% /contain;
+}
+/* 아티클4 */
+.article4 {
+    max-width: 1200px;
+    height: 490px;
+    margin: 30px auto;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.687);
+    padding: 45px 0 0 0;
+    line-height: 93px;
+}
+
+.article4 > h2 {
+    color: white;
+    font-size: 1.5rem;
+}
+.article4 > h2 > span {
+    color: tomato;
+}
+.article4 > h2::before {
+    content: "\f06e";
+    margin-right: 10px;
+}
+.article4 > section > h2 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+.article4 > section > h2 > span {
+    background-color: tomato;
+    padding: 0 5px;
+}
+.article4 > section > div {
+    display: flex;
+    justify-content: center;
+}
+.article4 > section > div > div:nth-child(1) {
+    width: 250px;
+    height: 140px;
+    background: url(../img/chungjukim/sub1_4.png) no-repeat 50% 50% / contain;
+}
+.article4 > section > div > div:nth-child(2) {
+    width: 41%;
+    line-height: 30px;
+}
+.article4 > section > div p {
+    color: #9C9C9C;
+    word-break: keep-all;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-align: justify;
+}
+.article4 > section > div b {
+    color: white;
+}
+.article5 {
+    max-width: 1200px;
+    margin: 30px auto;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.687);
+    padding: 20px 0;
+}
+
+.article5 > h2 {
+    color: white;
+    font-size: 2rem;
+}
+
+.article5 > section {
+    text-align: justify;
+    padding: 0 10px;
+}
+
+.article5 > section > h2 {
+    color: white;
+    background-color: #6299ce;
+    font-size: 1.7rem;
+    letter-spacing: 4px;
+    text-indent: 5px;
+}
+
+.article5 > section > p {
+    color: white;
+    margin: 10px 0;
+}
+
+.article5 > section > p > b {
+    background-color: #5889b9;
+    padding: 0 5px;
+    font-size: 1.05rem;
+}
+
+.article5 > section > div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.article5 > section > div > div {
+    word-break: keep-all;
+    background-color: seashell;
+    padding: 0 5px;
+}
+
+.article5 > section > div > div:nth-child(1) {
+    margin-right: 20px;
+    word-break: keep-all;
+    background-color: seashell;
+    padding: 0 5px;
+}
+
+.article5 > section:nth-of-type(1) > div > div:nth-child(1){
+    width: 620px;
+}
+.article5 > section:nth-of-type(1) > div > div:nth-child(2){
+    width: 600px;
+}
+
+.article5 > section:nth-of-type(2) {
+    width: 100%;
+}
+
+.article5 > section:nth-of-type(2) > p {
+    text-align: center;
+}
+
+.article5 > section:nth-of-type(2) > div {
+    width: 300px;
+    height: 250px;
+    background: url(../img/chungjukim/bestaward.png) no-repeat 50% 50%/contain;
+    margin: 10px auto;
+}
+.article5 > section:nth-of-type(3) > p:nth-of-type(1) {
+    width: 48%;
+    float: left;
+    position: relative;
+}
+.article5 > section:nth-of-type(3) > p:nth-of-type(1)::after {
+    content: " ";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    right: -30px;
+    top: 0px;
+}
+.article5 > section:nth-of-type(3) > p:nth-of-type(2) {
+    width: 48%;
+    float: right;
+}
+
+/* 푸터 */
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.687);
+    color: white;
+    margin: 20px 0 0 0;
+}
+
+footer > div:nth-of-type(1) {
+    margin-right: 20px;
+}
+
+footer > div > a {
+    color: white;
+    margin: 10px;
+}
+
+footer > div:nth-of-type(1) > p {
+    margin-top: 10px;
+}
+
+footer > div:nth-of-type(2) {
+    position: relative;
+}
+
+footer > div:nth-of-type(2)::before {
+    display: block;
+    content: " ";
+    width: 1px;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: -11px;
+}

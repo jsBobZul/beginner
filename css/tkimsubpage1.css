@@ -1,0 +1,31 @@
+@charset "utf-8";
+html{
+    font-size: 12px;
+}
+/* 헤더 */
+.header_inner > div > a {
+    margin: 0;
+}
+.drop_menu > div > a {
+    margin: 0;
+}
+
+/* 아티클1 */
+.article1 > section > div:nth-child(2) {
+    top: 50px;
+    left: 70px;
+}
+.article1 > section > div:nth-child(3) {
+    top: 100px;
+    right: 45px;
+}
+
+/* 아티클5 */
+.article5 > section:nth-of-type(3) > p:nth-of-type(1)::after {
+    right: -19px;
+}
+
+/* 푸터 */
+footer > div:nth-of-type(2)::before {
+    left: -15px;
+}

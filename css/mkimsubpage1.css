@@ -1,0 +1,165 @@
+@charset "utf-8";
+html{
+    font-size: 10px;
+}
+.mNav{
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: url(../img/chungjukim/메뉴.png) no-repeat 50% 50% /contain;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+/* 헤더 */
+header{
+    background: #6590E2;
+    height: 400px;
+    display: none;
+}
+.header_inner{
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.header_inner > a{
+    width: 110px;
+    position: absolute;
+    left: 10px;
+    top: -3px;
+}
+.close{
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../img/chungjukim/close.svg) no-repeat 50% 50% /contain;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+nav{
+    height: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+}
+nav > div{
+    height: 50px;
+    text-align: center;
+}
+.drop_menu{
+    transform: translate(0px, 3px);
+}
+.drop_menu > div{
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+.drop_menu > div > a{
+    color: #ddd;
+    font-weight: 300;
+}
+.header_inner > div{
+    margin-top: 20px;
+}
+header.on{
+    display: block;
+}
+/* 아티클1 */
+.article1{
+    min-width: 320px;
+    height: 100%;
+    padding: 44px 0 20px 0;
+}
+.article1 > h1 {
+    font-size: 1.65rem;
+}
+.article1 > section > h2 {
+    font-size: 1.35rem;
+}
+.article1 > section > div:nth-child(2) {
+    border: none;
+    padding: 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+    position: initial;
+    margin: 10px 0;
+}
+.article1 > section > div:nth-child(3) {
+    border: none;
+    padding: 0;
+    position: initial;
+}
+/* 아티클2 */
+.article2{
+    width: 320px;
+    height: 100%;
+    padding: 0px 15px 10px;
+    flex-direction: column;
+}
+.article2_content > h2{
+    margin: 20px 0 10px 0;
+}
+.article2_content_inner > div {
+    margin: 0;
+}
+/* 아티클3 */
+.article3{
+    min-width: 320px;
+    height: 430px;
+    padding: 20px 0;
+}
+.article3 > div{
+    width: 320px;
+}
+/* 아티클4 */
+.article4{
+    width: 320px;
+    height: 320px;
+    padding: 10px;
+    line-height: 50px;
+}
+.article4 > section > h2 {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+.article4 > section > div {
+    flex-direction: column;
+}
+.article4 > section > div > div:nth-child(1) {
+    width: 150px;
+    height: 110px;
+    background: url(../img/chungjukim/sub1_4.png) no-repeat 50% 50% / contain;
+    margin: 0 auto;
+}
+.article4 > section > div > div:nth-child(2) {
+    width: 100%;
+    line-height: 17px;
+    padding: 0 10px;
+}
+
+/* 아티클5 */
+.article5{
+    min-width: 320px;
+}
+.article5 > section:nth-of-type(3) > p > strong{
+    display: block;
+    font-size: 4.25rem;
+}
+.article5 > section:nth-of-type(3) > p:nth-of-type(1)::after {
+    display: none;
+}
+
+/* 푸터 */
+footer{
+    min-width: 320px;
+}
+footer > div:nth-of-type(2)::before {
+    left: -14px;
+}
+footer > div > a {
+    color: white;
+    margin: 0 3px 0 0;
+}
