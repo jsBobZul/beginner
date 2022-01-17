@@ -39,5 +39,4 @@ window.onload = function () {
     };
     hash2 ();
   };
-
 };
