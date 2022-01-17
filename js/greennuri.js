@@ -1,7 +1,4 @@
 window.onload = function(){
-    //포트폴리오임을 강조
-    alert("취업을 위한 포트폴리오입니다.");
-
     var menuA = document.querySelector('.menu > a');
     // console.log(menuA);
     var menuUl = document.querySelectorAll('.menu > ul');

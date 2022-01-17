@@ -1,6 +1,4 @@
 window.onload = function() {
-  //포트폴리오임을 강조
-  alert('취업을 위한 포트폴리오입니다.');
   // 스와이퍼
   var swiper = new Swiper(".slide", {
     loop: true,
