@@ -1,0 +1,30 @@
+@charset "utf-8";
+.is-ie .header_inner > nav {
+  width: 100%;
+}
+.is-ie .article1_inner > section > h2:nth-of-type(1) {
+  width: 252px;
+}
+.is-ie .article1_inner > section > h2:nth-of-type(2) {
+  width: 161px;
+}
+.is-ie .article1_inner > div {
+  width: 87px;
+  height: 102px;
+  -ms-overflow-style: none;
+}
+.is-ie .article2_inner > h2 {
+  width: 268px;
+}
+.is-ie .article2_inner > div:nth-of-type(1) > div:nth-of-type(2) {
+  width: 209px;
+}
+.is-ie .article2_inner > div:nth-of-type(2) > div:nth-of-type(1) {
+  width: 212px;
+}
+.is-ie .footer_inner > div:nth-of-type(1) {
+  width: 300px;
+}
+.is-ie address {
+  width: 300px;
+}

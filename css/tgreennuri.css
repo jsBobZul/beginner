@@ -1,0 +1,58 @@
+@charset "utf-8";
+@import url("greennuri_t_ie.css");
+html{
+    font-size: 9px;
+}
+.gnb::before{
+    content: "";
+    height: 113px;
+    top: 38px;
+}
+.header_inner{
+    background-position: 3% 0;
+    background-size: 10%;
+    padding: 0 0 7px 0;
+}
+.header_inner > form{
+    margin: 0;
+}
+.header_inner > form input{
+    transform: translate(3px, 5.8px);
+}
+.article1{
+    height: 325px;
+    padding: 40px 10px 0px;
+    background-size: 100% 265px;
+}
+.article1_inner > div{
+    margin: 123px auto;
+}
+.article2_inner > div:nth-of-type(1) > div > p > a{
+    width: 20px;
+    height: 20px;
+}
+table{
+    width: 100%;
+}
+table > tbody > tr > td {
+    width: 15%;
+}
+.article2_inner > div:nth-of-type(2) > div:nth-of-type(2) > h3 {
+    line-height: 65px;
+    margin: 0;
+    float: left;
+}
+.slide {
+    width: 58%;
+    white-space: nowrap;
+    overflow-x: auto;
+    margin: 0 auto 0;
+}
+.slide > a {
+    width: 70px;
+    height: 70px;
+    padding-top: 45px;
+}
+.footer_inner > div:nth-of-type(2) {
+    background-size: 60%;
+}  

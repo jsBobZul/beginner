@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* .is-ie IE공통요소 */
+.is-ie body{
+    background: url(../img/초록누리/aticle1.svg) no-repeat 88% 0% /cover;
+}
+.is-ie header{
+    background: white;
+}
+.is-ie .header_inner > nav {
+    width: 740px;
+}
+.is-ie .article1_inner > section > h2:nth-of-type(1){
+    width: 648px;
+}
+.is-ie .article1_inner > section > h2:nth-of-type(2){
+    width: 405px;
+}
+.is-ie .article1_inner > div {
+    width: 649px;
+}
+.is-ie .article2_inner > h2 {
+    width: 736px;
+}
+.is-ie .footer_inner > div:nth-of-type(1) {
+    width: 506px;
+}
+.is-ie address{
+    width: 602px;
+}
