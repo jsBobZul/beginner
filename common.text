@@ -6,7 +6,8 @@ height
 margin
 padding
 background
-border
+border top,bottom..
+border-radius
 box-sizing
 box-shadow
 filter
