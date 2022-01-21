@@ -81,9 +81,11 @@ body{
     margin: 0 auto;
     padding: 40px 0 0 0;
 }
+
+/* 아티클2 버튼 */
 .article2_inner > div:nth-of-type(1){
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 20px;
 }
 .article2_inner > div:nth-of-type(1) button{
     box-sizing: content-box;
@@ -135,4 +137,48 @@ body{
     border: 1px solid white;
     border-top: none;
     border-left: none;
+}
+
+/* 아티클2 슬라이드1 */
+.swiper-slide{
+    width: 1200px;
+    height: 500px;
+    padding: 60px 50px;
+    background: #4D4545;
+}
+.swiper-slide > div:first-child > div{
+    width: 569px;
+    height: 380px;
+    float: left;
+}
+.swiper-slide > div:first-child > p{
+    width: 45%;
+    padding: 125px 0 0 0;
+    float: right;
+    color: white;
+    font-size: 30px;
+}
+/* 슬라이드1 1번 째 slide */
+.swiper-wrapper > div:nth-of-type(1) > div:first-child > div{
+    background: url(../img/yeulramen/순열라면.png) no-repeat 0 0;
+}
+.swiper-wrapper > div:nth-of-type(1) > div:last-child{
+    width: fit-content;
+    margin: 10px auto 0;
+}
+.swiper-wrapper > div:nth-of-type(1) > div:last-child > p{
+    float: left;
+    color: white;
+    font-size: 20px;
+}
+.swiper-wrapper > div:nth-of-type(1) > div:last-child > p:nth-of-type(1) span{
+    margin: 0 5px;
+    color: red;
+}
+.swiper-wrapper > div:nth-of-type(1) > div:last-child > p:nth-of-type(2){
+    margin: 0 50px;
+}
+/* 슬라이드1 2번 째 slide */
+.swiper-wrapper > div:nth-of-type(2) > div > div{
+    background: url(../img/yeulramen/순열라면.png) no-repeat 0 0;
 }
