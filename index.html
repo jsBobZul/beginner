@@ -9,16 +9,18 @@
     <link rel="stylesheet" href="css/1.css">
     <title>포트폴리오</title>
     <style>
-        body{padding: 20vh 0; text-align: center;}
+        body{display: flex; flex-direction: column; padding: 20vh 0; text-align: center;}
         h1{margin: 0 0 50px 0; font-size: 40px;}
-        a{margin: 0 30px;}
-        a:hover{color: blue;}
+        a{margin: 10px 30px;}
+        a:hover, span:hover{color: blue;}
+        span{color: #6667AB; position: relative; margin-left: 20px;}
+        span::before{content: "✔"; display: block; width: 100px; height: 100px; position: absolute; top: 0; left: -58px;}
     </style>
 </head>
 <body>
     <h1>환영합니다!</h1>
-    <a href="https://jsbobzul.github.io/portfolio/greennuri" title="초록누리(포트폴리오) 바로가기" target="_blank"><span>초록누리(포트폴리오) 바로가기</span></a>
-    <a href="https://jsbobzul.github.io/portfolio/chungjukim" title="청주 김안과(포트폴리오) 바로가기" target="_blank"><span>김안과(포트폴리오) 바로가기</span></a>
-    <a href="https://jsbobzul.github.io/portfolio/yeulramen" title="열라면(포트폴리오) 바로가기" target="_blank"><span>열라면(포트폴리오) 바로가기</span></a>
+    <a href="https://jsbobzul.github.io/portfolio/greennuri" title="초록누리(포트폴리오) 바로가기" target="_blank">초록누리(포트폴리오)<span>바로가기</span></a>
+    <a href="https://jsbobzul.github.io/portfolio/chungjukim" title="청주 김안과(포트폴리오) 바로가기" target="_blank">김안과(포트폴리오)<span>바로가기</span></a>
+    <a href="https://jsbobzul.github.io/portfolio/yeulramen" title="열라면(포트폴리오) 바로가기" target="_blank">열라면(포트폴리오)<span>바로가기</span></a>
 </body>
 </html>
