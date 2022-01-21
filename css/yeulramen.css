@@ -2,6 +2,7 @@
 body{
     background: black;
 }
+/* 헤더 */
 .header_inner{
     width: 1200px;
     height: 100px;
@@ -14,4 +15,100 @@ body{
 }
 .header_inner > div a{
     color: white;
+}
+.header_inner > div a:first-child{
+    margin: 0 40px 0 0;
+}
+
+/* 메인 */
+.gnb{
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 100px;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    text-align:center;
+    line-height: 100px;
+}
+/* 아티클1 */
+.article1{
+    height: calc(100vh - 164px);
+    background: url(../img/yeulramen/article1_bg.png) no-repeat 100% 0 /contain;
+}
+.article1_inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+.article1_inner > h1{
+    width: fit-content;
+    margin: 64px auto 0;
+    color: white;
+    font-size: 35px;
+    transform: rotate(-11deg);
+}
+.article1_inner > h1 span{
+    margin: 0 20px 0 5px;
+    color: yellow;
+}
+.article1_inner > p{
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 0 0 50px;
+    color: white;
+    font-size: 55px;
+    transform: rotate(-11deg);
+}
+.article1_inner > div{
+    float: left;
+}
+.article1_inner > div > a{
+    display: block;
+    width: 419px;
+    height: 256px;
+}
+.article1_inner > div > a:nth-child(1){
+    background: url(../img/yeulramen/youtube1.png) no-repeat 50% 50% /cover;
+}
+.article1_inner > div > a:nth-child(2){
+    background: url(../img/yeulramen/youtube2.png) no-repeat 50% 50% /cover;
+}
+
+/* 아티클2 */
+.article2_inner{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0 0 0;
+}
+.article2_inner > div:nth-of-type(1){
+    width: fit-content;
+    margin: 0 auto;
+}
+.article2_inner > div:nth-of-type(1) button{
+    box-sizing: content-box;
+    padding: 5px 15px;
+    background: transparent;
+    border: 1px solid #808080;
+    border-radius: 10px;
+    box-shadow: 2px 3px 0px rgba(255, 255, 255, 0.5);
+    color: #808080;
+    font-size: 30px;
+}
+.article2_inner > div:nth-of-type(1) button[class="on"]{
+    margin: 0 50px 0 0;
+    border: 1px solid white;
+    box-shadow: 2px 3px 0px white;
+    position: relative;
+    color: white;
+}
+.article2_inner > div:nth-of-type(1) button[class="on"]::before{
+    content: "";
+    display: block;
+    width: 46px;
+    height: 43px;
+    background: url(../img/yeulramen/땡땡땡.svg);
+    position: absolute;
+    top: -34px;
+    left: -35px;
 }
