@@ -17,10 +17,12 @@ header{
     margin: 0 auto;
     line-height: 100px;
 }
-.header_inner > div a{
+.header_inner > div button{
     color: white;
+    background: transparent;
+    border: none;
 }
-.header_inner > div a:first-child{
+.header_inner > div button:first-child{
     margin: 0 40px 0 0;
 }
 
