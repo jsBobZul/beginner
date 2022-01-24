@@ -20,6 +20,7 @@ color
 font-size
 text-align
 line-height
+word-break
 transform{
     rotate(deg)
 }
