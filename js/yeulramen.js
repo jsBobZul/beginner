@@ -50,5 +50,25 @@ window.onload = function () {
     slideBt1.addEventListener('click', slideBt1On);
     slideBt2.addEventListener('click', slideBt2On);
 
-    
-}
+    const moveBt1 = document.querySelector(".header_inner > div > button:nth-child(1)");
+    console.log(moveBt1);
+    const moveBt2 = document.querySelector(".header_inner > div > button:nth-child(2)");
+    console.log(moveBt2);
+    const body = document.querySelector("body");
+    console.log(body);
+    const article2 = document.querySelector(".article2")
+    let move = function(a){
+        window.scroll({
+            behavior: 'smooth',
+            left:0,
+            top:a
+        });
+    };
+
+    moveBt1.addEventListener("click", function(){
+        move(body.offsetTop);
+    });
+    moveBt2.addEventListener("click", function(){
+        move(article2.offsetTop);
+    });
+};

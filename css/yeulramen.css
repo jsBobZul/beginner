@@ -5,7 +5,11 @@ body{
 }
 /* 헤더 */
 header{
-    background: url(../img/yeulramen/오뚜기logo.png) no-repeat 20px 3px;
+    width: 100vw;
+    background:black url(../img/yeulramen/오뚜기logo.png) no-repeat 20px 3px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
 }
 .header_inner{
     width: 1200px;
@@ -27,20 +31,10 @@ header{
 }
 
 /* 메인 */
-.gnb{
-    width: 100px;
-    height: 100px;
-    background: white;
-    border-radius: 100px;
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    text-align:center;
-    line-height: 100px;
-}
 /* 아티클1 */
 .article1{
     height: calc(100vh - 164px);
+    margin: 140px 0 0 0;
     background: url(../img/yeulramen/article1_bg.png) no-repeat 100% 0 /contain;
 }
 .article1_inner{
