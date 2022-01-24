@@ -24,6 +24,7 @@ window.onload = function () {
         },
     });
 
+    // 슬라이드1,2 클릭 이벤트
     const slide1 = document.querySelector(".article2_inner > div:nth-child(2)");
     console.log(slide1);
     const slide2 = document.querySelector(".article2_inner > div:nth-child(3)");
@@ -48,4 +49,6 @@ window.onload = function () {
     console.log(slideBt2On);
     slideBt1.addEventListener('click', slideBt1On);
     slideBt2.addEventListener('click', slideBt2On);
+
+    
 }
