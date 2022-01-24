@@ -4,11 +4,13 @@ body{
     background: black;
 }
 /* 헤더 */
+header{
+    background: url(../img/yeulramen/오뚜기logo.png) no-repeat 20px 3px;
+}
 .header_inner{
     width: 1200px;
     height: 100px;
     margin: 0 auto;
-    background: url(../img/yeulramen/오뚜기logo.png);
 }
 .header_inner > div{
     width: fit-content;
@@ -257,7 +259,7 @@ body{
 .slideWrap.on{display: block;}
 
 /* ---------------------- */
-
+/* 출처 등 */
 .article2_inner > div:nth-child(4){
     margin: 20px 0 0 0;
 }
@@ -265,12 +267,14 @@ body{
     float: left;
     color: white;
 }
-.article2_inner > div:nth-child(4) > img{
+.article2_inner > div:nth-child(4) > span{
     float: right;
+    color: white;
+    font-size: 50px;
     animation: left_move 2s infinite;
 }
 @keyframes left_move{
-    from{transform: translate(0, 0); opacity: 1;}
+    from{transform: translate(0, 0); opacity: 0.5;}
     to{transform: translate(-120px, 0); opacity: 0;}
 }
 
