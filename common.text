@@ -24,3 +24,5 @@ word-break
 transform{
     rotate(deg)
 }
+
+animation

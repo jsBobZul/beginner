@@ -34,3 +34,11 @@ address{
 button:hover{
     cursor: pointer;
 }
+.v_hidden {
+    position: absolute;
+    /* clip: rect(0px 0px 0px 0px); */
+    width: 1px;
+    height: 1px;
+    margin: 0px;
+    overflow: hidden;
+}
