@@ -1,6 +1,6 @@
 window.onload = function () {
 
-    var swiper = new Swiper('.slide1', {
+    var swiper1 = new Swiper('.slide1', {
         observer: true,
         observeParents: true,
         keyboard: {
@@ -8,7 +8,7 @@ window.onload = function () {
         },
     });
 
-    var swiper = new Swiper('.slide2', {
+    var swiper2 = new Swiper('.slide2', {
         observer: true,
         observeParents: true,
         keyboard: {
@@ -16,9 +16,10 @@ window.onload = function () {
         },
     });
 
-    var swiper = new Swiper('.slide3', {
+    var swiper3 = new Swiper('.slide3', {
         observer: true,
         observeParents: true,
+        slidesPerView: 3,
         keyboard: {
             enabled: true,
         },
@@ -69,6 +70,6 @@ window.onload = function () {
         move(body.offsetTop);
     });
     moveBt2.addEventListener("click", function(){
-        move(article2.offsetTop);
+        move(article2.offsetTop-100);
     });
 };

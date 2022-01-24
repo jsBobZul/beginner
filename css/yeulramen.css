@@ -283,9 +283,12 @@ header{
     width: 1200px;
     margin: 0 auto;
 }
-.article3_inner > .slideWrap{
-    width: 340px;
+.article3 > .slideWrap{
+    margin: 0 0 0 20px;
     float: left;
+}
+.swiper.swiper-container.slide3{
+    width: 1020px;
 }
 .swiper-slide.slide3_1{
     background: url(../img/yeulramen/열라면들.png) no-repeat 0 0;
@@ -303,22 +306,25 @@ header{
     background: url(../img/yeulramen/열라면들.png) no-repeat -1570px 0;
 }
 
-.article3_inner > div:nth-of-type(2){
-    width: 546px;
-    height: 169px;
+.article3_inner > div{
+    width: 500px;
+    height: 150px;
     margin: 50px 0 0 0;
     padding: 120px 0 0 0;
-    background: url(../img/yeulramen/해피뉴이열라면.png) no-repeat 0 0;
+    background: url(../img/yeulramen/해피뉴이열라면.png) no-repeat 0 0 /contain;
     float: right;
 }
-.article3_inner > div:nth-of-type(2) p{
+.article3_inner > div p{
     color: white;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 700;
     text-align: center;
 }
 
 /* 푸터 */
+footer{
+    height: 100px;
+}
 .footer_inner{
     width: 1200px;
     margin: 0 auto;
@@ -345,6 +351,6 @@ header{
 }
 .footer_inner div > a:nth-of-type(3){
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     vertical-align: middle;
 }
