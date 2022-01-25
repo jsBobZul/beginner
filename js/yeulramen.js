@@ -90,17 +90,20 @@ window.onload = function () {
         fire.style.position = 'absolute';
         fire.style.left = 0;
         fire.style.top = n + 'px';
-        fire.style.animation = 'fire_move linear 15s';
+        fire.style.animation = 'fire_move linear 1s';
         fire.style.background = 'red';
         fire.style.borderRadius = 100 + 'px';
         fire.style.zIndex = -1;
         fire.style.opacity = 0;
+        setInterval(moveFire,500);
     };
     console.log(moveFire);
     console.log(a);
-    for(var i = 0; i < 15; i++){
-        moveFire(a);
-        return i;
-    };
 
+    moveFire(a);
+    // var test = setInterval(function test(){
+    //     moveFire(a);
+    // },2000);
+    // //  setInterval(moveFire(a),2000);
+    // console.log(test);
 };
