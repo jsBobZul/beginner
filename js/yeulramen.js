@@ -83,19 +83,24 @@ window.onload = function () {
     });
 
     const fire = document.querySelector(".fire");
-    let moveFire = function(a){
+    let a = Math.floor(Math.random()*2000)+150;
+    let moveFire = function(n){
         fire.style.width = 10 + 'px';
         fire.style.height = 10 + 'px';
         fire.style.position = 'absolute';
         fire.style.left = 0;
-        fire.style.top = a + 'px';
-        fire.style.animation = 'fire_move 2s';
+        fire.style.top = n + 'px';
+        fire.style.animation = 'fire_move linear 15s';
         fire.style.background = 'red';
         fire.style.borderRadius = 100 + 'px';
         fire.style.zIndex = -1;
+        fire.style.opacity = 0;
     };
     console.log(moveFire);
-    // moveFire();
+    console.log(a);
+    for(var i = 0; i < 15; i++){
+        moveFire(a);
+        return i;
+    };
 
-    // for(var i=200; i<3000; i )
 };
