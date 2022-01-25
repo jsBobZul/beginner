@@ -3,6 +3,10 @@
 body{
     background: black;
 }
+@keyframes fire_move{
+    from{transform: translate(0, 0); opacity: 1;}
+    to{transform: translate(1920px, 0); opacity: 0.5;}
+}
 /* 헤더 */
 header{
     width: 100vw;
@@ -34,7 +38,7 @@ header{
 /* 아티클1 */
 .article1{
     height: calc(100vh - 164px);
-    margin: 140px 0 0 0;
+    margin: 164px 0 0 0;
     background: url(../img/yeulramen/article1_bg.png) no-repeat 100% 0 /contain;
 }
 .article1_inner{
@@ -277,6 +281,7 @@ header{
 /* 아티클3 */
 .article3{
     height: 500px;
+    margin: 50px 0 0 0;
     background: url(../img/yeulramen/불꽃.png) no-repeat 0 180px;
 }
 .article3_inner{

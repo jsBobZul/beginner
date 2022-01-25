@@ -81,4 +81,21 @@ window.onload = function () {
     moveBt2.addEventListener("click", function(){
         move(article2.offsetTop-100);
     });
+
+    const fire = document.querySelector(".fire");
+    let moveFire = function(a){
+        fire.style.width = 10 + 'px';
+        fire.style.height = 10 + 'px';
+        fire.style.position = 'absolute';
+        fire.style.left = 0;
+        fire.style.top = a + 'px';
+        fire.style.animation = 'fire_move 2s';
+        fire.style.background = 'red';
+        fire.style.borderRadius = 100 + 'px';
+        fire.style.zIndex = -1;
+    };
+    console.log(moveFire);
+    // moveFire();
+
+    // for(var i=200; i<3000; i )
 };
