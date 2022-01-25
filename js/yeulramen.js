@@ -19,10 +19,19 @@ window.onload = function () {
     var swiper3 = new Swiper('.slide3', {
         observer: true,
         observeParents: true,
-        slidesPerView: 3,
         keyboard: {
             enabled: true,
         },
+        effect: 'cube',
+        grabCursor: true,
+        cube: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94
+        },
+        loop: true,
+        pagination: '.swiper-pagination',
     });
 
     // 슬라이드1,2 클릭 이벤트
