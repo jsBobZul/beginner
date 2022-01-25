@@ -82,28 +82,6 @@ window.onload = function () {
         move(article2.offsetTop-100);
     });
 
-    const fire = document.querySelector(".fire");
-    let a = Math.floor(Math.random()*2000)+150;
-    let moveFire = function(n){
-        fire.style.width = 10 + 'px';
-        fire.style.height = 10 + 'px';
-        fire.style.position = 'absolute';
-        fire.style.left = 0;
-        fire.style.top = n + 'px';
-        fire.style.animation = 'fire_move linear 1s';
-        fire.style.background = 'red';
-        fire.style.borderRadius = 100 + 'px';
-        fire.style.zIndex = -1;
-        fire.style.opacity = 0;
-        setInterval(moveFire,500);
-    };
-    console.log(moveFire);
-    console.log(a);
-
-    moveFire(a);
-    // var test = setInterval(function test(){
-    //     moveFire(a);
-    // },2000);
-    // //  setInterval(moveFire(a),2000);
-    // console.log(test);
+   
+    
 };

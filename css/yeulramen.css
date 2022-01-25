@@ -3,9 +3,21 @@
 body{
     background: black;
 }
-@keyframes fire_move{
-    from{transform: translate(0, 0); opacity: 1;}
-    to{transform: translate(1920px, 0); opacity: 0.5;}
+.fire{
+    width: 10px;
+    height: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: red;
+    border-radius: 50%;
+    z-index: 500;
+    opacity: 1;
+}
+.fire.end{
+    left: 1920px;
+    top: 1180px;
+    transition: all 0.5s;
 }
 /* 헤더 */
 header{
