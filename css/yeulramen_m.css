@@ -163,11 +163,12 @@ header{
 /* --------------------------------------------- */
 .article3{
     height: 350px;
-    background: url(../img/yeulramen/불꽃.png) no-repeat 0 40px;
+    background: url(../img/yeulramen/불꽃.png) no-repeat -3px 40px;
 }
 .article3_inner{
     width: 320px;
-}.article3_inner > .slideWrap{
+}
+.article3_inner > .slideWrap{
     margin: 0 auto;
     float: none;
 }
@@ -190,17 +191,14 @@ header{
 .swiper-slide.slide3_5{
     background: url(../img/yeulramen/열라면들T.png) no-repeat -1033px 0;
 }
-.swiper.swiper-container.slide3 .swiper-pagination-bullet{
-    width: 12px;
-    height: 12px;
-}
 .article3_inner > div:nth-child(2){
-    width: 250px;
-    margin: 90px 110px 0 0;
-    padding: 70px 0 0 0;
+    width: 220px;
+    margin: 50px auto;
+    padding: 50px 0 0 0;
+    float: none;
 }
 .article3_inner > div:nth-child(2) p{
-    font-size: 20px;
+    font-size: 15px;
 } 
 /* --------------------------------------------- */
 
