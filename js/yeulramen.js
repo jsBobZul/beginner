@@ -28,6 +28,11 @@ window.onload = function () {
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: '3',
+        breakpoints: {
+            1199: {
+                slidesPerView: 1,
+            },
+        },
         coverflow: {
             rotate: 50,
             stretch: 0,

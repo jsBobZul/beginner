@@ -168,7 +168,7 @@ header{
 .article3_inner{
     width: 320px;
 }
-.article3_inner > .slideWrap{
+.article3 > .slideWrap{
     margin: 0 auto;
     float: none;
 }
