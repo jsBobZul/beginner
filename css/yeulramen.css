@@ -245,7 +245,7 @@ header{
     width: 633px;
     height: 360px;
     margin: 20px auto 0;
-    background: url(../img/yeulramen/로열라면레시피.png) no-repeat 0 0;
+    background: url(../img/yeulramen/로열라면레시피.png) no-repeat 50% 50%/cover;
 }
 
 /* ------------------------------------------------------------------ */
@@ -313,7 +313,6 @@ header{
 }
 .article3_inner > div:nth-child(2){
     width: 500px;
-    height: 150px;
     margin: 50px 0 0 0;
     padding: 120px 0 0 0;
     background: url(../img/yeulramen/해피뉴이열라면.png) no-repeat 0 0 /contain;
