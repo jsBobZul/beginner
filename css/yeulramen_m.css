@@ -1,1 +1,59 @@
 @charset "UTF-8";
+header{
+    background:black url(../img/yeulramen/오뚜기logo.png) no-repeat 20px 27px / 40px;
+}
+.header_inner{
+    width: 320px;
+}
+.header_inner > div{
+    font-size: 10px;
+}
+.header_inner > div button:first-child{
+    margin: 0 30px 0 30px;
+}
+/* --------------------------------------------- */
+.article1{
+    height: 100%;
+    margin: 124px 0 0 0;
+    background: url(../img/yeulramen/article1_bg.png) no-repeat 50% 17% /contain;
+}
+.article1_inner{
+    width: 320px;
+}
+.article1_inner > h1{
+    font-size: 18px;
+}
+.article1_inner > h1 > img{
+    width: 100px;
+}
+.article1_inner > p{
+    font-size: 15px;
+}
+.article1_inner > div{
+    float: none;
+    margin: 267px 0 0 0;
+}
+.article1_inner > div > a{
+    display: block;
+    width: 255px;
+    height: 150px;
+    margin: 0 auto;
+}
+.article1_inner > div > a:nth-of-type(1){
+    margin: 0 auto 10px;
+}
+/* --------------------------------------------- */
+
+.article2_inner{
+    width: 320px;
+}
+/* --------------------------------------------- */
+
+.article3_inner{
+    width: 320px;
+}
+/* --------------------------------------------- */
+
+.footer_inner{
+    width: 320px;
+}
