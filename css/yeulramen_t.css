@@ -5,23 +5,64 @@ header{
 .header_inner{
     width: 100%;
 }
-
-
+/* -------------------------------------------------------------------------- */
+.article1{
+    height: 100%;
+    background: url(../img/yeulramen/article1_bg.png) no-repeat 270px 68px /530px;
+}
 .article1_inner{
     width: 100%;
 }
 .article1_inner > h1{
     font-size: 25px;
 }
+.article1_inner > h1 > img{
+    width: 160px;
+}
 .article1_inner > p{
     font-size: 35px;
 }
 .article1_inner > div{
-    margin: 0 0 0 15px;
+    margin: 60px 0 0 75px;
 }
-
 .article1_inner > div > a{
     display: block;
-    width: 303px;
-    height: 186px;
+    width: 174px;
+    height: 100px;
+}
+.article1_inner > div > a:nth-of-type(1){
+    margin: 0 0 20px 0;
+}
+/* ----------------------------------------------------------------------------------- */
+
+.article2_inner{
+    width: 100%;
+    padding: 80px 0 0 0;
+}
+.article2_inner > div:nth-of-type(1) button{
+    font-size: 20px;
+}
+.article2_inner > div:nth-of-type(1) button:nth-of-type(1)::after{
+    width: 146px;
+    height: 41px;
+}
+.article2_inner > div:nth-of-type(1) button:nth-of-type(2)::after{
+    width: 109px;
+    height: 41px;
+}
+.article2_inner > div:nth-of-type(1) button[class="on"]::before {
+    width: 30px;
+    height: 30px;
+    top: -19px;
+    left: -23px;
+}
+/* ----------------------------------------------------------------------------------- */
+
+.article3_inner{
+    width: 100%;
+}
+/* ----------------------------------------------------------------------------------- */
+
+.footer_inner{
+    width: 100%;
 }

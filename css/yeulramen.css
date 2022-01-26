@@ -129,7 +129,7 @@ header{
     display: block;
     width: 46px;
     height: 43px;
-    background: url(../img/yeulramen/땡땡땡.svg);
+    background: url(../img/yeulramen/땡땡땡.svg) no-repeat 0 0 /contain;
     position: absolute;
     top: -34px;
     left: -35px;
