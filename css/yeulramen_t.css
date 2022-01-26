@@ -1,1 +1,27 @@
 @charset "UTF-8";
+header{
+    background:black url(../img/yeulramen/오뚜기logo.png) no-repeat 20px 8px / 80px;
+}
+.header_inner{
+    width: 100%;
+}
+
+
+.article1_inner{
+    width: 100%;
+}
+.article1_inner > h1{
+    font-size: 25px;
+}
+.article1_inner > p{
+    font-size: 35px;
+}
+.article1_inner > div{
+    margin: 0 0 0 15px;
+}
+
+.article1_inner > div > a{
+    display: block;
+    width: 303px;
+    height: 186px;
+}
