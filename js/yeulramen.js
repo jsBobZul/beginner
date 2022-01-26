@@ -38,13 +38,13 @@ window.onload = function () {
     });
 
     // 슬라이드1,2 클릭 이벤트
-    const slide1 = document.querySelector(".article2_inner > div:nth-child(2)");
+    var slide1 = document.querySelector(".article2_inner > div:nth-child(2)");
     // console.log(slide1);
-    const slide2 = document.querySelector(".article2_inner > div:nth-child(3)");
+    var slide2 = document.querySelector(".article2_inner > div:nth-child(3)");
     // console.log(slide2);
-    const slideBt1 = document.querySelector(".article2_inner > div:nth-child(1) > button:nth-child(1)");
+    var slideBt1 = document.querySelector(".article2_inner > div:nth-child(1) > button:nth-child(1)");
     // console.log(slideBt1);
-    const slideBt2 = document.querySelector(".article2_inner > div:nth-child(1) > button:nth-child(2)");
+    var slideBt2 = document.querySelector(".article2_inner > div:nth-child(1) > button:nth-child(2)");
     // console.log(slideBt2);
     var slideBt1On = function(){
         slide1.classList.add("on");
@@ -63,14 +63,14 @@ window.onload = function () {
     slideBt1.addEventListener('click', slideBt1On);
     slideBt2.addEventListener('click', slideBt2On);
 
-    const moveBt1 = document.querySelector(".header_inner > div > button:nth-child(1)");
+    var moveBt1 = document.querySelector(".header_inner > div > button:nth-child(1)");
     // console.log(moveBt1);
-    const moveBt2 = document.querySelector(".header_inner > div > button:nth-child(2)");
+    var moveBt2 = document.querySelector(".header_inner > div > button:nth-child(2)");
     // console.log(moveBt2);
-    const body = document.querySelector("body");
+    var body = document.querySelector("body");
     // console.log(body);
-    const article2 = document.querySelector(".article2")
-    let move = function(a){
+    var article2 = document.querySelector(".article2")
+    var move = function(a){
         window.scroll({
             behavior: 'smooth',
             left:0,
