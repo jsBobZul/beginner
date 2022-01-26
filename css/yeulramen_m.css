@@ -73,6 +73,95 @@ header{
     top: -13px;
     left: -15px;
 }
+/* 아티클2 슬라이드1 */
+.swiper-slide{
+    width: 100%;
+    height: 280px;
+    padding: 20px 0 0 0;
+}
+.swiper-slide > div:first-child > div{
+    width: 240px;
+    height: 160px;
+    margin: 0 auto;
+    float: none;
+}
+.swiper-slide > div:first-child > p{
+    width: fit-content;
+    margin: 10px auto 0;
+    padding: 0 10px;
+    float: none;
+    font-size: 12px;
+}
+/* 슬라이드1 1번 째 slide */
+.swiper-slide.slide1_1 > div:first-child > div{
+    background: url(../img/yeulramen/순열라면M.png) no-repeat 0 0;
+}
+.swiper-slide.slide1_1 > div:last-child > p{
+    font-size: 8px;
+}
+/* 슬라이드1 2~5번 째 slide */
+.swiper-slide.slide1_2 > div > div{
+    background: url(../img/yeulramen/순열라면M.png) no-repeat -270px 0;
+}
+.swiper-slide.slide1_3 > div > div{
+    background: url(../img/yeulramen/순열라면M.png) no-repeat -540px 0;
+}
+.swiper-slide.slide1_4 > div > div{
+    background: url(../img/yeulramen/순열라면M.png) no-repeat -810px 0;
+}
+.swiper-slide.slide1_5 > div > div{
+    background: url(../img/yeulramen/순열라면M.png) no-repeat -1080px 0;
+}
+/* -------------------------------------------------------------------------- */
+
+/* 슬라이드2 1번 째 slide*/
+.swiper-slide.slide2_1 > div:first-child > div{
+    background: url(../img/yeulramen/로열라면M.png) no-repeat 0 0;
+}
+.swiper-slide.slide2_1 > div:last-child{
+    margin: 20px auto 0;
+}
+.swiper-slide.slide2_1 > div:last-child > p{
+    font-size: 8px;
+}
+.swiper-slide.slide2_1 > div:last-child > p:nth-of-type(1) span{
+    margin: 0 3px;
+}
+.swiper-slide.slide2_1 > div:last-child > p:nth-of-type(2){
+    margin: 0 30px;
+}
+/* 슬라이드2 2~7번 째 slide */
+.swiper-slide.slide2_2 > div > div{
+    background: url(../img/yeulramen/로열라면M.png) no-repeat -270px 0;
+}
+.swiper-slide.slide2_3 > div > div{
+    background: url(../img/yeulramen/로열라면M.png) no-repeat -540px 0;
+}
+.swiper-slide.slide2_4 > div > div{
+    background: url(../img/yeulramen/로열라면M.png) no-repeat -810px 0;
+}
+.swiper-slide.slide2_5 > div > div{
+    background: url(../img/yeulramen/로열라면M.png) no-repeat -1080px 0;
+}
+.swiper-slide.slide2_6 > div > div{
+    background: url(../img/yeulramen/로열라면M.png) no-repeat -1350px 0;
+}
+.swiper-slide.slide2_7 > div > div{
+    background: url(../img/yeulramen/로열라면M.png) no-repeat -1620px 0;
+}
+/* 슬라이드2 8번 째 slide */
+.swiper-slide.slide2_8 > div > a{
+    width: 320px;
+    height: 180px;
+    margin: 30px auto;
+}
+/* 출처 등 */
+.article2_inner > div:nth-child(4){
+    padding: 0 20px;
+}
+.article2_inner > div:nth-child(4) > p{
+    font-size: 10px;
+}
 /* --------------------------------------------- */
 
 .footer_inner{
