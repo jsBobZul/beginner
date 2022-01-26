@@ -19,19 +19,22 @@ window.onload = function () {
     var swiper3 = new Swiper('.slide3', {
         observer: true,
         observeParents: true,
+        loop: true,
         keyboard: {
             enabled: true,
         },
-        effect: 'cube',
-        grabCursor: true,
-        cube: {
-            shadow: true,
-            slideShadows: true,
-            shadowOffset: 20,
-            shadowScale: 0.94
-        },
-        loop: true,
         pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: '3',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true
+        },
     });
 
     // 슬라이드1,2 클릭 이벤트

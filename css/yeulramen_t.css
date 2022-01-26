@@ -214,13 +214,13 @@ header {
     height: 12px;
 }
 
-.article3_inner>div:nth-child(2) {
+.article3_inner>div {
     width: 250px;
     margin: 90px 110px 0 0;
     padding: 70px 0 0 0;
 }
 
-.article3_inner>div:nth-child(2) p {
+.article3_inner>div p {
     font-size: 20px;
 }
 
