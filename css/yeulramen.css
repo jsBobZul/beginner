@@ -195,7 +195,7 @@ header{
 }
 /* 슬라이드1 6번 째 slide */
 .swiper-slide.slide1_6 > div > div{
-    background: url(../img/yeulramen/면먹는노제.gif) no-repeat;
+    background: url(../img/yeulramen/면먹는노제.gif) no-repeat 50% 50%/cover;
 }
 
 /* ------------------------------------------------------------------------- */
