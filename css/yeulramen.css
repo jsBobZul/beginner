@@ -3,22 +3,7 @@
 body{
     background: black;
 }
-.fire{
-    width: 10px;
-    height: 10px;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background: red;
-    border-radius: 50%;
-    z-index: 500;
-    opacity: 1;
-}
-.fire.end{
-    left: 1920px;
-    top: 1180px;
-    transition: all 0.5s;
-}
+
 /* 헤더 */
 header{
     width: 100vw;
@@ -51,7 +36,7 @@ header{
 .article1{
     height: calc(100vh - 164px);
     margin: 164px 0 0 0;
-    background: url(../img/yeulramen/article1_bg.png) no-repeat 100% 0 /contain;
+    background: url(../img/yeulramen/article1_bg.png) no-repeat 300px 0 /contain;
 }
 .article1_inner{
     width: 1200px;
