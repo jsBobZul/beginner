@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* .is-ie IE공통요소 */
+.is-ie .header_inner > div{
+    width: 100px;
+}
+.is-ie .article1_inner > h1{
+    width: 406px;
+}
+.is-ie .article1_inner > p{
+    width: 395px;
+}
+/* 아티클2 버튼 */
+.is-ie .article2_inner > div:nth-of-type(1){
+    width: 394px;
+}
+/* 푸터 */
+.is-ie .footer_inner div{
+    width: 452px;
+    margin: 0 auto;
+}
