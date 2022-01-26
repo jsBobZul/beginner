@@ -15,7 +15,7 @@ header{
 .article1{
     height: 100%;
     margin: 124px 0 0 0;
-    background: url(../img/yeulramen/article1_bg.png) no-repeat 50% 17% /contain;
+    background: url(../img/yeulramen/article1_bg.png) no-repeat 50% 17% /320px;
 }
 .article1_inner{
     width: 320px;
@@ -47,10 +47,31 @@ header{
 .article2_inner{
     width: 320px;
 }
+.article2_inner > div:nth-of-type(1) button{
+    font-size: 12px;
+}
 /* --------------------------------------------- */
 
 .article3_inner{
     width: 320px;
+}
+.article2_inner > div:nth-of-type(1) button::after{
+    right: -3px;
+    bottom: -4px;
+}
+.article2_inner > div:nth-of-type(1) button:nth-of-type(1)::after{
+    width: 100px;
+    height: 29px;
+}
+.article2_inner > div:nth-of-type(1) button:nth-of-type(2)::after{
+    width: 79px;
+    height: 29px;
+}
+.article2_inner > div:nth-of-type(1) button[class="on"]::before {
+    width: 20px;
+    height: 20px;
+    top: -13px;
+    left: -15px;
 }
 /* --------------------------------------------- */
 
