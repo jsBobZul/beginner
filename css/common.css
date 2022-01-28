@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 *{
     font-family: 'Noto Sans KR', sans-serif;
     padding: 0;
@@ -25,9 +26,6 @@ h1,h2,h3,h4,h5,h6{
 .blue{
     color: blue;
 }
-.shrink{
-    flex-shrink: 0;
-}
 address{
     font-style: normal;
 }
@@ -36,7 +34,6 @@ button:hover{
 }
 .v_hidden {
     position: absolute;
-    /* clip: rect(0px 0px 0px 0px); */
     width: 1px;
     height: 1px;
     margin: 0px;

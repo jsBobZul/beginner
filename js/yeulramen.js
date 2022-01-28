@@ -1,6 +1,6 @@
 window.onload = function () {
 
-    var swiper1 = new Swiper('.slide1', {
+    var swiper = new Swiper('.slide1', {
         observer: true,
         observeParents: true,
         keyboard: {
@@ -8,7 +8,7 @@ window.onload = function () {
         },
     });
 
-    var swiper2 = new Swiper('.slide2', {
+    var swiper = new Swiper('.slide2', {
         observer: true,
         observeParents: true,
         keyboard: {
@@ -16,7 +16,7 @@ window.onload = function () {
         },
     });
 
-    var swiper3 = new Swiper('.slide3', {
+    var swiper = new Swiper('.slide3', {
         observer: true,
         observeParents: true,
         loop: true,
