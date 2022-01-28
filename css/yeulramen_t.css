@@ -1,15 +1,18 @@
 @charset "UTF-8";
 header {
-    background: black url(../img/yeulramen/오뚜기logo.png) no-repeat 20px 8px / 80px;
+    background: black url(../img/yeulramen/오뚜기logo.png) no-repeat 20px 8px / 50px;
 }
 
 .header_inner {
     width: 768px;
+    height: 60px;
+    padding: 20px 0 0 0;
 }
 
 /* -------------------------------------------------------------------------- */
 .article1 {
     height: 100%;
+    margin: 84px 0 0 0;
     background: url(../img/yeulramen/article1_bg.png) no-repeat 270px 68px /530px;
 }
 

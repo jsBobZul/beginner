@@ -89,7 +89,6 @@ window.onload = function () {
     moveBt2.addEventListener("click", function(){
         move(article2.offsetTop-100);
     });
-
-   
+    
     
 };

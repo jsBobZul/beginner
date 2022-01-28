@@ -290,6 +290,7 @@ header{
     float: left;
 }
 .swiper.swiper-container.slide3{
+    /* 고쳐야됨 */
     width: 1000px;
     height: 500px;
 }
