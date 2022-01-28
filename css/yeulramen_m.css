@@ -49,7 +49,7 @@ header{
 
 .article2_inner{
     width: 320px;
-    padding: 60px 0 0 0;
+    padding: 55px 0 0 0;
 }
 .article2_inner > div:nth-of-type(1) button{
     font-size: 12px;
@@ -172,7 +172,7 @@ header{
 .article3_inner{
     width: 320px;
 }
-.article3 > .slideWrap{
+.article3_inner > .slideWrap{
     margin: 0 auto;
     float: none;
 }
@@ -180,28 +180,17 @@ header{
     width: 220px;
     height: 330px;
 }
-.swiper-slide.slide3_1{
-    background: url(../img/yeulramen/열라면들T.png) no-repeat 0 0;
+.swiper.swiper-container.slide3 .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
 }
-.swiper-slide.slide3_2{
-    background: url(../img/yeulramen/열라면들T.png) no-repeat -240px 0;
-}
-.swiper-slide.slide3_3{
-    background: url(../img/yeulramen/열라면들T.png) no-repeat -470px 0;
-}
-.swiper-slide.slide3_4{
-    background: url(../img/yeulramen/열라면들T.png) no-repeat -752px 0;
-}
-.swiper-slide.slide3_5{
-    background: url(../img/yeulramen/열라면들T.png) no-repeat -1033px 0;
-}
-.article3_inner > div{
+.article3_inner > div:last-child{
     width: 220px;
     margin: 50px auto;
     padding: 50px 0 0 0;
     float: none;
 }
-.article3_inner > div p{
+.article3_inner > div:last-child p{
     font-size: 15px;
 } 
 /* --------------------------------------------- */

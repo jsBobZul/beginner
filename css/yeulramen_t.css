@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 header {
     background: black url(../img/yeulramen/오뚜기logo.png) no-repeat 20px 8px / 50px;
 }
@@ -20,29 +21,29 @@ header {
     width: 768px;
 }
 
-.article1_inner>h1 {
+.article1_inner > h1 {
     font-size: 25px;
 }
 
-.article1_inner>h1>img {
+.article1_inner > h1 > img {
     width: 160px;
 }
 
-.article1_inner>p {
+.article1_inner > p {
     font-size: 35px;
 }
 
-.article1_inner>div {
+.article1_inner > div {
     margin: 60px 0 0 75px;
 }
 
-.article1_inner>div>a {
+.article1_inner > div > a {
     display: block;
     width: 174px;
     height: 100px;
 }
 
-.article1_inner>div>a:nth-of-type(1) {
+.article1_inner > div > a:nth-of-type(1) {
     margin: 0 0 20px 0;
 }
 
@@ -53,21 +54,21 @@ header {
     padding: 80px 0 0 0;
 }
 
-.article2_inner>div:nth-of-type(1) button {
+.article2_inner > div:nth-of-type(1) button {
     font-size: 20px;
 }
 
-.article2_inner>div:nth-of-type(1) button:nth-of-type(1)::after {
+.article2_inner > div:nth-of-type(1) button:nth-of-type(1)::after {
     width: 146px;
     height: 41px;
 }
 
-.article2_inner>div:nth-of-type(1) button:nth-of-type(2)::after {
+.article2_inner > div:nth-of-type(1) button:nth-of-type(2)::after {
     width: 109px;
     height: 41px;
 }
 
-.article2_inner>div:nth-of-type(1) button[class="on"]::before {
+.article2_inner > div:nth-of-type(1) button[class="on"]::before {
     width: 30px;
     height: 30px;
     top: -19px;
@@ -80,99 +81,91 @@ header {
     height: 376px;
 }
 
-.swiper-slide>div:first-child>div {
+.swiper-slide > div:first-child > div {
     width: 322px;
     height: 215px;
 }
 
-.swiper-slide>div:first-child>p {
+.swiper-slide > div:first-child > p {
     padding: 54px 0 0 0;
     font-size: 18px;
 }
 
 /* 슬라이드1 1번 째 slide */
-.swiper-slide.slide1_1>div:first-child>div {
+.swiper-slide.slide1_1 > div:first-child > div {
     background: url(../img/yeulramen/순열라면T.png) no-repeat 0 0;
 }
 
-.swiper-slide.slide1_1>div:last-child {
+.swiper-slide.slide1_1 > div:last-child {
     margin: 20px auto 0;
 }
 
-.swiper-slide.slide1_1>div:last-child>p {
+.swiper-slide.slide1_1 > div:last-child > p {
     font-size: 15px;
 }
 
 /* 슬라이드1 2~5번 째 slide */
-.swiper-slide.slide1_2>div>div {
+.swiper-slide.slide1_2 > div > div {
     background: url(../img/yeulramen/순열라면T.png) no-repeat -352px 0;
 }
 
-.swiper-slide.slide1_3>div>div {
+.swiper-slide.slide1_3 > div > div {
     background: url(../img/yeulramen/순열라면T.png) no-repeat -704px 0;
 }
 
-.swiper-slide.slide1_4>div>div {
+.swiper-slide.slide1_4 > div > div {
     background: url(../img/yeulramen/순열라면T.png) no-repeat -1056px 0;
 }
 
-.swiper-slide.slide1_5>div>div {
+.swiper-slide.slide1_5 > div > div {
     background: url(../img/yeulramen/순열라면T.png) no-repeat -1408px 0;
 }
 
 /* -------------------------------------------------------------------------- */
 
 /* 슬라이드2 1번 째 slide*/
-.swiper-slide.slide2_1>div:first-child>div {
+.swiper-slide.slide2_1 > div:first-child > div {
     background: url(../img/yeulramen/로열라면T.png) no-repeat 0 0;
 }
-
-.swiper-slide.slide2_1>div:last-child {
+.swiper-slide.slide2_1 > div:last-child {
     margin: 20px auto 0;
 }
-
-.swiper-slide.slide2_1>div:last-child>p {
+.swiper-slide.slide2_1 > div:last-child > p {
     font-size: 15px;
 }
 
 /* 슬라이드2 2~7번 째 slide */
-.swiper-slide.slide2_2>div>div {
+.swiper-slide.slide2_2 > div > div {
     background: url(../img/yeulramen/로열라면T.png) no-repeat -352px 0;
 }
-
-.swiper-slide.slide2_3>div>div {
+.swiper-slide.slide2_3 > div > div {
     background: url(../img/yeulramen/로열라면T.png) no-repeat -704px 0;
 }
-
-.swiper-slide.slide2_4>div>div {
+.swiper-slide.slide2_4 > div > div {
     background: url(../img/yeulramen/로열라면T.png) no-repeat -1056px 0;
 }
-
-.swiper-slide.slide2_5>div>div {
+.swiper-slide.slide2_5 > div > div {
     background: url(../img/yeulramen/로열라면T.png) no-repeat -1408px 0;
 }
-
-.swiper-slide.slide2_6>div>div {
+.swiper-slide.slide2_6 > div > div {
     background: url(../img/yeulramen/로열라면T.png) no-repeat -1760px 0;
 }
-
-.swiper-slide.slide2_7>div>div {
+.swiper-slide.slide2_7 > div > div {
     background: url(../img/yeulramen/로열라면T.png) no-repeat -2112px 0;
 }
 
 /* 슬라이드2 8번 째 slide */
-.swiper-slide.slide2_8>div>a {
+.swiper-slide.slide2_8 > div > a {
     width: 450px;
     height: 250px;
     margin: 0 auto;
 }
 
 /* 출처 등 */
-.article2_inner>div:nth-child(4) {
+.article2_inner > div:nth-child(4) {
     padding: 0 20px;
 }
-
-.article2_inner>div:nth-child(4)>p {
+.article2_inner > div:nth-child(4) > p {
     font-size: 12px;
 }
 
@@ -181,69 +174,39 @@ header {
     height: 350px;
     background: url(../img/yeulramen/불꽃.png) no-repeat 0 40px;
 }
-
 .article3_inner {
     width: 768px;
 }
-
 .swiper.swiper-container.slide3 {
     width: 360px;
     height: 330px;
 }
-
-.swiper-slide.slide3_1 {
-    background: url(../img/yeulramen/열라면들T.png) no-repeat 0 0;
-}
-
-.swiper-slide.slide3_2 {
-    background: url(../img/yeulramen/열라면들T.png) no-repeat -240px 0;
-}
-
-.swiper-slide.slide3_3 {
-    background: url(../img/yeulramen/열라면들T.png) no-repeat -470px 0;
-}
-
-.swiper-slide.slide3_4 {
-    background: url(../img/yeulramen/열라면들T.png) no-repeat -752px 0;
-}
-
-.swiper-slide.slide3_5 {
-    background: url(../img/yeulramen/열라면들T.png) no-repeat -1033px 0;
-}
-
 .swiper.swiper-container.slide3 .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
+    width: 9px;
+    height: 9px;
 }
-
-.article3_inner>div {
+.article3_inner > div:last-child {
     width: 250px;
     margin: 90px 110px 0 0;
     padding: 70px 0 0 0;
 }
-
-.article3_inner>div p {
+.article3_inner > div:last-child p {
     font-size: 20px;
 }
-
 /*----------------------------------------------------------------------------------- */
-
 .footer_inner {
     width: 768px;
 }
-
-.footer_inner div>a:nth-of-type(1) {
+.footer_inner div > a:nth-of-type(1) {
     width: 79px;
     height: 22px;
     background: url(../img/yeulramen/footer_content_T.png) no-repeat 0 -4px;
 }
-
-.footer_inner div>a:nth-of-type(2) {
+.footer_inner div > a:nth-of-type(2) {
     width: 36px;
     height: 36px;
     background: url(../img/yeulramen/footer_content_T.png) no-repeat -129px 0;
 }
-
-.footer_inner div>a:nth-of-type(3) {
+.footer_inner div > a:nth-of-type(3) {
     font-size: 12px;
 }

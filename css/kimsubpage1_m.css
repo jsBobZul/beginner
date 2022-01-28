@@ -30,6 +30,9 @@ header{
     left: 10px;
     top: -3px;
 }
+.header_inner > div{
+    margin-top: 20px;
+}
 .close{
     display: block;
     width: 30px;
@@ -57,12 +60,10 @@ nav > div{
     flex-direction: column;
     border: none;
 }
-.drop_menu > div > a{
+.drop_menu > div > a,
+.drop_menu button{
     color: #ddd;
     font-weight: 300;
-}
-.header_inner > div{
-    margin-top: 20px;
 }
 header.on{
     display: block;
