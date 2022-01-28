@@ -1,8 +1,8 @@
 window.onload = function () {
   // 모바일 헤더 클릭 이벤트
-  let mNav = document.querySelector('.mNav');
-  let closeBt = document.querySelector('.close');
-  let header = document.querySelector('header')
+  const mNav = document.querySelector('.mNav');
+  const closeBt = document.querySelector('.close');
+  const header = document.querySelector('header')
 
   mNav.addEventListener('click', function () {
     header.classList.add("on");
@@ -12,31 +12,41 @@ window.onload = function () {
   });
 
   //드롭 메뉴 부드러운 이동
-  $(".sub1 a").each(function () {
-    var thisOffset = $($(this).attr('href')).offset().top - 70;
-    $(this).click(function () {
-      $("html, body").animate({
-        scrollTop: thisOffset
-      }, 800);
-      return false;
+  const move = function(a){
+    window.scroll({
+      behavior: 'smooth',
+      left: 0,
+      top: a
     });
-  })
-
-  if (location.hash === '#a1'){
-    console.log('첫번 째');
-    var hash1 = function() {
-      let thisOffset1 = $('#a1').offset().top - 70;
-      $("html, body").scrollTop(thisOffset1);
-      console.log('첫번 째 실행');
-    };
-    hash1 ();
-  }else if(location.hash === '#a2'){
-    console.log('두번 째');
-    var hash2 = function() {
-      let thisOffset2 = $('#a2').offset().top - 70;
-      $("html, body").scrollTop(thisOffset2);
-      console.log('두번 째 실행');
-    };
-    hash2 ();
   };
+  const sub1Bt = document.querySelectorAll(".sub1 > button");
+  console.log(sub1Bt);
+  const article2 = document.querySelector(".article2");
+  const article4 = document.querySelector(".article4");
+  const article5 = document.querySelector(".article5");
+  const article2Top = article2.offsetTop-70;
+  const article4Top = article4.offsetTop-70;
+  sub1Bt[0].addEventListener("click", function(){
+    move(article2Top);
+  });
+  sub1Bt[1].addEventListener("click", function(){
+    move(article4Top);
+  });
+  sub1Bt[2].addEventListener("click", function(){
+    move(article5.offsetTop);
+  });
+
+  // 타 페이지에서 이동
+  if(location.hash === '#a1'){
+    window.scroll({
+      left: 0,
+      top: article2Top
+    });
+  }else if(location.hash === "#a2"){
+    window.scroll({
+      left: 0,
+      top: article4Top
+    });
+  };
+
 };
