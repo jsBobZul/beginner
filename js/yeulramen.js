@@ -87,8 +87,7 @@ window.onload = function () {
         move(body.offsetTop);
     });
     moveBt2.addEventListener("click", function(){
-        move(article2.offsetTop-100);
+        move(article2.offsetTop);
     });
-    
     
 };
