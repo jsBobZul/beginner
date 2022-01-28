@@ -297,13 +297,13 @@ header{
     background: url(../img/yeulramen/봉지열라면.png) no-repeat 50% 50% /contain;
 }
 .swiper-slide.slide3_2{
-    background: url(../img/yeulramen/작은컵열라면.png) no-repeat 50% 50% /contain;
+    background: url(../img/yeulramen/작은컵열라면.png) no-repeat 50% 50% /100px;
 }
 .swiper-slide.slide3_3{
     background: url(../img/yeulramen/열라짬뽕.png) no-repeat 50% 50% /contain;
 }
 .swiper-slide.slide3_4{
-    background: url(../img/yeulramen/큰컵열라면.png) no-repeat 50% 50% /contain;
+    background: url(../img/yeulramen/큰컵열라면.png) no-repeat 50% 50% /180px;
 }
 .swiper-slide.slide3_5{
     background: url(../img/yeulramen/열려라참깨라면.png) no-repeat 50% 50% /contain;
