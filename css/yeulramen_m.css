@@ -180,6 +180,12 @@ header{
     width: 220px;
     height: 330px;
 }
+.swiper-slide.slide3_2{
+    background: url(../img/yeulramen/작은컵열라면.png) no-repeat 50% 50% /100px;
+}
+.swiper-slide.slide3_4{
+    background: url(../img/yeulramen/큰컵열라면.png) no-repeat 50% 50% /180px;
+}
 .swiper.swiper-container.slide3 .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
