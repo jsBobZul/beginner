@@ -3,8 +3,14 @@ html{
     font-size: 13px
 }
 /* 헤더 */
-.header_inner > div >a{
+.header_inner > a{
+    width: 103px;
+}
+.header_inner > div > a{
     display: none;
+}
+.nav > div{
+    width: 110px;
 }
 /* 아티클2 */
 .article2{

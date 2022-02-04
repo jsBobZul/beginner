@@ -15,7 +15,6 @@ html{
 }
 /* 헤더 */
 header{
-    /* background: #6590E2; */
     height: 400px;
     display: none;
 }
@@ -47,9 +46,11 @@ nav > div{
     text-align: center;
 }
 .drop_menu{
+    background: transparent;
     transform: translate(0px, 3px);
 }
 .drop_menu > div{
+    background: transparent;
     display: flex;
     flex-direction: column;
     border: none;

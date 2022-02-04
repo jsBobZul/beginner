@@ -23,7 +23,7 @@ header {
     display: block;
     width: 154px;
     height: 50px;
-    background: url(../img/chungjukim/logo.svg) no-repeat;
+    background: url(../img/chungjukim/logo.svg) no-repeat 50% 50% /contain;
 }
 .close{
     display: none;
