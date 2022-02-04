@@ -9,8 +9,10 @@ header {
     z-index: 10000;
     position: fixed;
 }
-header:hover{
-    background: rgb(47, 46, 51) !important;
+@media (min-width:768px){
+    header:hover{
+        background: rgb(47, 46, 51) !important;
+    }
 }
 .header_inner{
     display: flex;
