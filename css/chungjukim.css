@@ -42,8 +42,9 @@ nav > div{
 }
 button{
     color: white;   
-    border: none;
     background: transparent;
+    border: none;
+    font-size: 18px;
 }
 .header_inner > div >a{
     color: white;
