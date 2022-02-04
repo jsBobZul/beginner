@@ -9,8 +9,11 @@ html{
 .header_inner > div > a{
     display: none;
 }
-.nav > div{
+nav > div{
     width: 110px;
+}
+.drop_menu > div {
+    width: 127px;
 }
 /* 아티클2 */
 .article2{
