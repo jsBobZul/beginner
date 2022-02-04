@@ -26,8 +26,8 @@ window.onload = function () {
     },
     breakpoints: {
       767: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
         spaceBetween: 5,
       },
       1024: {
@@ -35,7 +35,7 @@ window.onload = function () {
         slidesPerGroup: 2,
         spaceBetween: 5,
       },
-      2000: {
+      9999: {
         slidesPerView: 4,
         slidesPerGroup: 4,
         spaceBetween: 5,
