@@ -62,8 +62,10 @@ nav > .menu:nth-child(4) > .drop_menu{
     height: 100%;
     margin: 0;
     background: transparent;
+    display: block;
 }
 .drop_menu > div > a{
+    margin: 0 10px;
     color: #ddd;
     font-weight: 300;
 }
