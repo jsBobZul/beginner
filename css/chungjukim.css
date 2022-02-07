@@ -40,13 +40,6 @@ nav > div{
 .menu > a{
     color: white;
 }
-button{
-    color: white;
-    background: transparent;
-    border: none;
-    font-size: 1rem;
-    margin: 15px 0 0 0;
-}
 .header_inner > div >a{
     color: white;
     margin: 0 10px;

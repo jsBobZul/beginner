@@ -2,13 +2,6 @@
 html{
     font-size: 12px;
 }
-/* 헤더 */
-.header_inner > div > a {
-    margin: 0;
-}
-.drop_menu > div > a {
-    margin: 0;
-}
 
 /* 아티클1 */
 .article1 > section > div:nth-child(2) {
