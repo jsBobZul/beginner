@@ -26,7 +26,7 @@ window.onload = function () {
   const article5 = document.querySelector(".article5");
   const article2Top = article2.offsetTop-70;
   const article4Top = article4.offsetTop-70;
-  const article5Top = article5.offsetTop-70;
+  const article5Top = article5.offsetTop-90;
   sub1Bt[0].addEventListener("click", function(){
     move(article2Top);
   });
