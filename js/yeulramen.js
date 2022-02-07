@@ -1,22 +1,23 @@
 window.onload = function () {
 
-    var swiper = new Swiper('.slide1', {
+    var swiper1 = new Swiper('.slide1', {
         observer: true,
         observeParents: true,
         keyboard: {
             enabled: true,
         },
     });
-
-    var swiper = new Swiper('.slide2', {
-        observer: true,
-        observeParents: true,
-        keyboard: {
-            enabled: true,
-        },
-    });
-
-    var swiper = new Swiper('.slide3', {
+    function swiper2(){
+        var swiper2 = new Swiper('.slide2', {
+            observer: true,
+            observeParents: true,
+            keyboard: {
+                enabled: true,
+            },
+            observeSlideChildren: true,
+        });
+    }
+    var swiper3 = new Swiper('.slide3', {
         observer: true,
         observeParents: true,
         loop: true,
@@ -49,15 +50,16 @@ window.onload = function () {
         slide2.classList.remove("on");
         slideBt1.classList.add("on");
         slideBt2.classList.remove("on");
-    }
+    };
     // console.log(slideBt1On);
     var slideBt2On = function(){
         slide1.classList.remove("on");
         slide2.classList.add("on");
         slideBt1.classList.remove("on");
         slideBt2.classList.add("on");
-    }
-    console.log(slideBt2On);
+        swiper2();
+    };
+    // console.log(slideBt2On);
     slideBt1.addEventListener('click', slideBt1On);
     slideBt2.addEventListener('click', slideBt2On);
 
@@ -97,7 +99,5 @@ window.onload = function () {
             moveIe(article2.offsetTop);
         });
     };
-
-    
     
 };
