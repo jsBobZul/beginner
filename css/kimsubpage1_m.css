@@ -85,20 +85,23 @@ header.on{
     padding: 0;
     font-size: 1.125rem;
     font-weight: 500;
-    position: initial;
+    position: static;
     margin: 10px 0;
 }
 .article1 > section > div:nth-child(3) {
     border: none;
     padding: 0;
-    position: initial;
+    position: static;
 }
 /* 아티클2 */
 .article2{
     width: 320px;
     height: 100%;
     padding: 0px 15px 10px;
-    flex-direction: column;
+}
+.article2 > .article2_content:nth-of-type(1){
+    float: none;
+    width: 100%;
 }
 .article2_content > h2{
     margin: 20px 0 10px 0;
