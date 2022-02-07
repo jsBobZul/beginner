@@ -57,7 +57,7 @@ window.onload = function () {
         slideBt1.classList.remove("on");
         slideBt2.classList.add("on");
     }
-    // console.log(slideBt2On);
+    console.log(slideBt2On);
     slideBt1.addEventListener('click', slideBt1On);
     slideBt2.addEventListener('click', slideBt2On);
 
@@ -67,20 +67,40 @@ window.onload = function () {
     // console.log(moveBt2);
     var body = document.querySelector("body");
     // console.log(body);
-    var article2 = document.querySelector(".article2")
-    var move = function(a){
+    var article2 = document.querySelector(".article2");
+
+    var move = function(el){
         window.scroll({
             behavior: 'smooth',
-            left:0,
-            top:a
+            left: 0,
+            top: el,
         });
     };
 
-    moveBt1.addEventListener("click", function(){
-        move(body.offsetTop);
-    });
-    moveBt2.addEventListener("click", function(){
-        move(article2.offsetTop);
-    });
+    var browser = navigator.userAgent;
+    if(browser.match(/Chrome/)){
+        moveBt1.addEventListener("click", function(){
+            move(body.offsetTop);
+            console.log('body로 이동합니다');
+        });
+        moveBt2.addEventListener("click", function(){
+            move(article2.offsetTop);
+            console.log('아티클2로 이동합니다')
+        });
+    } else if(browser.match(/Trident/)){
+        var moveIe = function(el){
+            window.scroll(0, el);
+        };
+        moveBt1.addEventListener("click", function(){
+            moveIe(body.offsetTop);
+            console.log('바디 이동 정상');
+        });
+        moveBt2.addEventListener("click", function(){
+            moveIe(article2.offsetTop);
+            console.log('아티클2 이동 정상');
+        });
+    };
+
+    
     
 };
