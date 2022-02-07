@@ -80,6 +80,7 @@ window.onload = function () {
         window.scroll(0, el);
     };
 
+    // 브라우저별 호환성
     var browser = navigator.userAgent;
     if(browser.match(/Chrome/)){
         moveBt1.addEventListener("click", function(){
