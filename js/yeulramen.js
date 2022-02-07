@@ -76,28 +76,24 @@ window.onload = function () {
             top: el,
         });
     };
+    var moveIe = function(el){
+        window.scroll(0, el);
+    };
 
     var browser = navigator.userAgent;
     if(browser.match(/Chrome/)){
         moveBt1.addEventListener("click", function(){
             move(body.offsetTop);
-            console.log('body로 이동합니다');
         });
         moveBt2.addEventListener("click", function(){
             move(article2.offsetTop);
-            console.log('아티클2로 이동합니다')
         });
     } else if(browser.match(/Trident/)){
-        var moveIe = function(el){
-            window.scroll(0, el);
-        };
         moveBt1.addEventListener("click", function(){
             moveIe(body.offsetTop);
-            console.log('바디 이동 정상');
         });
         moveBt2.addEventListener("click", function(){
             moveIe(article2.offsetTop);
-            console.log('아티클2 이동 정상');
         });
     };
 
