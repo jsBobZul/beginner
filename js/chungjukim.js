@@ -142,8 +142,8 @@ window.onload = function () {
       };
     };
   };
-  // responSubPage1();
-  // window.addEventListener('resize', responSubPage1);
+  responSubPage1();
+  window.addEventListener('resize', responSubPage1);
 
   // 모바일 헤더 클릭 이벤트
   let mNav = document.querySelector('.mNav');
