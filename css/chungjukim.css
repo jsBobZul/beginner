@@ -67,7 +67,6 @@ button{
     border-top: 1px solid #ddd;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
 }
 .drop_menu > div > a{
     color: white;
