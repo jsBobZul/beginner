@@ -20,7 +20,7 @@ window.onload = function () {
     });
   };
   const sub1Bt = document.querySelectorAll(".sub1 > button");
-  console.log(sub1Bt);
+  // console.log(sub1Bt);
   const article2 = document.querySelector(".article2");
   const article4 = document.querySelector(".article4");
   const article5 = document.querySelector(".article5");

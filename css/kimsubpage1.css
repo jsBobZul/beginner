@@ -8,7 +8,7 @@ body {
 /* 헤더 */
 header {
     width: 100%;
-    padding: 20px 0;
+    padding: 25px;
     z-index: 10000;
     position: fixed;
     background: #2F2E33;
@@ -29,12 +29,14 @@ header {
 }
 nav {
     display: flex;
-    justify-content: center;
 }
 
-nav > div {
+nav > div{
+    width: 150px;
+    height: 50px;
     color: white;
-    margin: 0 10px;
+    padding: 18px 0 0 0;
+    text-align: center;
 }
 
 .menu > a {
@@ -46,30 +48,35 @@ nav > div {
     margin: 0 10px;
 }
 
-.drop_menu {
+.drop_menu{
     width: 100%;
-    left: 0px;
-    position: absolute;
+    background: rgb(47, 46, 51);
     display: none;
-    text-align: center;
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    z-index: -1;
 }
 
-.drop_menu > div {
-    width: 100%;
+.drop_menu > div{
+    width: 600px;
+    height: 180px;
+    background: rgb(47, 46, 51);
+    margin: 30px auto 0;
     border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
 }
-
 .drop_menu > div > a {
     color: white;
-    margin: 0 15px;
+    margin: 15px 0 0 0;
 }
 
 .drop_menu button{
     color: white;
     font-size: 1rem;
     border: none;
-    margin: 0 15px;
+    margin: 15px 0 0 0;
     background: transparent;
 }
 
