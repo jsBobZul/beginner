@@ -41,10 +41,11 @@ nav > div{
     color: white;
 }
 button{
-    color: white;   
     background: transparent;
     border: none;
     font-size: 1rem;
+    color: white;
+    margin: 15px 0 0 0;
 }
 .header_inner > div >a{
     color: white;
@@ -70,7 +71,7 @@ button{
 }
 .drop_menu > div > a{
     color: white;
-    margin: 0 10px;
+    margin: 15px 0 0 0;
 }
 .menu:hover > div{
     display: block;
