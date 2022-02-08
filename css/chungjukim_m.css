@@ -55,6 +55,7 @@ nav > .menu:nth-child(4) > .drop_menu{
     margin: 255px 0 0 0;
 }
 .drop_menu{
+    display: block;
     background: transparent;
 }
 .drop_menu > div{

@@ -13,6 +13,9 @@ header {
     header:hover{
         background: rgb(47, 46, 51) !important;
     }
+    .menu:hover > div{
+        display: block;
+    }
 }
 .header_inner{
     display: flex;
@@ -65,9 +68,6 @@ nav > div{
 .drop_menu > div > a{
     color: white;
     margin: 15px 0 0 0;
-}
-.menu:hover > div{
-    display: block;
 }
 /* 메인 아티클1 */
 .article1{

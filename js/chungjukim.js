@@ -105,7 +105,12 @@ window.onload = function () {
     });
   } else {
     header.style.background = '#6590E2';
-  }
+  };
+
+  // 브라우저 실행 시 헤더 환경 개선
+  if (window.innerWidth >= 768 && window.pageYOffset > article1Height / 2) {
+    header.style.background = '#2F2E33';
+  };
 
   // 브라우저 리사이징 시 헤더 변경
   function responsiveHeader() {
@@ -130,7 +135,7 @@ window.onload = function () {
   window.addEventListener('resize', responsiveHeader);
 
   // 모바일에서 서브페이지 이동 막기
-  var subPage1 = document.querySelector('nav > .menu:nth-child(1) > a');
+  const subPage1 = document.querySelector('nav > .menu:nth-child(1) > a');
   function responSubPage1(){
     if(window.innerWidth <= 767){
       subPage1.onclick = function(){
@@ -146,8 +151,8 @@ window.onload = function () {
   window.addEventListener('resize', responSubPage1);
 
   // 모바일 헤더 클릭 이벤트
-  let mNav = document.querySelector('.mNav');
-  let closeBt = document.querySelector('.close');
+  const mNav = document.querySelector('.mNav');
+  const closeBt = document.querySelector('.close');
 
   mNav.addEventListener('click', function () {
     header.classList.add('on');
@@ -155,4 +160,18 @@ window.onload = function () {
   closeBt.addEventListener('click', function () {
     header.classList.remove('on');
   });
+
+  // NodeList.forEach ie에서 사용 가능
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  };
+  
+  // 비어있는 a태그 이동 막기
+  let aTag = document.querySelectorAll('a[href="#"]');
+  aTag.forEach(function(eachATag){
+    eachATag.onclick = function(){
+      return false;
+    };
+  });
+
 };

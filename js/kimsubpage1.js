@@ -12,13 +12,14 @@ window.onload = function () {
   });
 
   //드롭 메뉴 부드러운 이동
-  const move = function(a){
+  const move = function(el){
     window.scroll({
       behavior: 'smooth',
       left: 0,
-      top: a
+      top: el,
     });
   };
+ 
   const sub1Bt = document.querySelectorAll(".sub1 > button");
   // console.log(sub1Bt);
   const article2 = document.querySelector(".article2");
@@ -27,6 +28,8 @@ window.onload = function () {
   const article2Top = article2.offsetTop-70;
   const article4Top = article4.offsetTop-70;
   const article5Top = article5.offsetTop-90;
+
+  
   sub1Bt[0].addEventListener("click", function(){
     move(article2Top);
   });
@@ -36,20 +39,23 @@ window.onload = function () {
   sub1Bt[2].addEventListener("click", function(){
     move(article5Top);
   });
+   // IE 호환
+   const moveIe = function(el){
+    window.scroll(0, el);
+  };
+  const browser = navigator.userAgent;
+  if(browser.match(/Trident/)){
+    sub1Bt[0].addEventListener("click", function(){
+      moveIe(article2Top);
+    });
+    sub1Bt[1].addEventListener("click", function(){
+      moveIe(article4Top);
+    });
+    sub1Bt[2].addEventListener("click", function(){
+      moveIe(article5Top);
+    });
+  };
 
-  // const hashAritcle = [article2, article4, article5];
-  // const hashAritcle = [article2Top, article4Top, article5Top];
-
-  // hashAritcle.forEach(function(eachArticle, index){
-  //     let abcd = eachArticle.offsetTop-70;
-  //     console.log(eachArticle);
-  //   });
-    // sub1Bt.forEach(function(eachBt){
-    //   console.log(eachBt);
-    //   eachBt.addEventListener("click", function(){
-    //     move(hashAritcle);
-    //   });
-    // });
 
   // 타 페이지에서 이동
   if(location.hash === '#a1'){
@@ -68,5 +74,20 @@ window.onload = function () {
       top: article5Top
     });
   };
+
+   // NodeList.forEach ie에서 사용 가능
+   if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  };
+
+  // 비어있는 a태그 이벤트 막기
+  let aTag = document.querySelectorAll('a[href="#"]');
+  // console.log(aTag);
+  aTag.forEach(function(eachATag){
+    // console.log(eachATag);
+    eachATag.onclick = function(){
+      return false;
+    };
+  });
 
 };
