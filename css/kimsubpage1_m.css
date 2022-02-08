@@ -30,6 +30,9 @@ header{
     left: 10px;
     top: -3px;
 }
+.header_inner > div{
+    display: block;
+}
 .close{
     display: block;
     width: 40px;
