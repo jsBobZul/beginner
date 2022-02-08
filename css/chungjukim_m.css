@@ -24,7 +24,11 @@ header{
     flex-direction: column;
 }
 .header_inner > a{
-    display: none;
+    /* display: none; */
+    width: 110px;
+    position: absolute;
+    left: 10px;
+    top: -3px;
 }
 .close{
     display: block;
@@ -62,9 +66,6 @@ nav > .menu:nth-child(1){
     color: #ddd;
     font-weight: 300;
     margin: 0;
-}
-.header_inner > div{
-    margin-top: 20px;
 }
 header.on{
     display: block;

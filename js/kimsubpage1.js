@@ -19,7 +19,6 @@ window.onload = function () {
       top: el,
     });
   };
-
   const sub1Bt = document.querySelectorAll(".sub1 > button");
   // console.log(sub1Bt);
   const article2 = document.querySelector(".article2");
@@ -28,7 +27,6 @@ window.onload = function () {
   const article2Top = article2.offsetTop - 70;
   const article4Top = article4.offsetTop - 70;
   const article5Top = article5.offsetTop - 90;
-
 
   sub1Bt[0].addEventListener("click", function () {
     move(article2Top);
