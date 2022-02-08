@@ -134,22 +134,6 @@ window.onload = function () {
   }
   window.addEventListener('resize', responsiveHeader);
 
-  // 모바일에서 서브페이지 이동 막기
-  const subPage1 = document.querySelector('nav > .menu:nth-child(1) > a');
-  function responSubPage1(){
-    if(window.innerWidth <= 767){
-      subPage1.onclick = function(){
-        return false;
-      };
-    }else{
-      subPage1.onclick = function(){
-        return true;
-      };
-    };
-  };
-  responSubPage1();
-  window.addEventListener('resize', responSubPage1);
-
   // 모바일 헤더 클릭 이벤트
   const mNav = document.querySelector('.mNav');
   const closeBt = document.querySelector('.close');
