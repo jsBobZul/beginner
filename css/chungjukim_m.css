@@ -1,6 +1,6 @@
 @charset "urf-8";
 html{
-    font-size: 14px;
+    font-size: 9px;
 }
 .mNav{
     display: block;
@@ -24,7 +24,6 @@ header{
     flex-direction: column;
 }
 .header_inner > a{
-    /* display: none; */
     width: 110px;
     position: absolute;
     left: 10px;
@@ -43,6 +42,10 @@ header{
 nav{
     display: block;
     text-align: center;
+}
+nav a,
+.header_inner > div{
+    font-size: 1.4rem !important;
 }
 .menu{
     margin: 60px 0 0 0;
@@ -73,6 +76,12 @@ header.on{
 /* 아티클1 */
 .article1{
     min-width: 320px;
+}
+.full > video:nth-of-type(1){
+    display: none;
+}
+.full > video:nth-of-type(2){
+    display: block;
 }
 /* 아티클2 */
 .article2{

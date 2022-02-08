@@ -91,6 +91,9 @@ div.article1 .full{
     height: 100%;
     z-index: -1;
 }
+.full > video:nth-of-type(2){
+    display: none;
+}
 /* 아티클2 */
 .article2{
     width: 100%;
