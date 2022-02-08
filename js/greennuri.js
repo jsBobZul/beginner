@@ -30,21 +30,40 @@ window.onload = function () {
     // console.log('gnb가 닫힙니다.');
   };
 
-  // gnb 태블릿, PC에서 tap 포커싱 가능
-  menuA.addEventListener('focus', function () {
-    if (window.innerWidth > 767) {
-      ulOn();
-    }
-  });
-  lastA.addEventListener('blur', function () {
-    if (window.innerWidth > 767) {
-      ulOff();
-    }
-  });
-  //gnb 포커싱 중 다른 곳 클릭 시 닫힘
-  window.addEventListener('click', function () {
-    if (window.innerWidth > 767) {
-      ulOff();
-    }
+  // // gnb 태블릿, PC에서 tap 포커싱 가능
+  // menuA.addEventListener('focus', function () {
+  //   if (window.innerWidth > 767) {
+  //     ulOn();
+  //   }
+  // });
+  // lastA.addEventListener('blur', function () {
+  //   if (window.innerWidth > 767) {
+  //     ulOff();
+  //   }
+  // });
+  // //gnb 포커싱 중 다른 곳 클릭 시 닫힘
+  // window.addEventListener('click', function () {
+  //   if (window.innerWidth > 767) {
+  //     ulOff();
+  //   }
+  // });
+
+  if(window.innerWidth > 767){
+    menuA.addEventListener('focus', ulOn);
+    lastA.addEventListener('blur', ulOff);
+    window.addEventListener('focus', ulOff);
+  };
+
+  // NodeList.forEach ie에서 사용 가능
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  };
+  
+  // 비어있는 a태그 이동 막기
+  let aTag = document.querySelectorAll('a[href="#"]');
+  aTag.forEach(function(eachATag){
+    eachATag.onclick = function(){
+      return false;
+    };
   });
 };
