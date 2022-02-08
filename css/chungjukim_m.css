@@ -7,7 +7,7 @@ html{
     width: 40px;
     height: 40px;
     border: none;
-    background: url(../img/chungjukim/메뉴.png) no-repeat 50% 50% /contain;
+    background: url(../img/chungjukim/open.svg) no-repeat 50% 50% /contain;
     position: fixed;
     right: 0;
     top: 0;

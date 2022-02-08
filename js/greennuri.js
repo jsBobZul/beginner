@@ -49,13 +49,4 @@ window.onload = function () {
       return false;
     };
   });
-
-  // (function (i) {
-  //   for (var i = 0; i < aTag.length; i++) {
-  //     aTag[i].onclick = function(){
-  //       return false;
-  //     };
-  //   };
-  // })();
-
 };

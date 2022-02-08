@@ -161,17 +161,15 @@ window.onload = function () {
     header.classList.remove('on');
   });
 
-  // NodeList.forEach ie에서 사용 가능
-  if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = Array.prototype.forEach;
-  };
   
   // 비어있는 a태그 이동 막기
   let aTag = document.querySelectorAll('a[href="#"]');
-  aTag.forEach(function(eachATag){
-    eachATag.onclick = function(){
-      return false;
+   (function (i) {
+    for (var i = 0; i < aTag.length; i++) {
+      aTag[i].onclick = function(){
+        return false;
+      };
     };
-  });
+  })();
 
 };
