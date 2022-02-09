@@ -409,7 +409,6 @@ table tr td:last-child {
 /* 풋터 */
 footer {
     width: 100%;
-    margin: 0 0 -24px 0;
     padding: 20px 10px;
     background-color: black;
 }

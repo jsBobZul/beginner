@@ -200,14 +200,12 @@ span[class="fab fa-youtube"]{
     background-blend-mode: hard-light;
 }
 .slide3_inner > img{
-    height: 100px;
+    height: 100px; 
     margin-right: 0px;
 }
 .slide3content > h2{
     font-size: 1.3rem;
-    text-align: center;
-}
-.slide3content li {
+    text-align: center;     
     margin: 5px;
 }
 .swiper-slide.hei{
@@ -260,7 +258,6 @@ footer {
     min-width: 320px;
     display: block;
     padding: 10px;
-    margin: 0 0 -24px 0;
     text-align: center;
 }
 footer > div:nth-of-type(1){
