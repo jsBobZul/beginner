@@ -197,6 +197,7 @@ span[class="fab fa-youtube"]{
 }
 .slidewrap3{
     background: white url(../img/chungjukim/kimlogo.svg) no-repeat 100% 130% /70%;
+    background-blend-mode: hard-light;
 }
 .slide3_inner > img{
     height: 100px;
