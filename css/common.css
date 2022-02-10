@@ -33,6 +33,7 @@ button{
     background: transparent;
     box-shadow: none;
     border: none;
+    font-size: 1rem;
 }
 button:hover{
     cursor: pointer;

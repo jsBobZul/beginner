@@ -18,20 +18,20 @@
 
 <body>
     <button class="mNav"></button>
-    <div class="login clear">
-        <div class="login_inner">
-            <div></div>
+    <div class="login clear" role="form">
+        <form action="#" method="post" class="login_inner">
+            <button class="login_close"></button>
             <p>아이디</p>
             <p><input type="text"></p>
             <p>비밀번호</p>
             <p><input type="password"></p>
             <button>아이디/비밀번호 찾기</button>
             <div>
-                <div>로그인</div>
-                <div class="clear"><span>N</span><b>네이버 로그인</b></div>
-                <div class="clear"><span>K</span><b>카카오 로그인</b></div>
+                <button><input type="submit">로그인</button>
+                <button class="clear"><span>N</span><b>네이버 로그인</b></button>
+                <button class="clear"><span>K</span><b>카카오 로그인</b></button>
             </div>
-        </div>
+        </form>
     </div>
     <header>
         <div class="header_inner">
@@ -78,7 +78,7 @@
                 </div>
             </nav>
             <div>
-                <a href="#">로그인</a>
+                <button class="login_button">로그인</button>
                 <a href="#">회원가입</a>
             </div>
         </div>

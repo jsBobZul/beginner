@@ -6,13 +6,16 @@
     z-index: 99999;
     display: none;
 }
+.login.on{
+    display: block;
+}
 .login_inner{
     width: 320px;
     margin: 0 auto;
     padding: 10px;
     background: black;
 }
-.login_inner > div:nth-child(1){
+.login_inner > button:nth-child(1){
     width: 15px;
     height: 15px;
     background: url(../img/chungjukim/닫기로.png) no-repeat 50% 50% /contain;
@@ -22,7 +25,7 @@
     margin: 0 0 10px 0;
     color: white;
 }
-.login_inner button{
+.login_inner > button:nth-of-type(2){
     float: right;
     margin: 0 0 10px 0;
     color: white;
@@ -32,34 +35,35 @@
     margin: 0 auto;
     clear: both;
 }
-.login_inner > div:last-child div{
+.login_inner > div:last-child button{
+    display: block;
     width: 200px;
     margin: 0 0 10px 0;
     text-align: center;
 }
-.login_inner > div:last-child div:nth-child(1){
+.login_inner > div:last-child button:nth-child(1){
     background: white;
 }
-.login_inner > div:last-child div:nth-child(2){
+.login_inner > div:last-child button:nth-child(2){
     background: green;
 }
-.login_inner > div:last-child div span{
+.login_inner > div:last-child button span{
     display: block;
     float: left;
     margin: 0 -20px 0 20px;
     font-size: 1.5rem;
 }
-.login_inner > div:last-child div:nth-child(2) span{
+.login_inner > div:last-child button:nth-child(2) span{
     color: white;
 }
-.login_inner > div:last-child div:nth-child(3){
+.login_inner > div:last-child button:nth-child(3){
     background: yellow;
 }
-.login_inner > div:last-child div:nth-child(3) span{
+.login_inner > div:last-child button:nth-child(3) span{
     color: black;
     clear: both;
 }
-.login_inner > div:last-child div b{
+.login_inner > div:last-child button b{
     display: block;
     padding: 6px 0 0 0;
 }
