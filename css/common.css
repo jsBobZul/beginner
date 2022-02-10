@@ -45,8 +45,3 @@ button:hover{
     margin: 0px;
     overflow: hidden;
 }
-input[type="submit"]{
-    background: transparent;
-    border: none;
-    font-size: 1rem;
-}
