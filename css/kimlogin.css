@@ -1,0 +1,65 @@
+@charset "utf-8";
+.login{
+    width: 100%;
+    position: fixed;
+    top: 300px;
+    z-index: 99999;
+    display: none;
+}
+.login_inner{
+    width: 320px;
+    margin: 0 auto;
+    padding: 10px;
+    background: black;
+}
+.login_inner > div:nth-child(1){
+    width: 15px;
+    height: 15px;
+    background: url(../img/chungjukim/닫기로.png) no-repeat 50% 50% /contain;
+    float: right;
+}
+.login_inner P{
+    margin: 0 0 10px 0;
+    color: white;
+}
+.login_inner button{
+    float: right;
+    margin: 0 0 10px 0;
+    color: white;
+}
+.login_inner > div:last-child{
+    width: fit-content;
+    margin: 0 auto;
+    clear: both;
+}
+.login_inner > div:last-child div{
+    width: 200px;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+.login_inner > div:last-child div:nth-child(1){
+    background: white;
+}
+.login_inner > div:last-child div:nth-child(2){
+    background: green;
+}
+.login_inner > div:last-child div span{
+    display: block;
+    float: left;
+    margin: 0 -20px 0 20px;
+    font-size: 1.5rem;
+}
+.login_inner > div:last-child div:nth-child(2) span{
+    color: white;
+}
+.login_inner > div:last-child div:nth-child(3){
+    background: yellow;
+}
+.login_inner > div:last-child div:nth-child(3) span{
+    color: black;
+    clear: both;
+}
+.login_inner > div:last-child div b{
+    display: block;
+    padding: 6px 0 0 0;
+}
