@@ -166,4 +166,15 @@ window.onload = function () {
   loginClose.addEventListener('click', function(){
     login.classList.remove('on');
   });
+  //로그인 버튼 이벤트 막기
+  const submit = document.querySelector("input[type='submit']");
+  console.log(submit);
+  submit.onclick = function(){
+    console.log('작동');
+    return false;
+  };
+  // submit.addEventListener('click', function(){
+  //   console.log('작동');
+  //   return false;
+  // });
 };
