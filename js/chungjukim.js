@@ -167,9 +167,12 @@ window.onload = function () {
     login.classList.remove('on');
   });
   //로그인 버튼 이벤트 막기
-  const submit = document.querySelector("button[type='submit']");
-  submit.onclick = function(event){
-    alert("현재 로그인 불가능합니다. 고객센터 000-0000")
-    event.preventDefault()
-  }
+  const submit = document.querySelectorAll(".logins button");
+  [].forEach.call(submit, function(eachSubmit){
+    eachSubmit.onclick = function(event){
+        alert("현재 로그인 불가능합니다. 고객센터 000-0000")
+        event.preventDefault()
+      };
+  });
+
 };
