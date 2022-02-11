@@ -28,6 +28,7 @@
     float: right;
     margin: 15px 0;
     color: white;
+    font-size: 12px;
 }
 .login_inner > div:last-child{
     width: fit-content;

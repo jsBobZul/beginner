@@ -174,6 +174,11 @@ window.onload = function () {
         event.preventDefault()
       };
   });
+  // 아이디/비밀번호 찾기 버튼 이벤트 막기
+  const pwId = document.querySelector('.pwid');
+  pwId.addEventListener('click', function(){
+    alert("현재 이용불가합니다. 고객센터 000-0000");
+  });
 
   // // ------- 로그인 유효성 검사 ----------
 
