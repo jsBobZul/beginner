@@ -1,3 +1,42 @@
+window.addEventListener('DOMContentLoaded', function(){
+    var moveBt1 = document.querySelector(".header_inner > div > button:nth-child(1)");
+    // console.log(moveBt1);
+    var moveBt2 = document.querySelector(".header_inner > div > button:nth-child(2)");
+    // console.log(moveBt2);
+    var body = document.querySelector("body");
+    // console.log(body);
+    var article2 = document.querySelector(".article2");
+
+    var move = function (el) {
+        window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: el,
+        });
+    };
+    var moveIe = function (el) {
+        window.scroll(0, el);
+    };
+
+    // 헤더 버튼 스크롤 이벤트
+    moveBt1.addEventListener("click", function() {
+        move(body.offsetTop);
+    });
+    moveBt2.addEventListener("click", function() {
+        move(article2.offsetTop-10);
+    });
+    // IE 호환
+    var browser = navigator.userAgent;
+    if (browser.match(/Trident/)){
+        moveBt1.addEventListener("click", function() {
+            moveIe(body.offsetTop);
+        });
+        moveBt2.addEventListener("click", function() {
+            moveIe(article2.offsetTop-10);
+        });
+    };
+});
+
 window.onload = function () {
         var swiper1 = new Swiper('.slide1', {
             observer: true,
@@ -63,41 +102,4 @@ window.onload = function () {
         slideBt1.addEventListener('click', slideBt1On);
         slideBt2.addEventListener('click', slideBt2On);
 
-        var moveBt1 = document.querySelector(".header_inner > div > button:nth-child(1)");
-        // console.log(moveBt1);
-        var moveBt2 = document.querySelector(".header_inner > div > button:nth-child(2)");
-        // console.log(moveBt2);
-        var body = document.querySelector("body");
-        // console.log(body);
-        var article2 = document.querySelector(".article2");
-
-        var move = function (el) {
-            window.scroll({
-                behavior: 'smooth',
-                left: 0,
-                top: el,
-            });
-        };
-        var moveIe = function (el) {
-            window.scroll(0, el);
-        };
-
-        // 헤더 버튼 스크롤 이벤트
-        moveBt1.addEventListener("click", function() {
-            move(body.offsetTop);
-        });
-        moveBt2.addEventListener("click", function() {
-            move(article2.offsetTop-10);
-        });
-        // IE 호환
-        var browser = navigator.userAgent;
-        if (browser.match(/Trident/)){
-            moveBt1.addEventListener("click", function() {
-                moveIe(body.offsetTop);
-            });
-            moveBt2.addEventListener("click", function() {
-                moveIe(article2.offsetTop-10);
-            });
-        };
-         
 };
