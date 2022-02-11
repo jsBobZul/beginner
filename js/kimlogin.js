@@ -10,7 +10,7 @@
   const idLog = document.querySelector('.id_log');
   const pwLog = document.querySelector('.pass_log');
 
-    function (el){
+    function loginEvent (el){
         a.addEventlistener('focus', function(){
             alert("대/소문자 구분 없이 영어, 숫자만 가능합니다.");
         }, {once:true});
