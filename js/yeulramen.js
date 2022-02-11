@@ -87,7 +87,7 @@ window.onload = function () {
             move(body.offsetTop);
         });
         moveBt2.addEventListener("click", function() {
-            move(article2.offsetTop);
+            move(article2.offsetTop-10);
         });
         // IE 호환
         var browser = navigator.userAgent;
@@ -96,7 +96,7 @@ window.onload = function () {
                 moveIe(body.offsetTop);
             });
             moveBt2.addEventListener("click", function() {
-                moveIe(article2.offsetTop);
+                moveIe(article2.offsetTop-10);
             });
         };
          

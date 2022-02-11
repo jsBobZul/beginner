@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* .is-ie IE공통요소 */
 .is-ie .header_inner > div{
-    width: 127px;
+    width: 144px;
 }
 .is-ie .article1_inner > h1{
     width: 406px;
