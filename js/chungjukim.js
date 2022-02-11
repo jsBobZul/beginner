@@ -156,29 +156,16 @@ window.onload = function () {
     };
   })();
 
-  // 로그인 창 열기
-  const login = document.querySelector('.login');
-  const loginBt = document.querySelector('.login_button');
-  const loginClose = document.querySelector('.login_close');
-  loginBt.addEventListener('click', function(){
-    login.classList.add('on');
-  });
-  loginClose.addEventListener('click', function(){
-    login.classList.remove('on');
-  });
-  //로그인 버튼 이벤트 막기
-  const submit = document.querySelectorAll(".logins button");
-  [].forEach.call(submit, function(eachSubmit){
-    eachSubmit.onclick = function(event){
-        alert("현재 로그인 불가능합니다. 고객센터 000-0000")
-        event.preventDefault()
-      };
-  });
-  // 아이디/비밀번호 찾기 버튼 이벤트 막기
-  const pwId = document.querySelector('.pwid');
-  pwId.addEventListener('click', function(){
-    alert("현재 이용불가합니다. 고객센터 000-0000");
-  });
+  // // 로그인 창 열기
+  // const login = document.querySelector('.login');
+  // const loginBt = document.querySelector('.login_button');
+  // const loginClose = document.querySelector('.login_close');
+  // loginBt.addEventListener('click', function(){
+  //   login.classList.add('on');
+  // });
+  // loginClose.addEventListener('click', function(){
+  //   login.classList.remove('on');
+  // });
 
 
 };

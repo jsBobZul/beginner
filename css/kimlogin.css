@@ -1,69 +1,74 @@
 @charset "utf-8";
 .login{
-    width: 100%;
-    position: fixed;
-    top: 300px;
-    z-index: 99999;
-    display: none;
-}
-.login.on{
-    display: block;
-}
-.login_inner{
-    width: 320px;
+    width: 800px;
     margin: 0 auto;
-    padding: 10px;
-    background: black;
+    padding: 200px 0 50px 0;
+    border: 1px solid black;
+    background: url(../img/chungjukim/login.png) no-repeat 50% 50px /300px;
 }
-.login_inner > button:nth-child(1){
-    width: 15px;
-    height: 15px;
-    background: url(../img/chungjukim/닫기로.png) no-repeat 50% 50% /contain;
-    float: right;
+.login > div:nth-of-type(1){
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
 }
-.login_inner P{
-    color: white;
+.login > div:nth-of-type(1) P{
+    color: black;
 }
-.login_inner > button:nth-of-type(2){
-    float: right;
-    margin: 15px 0;
-    color: white;
+.login > div:nth-of-type(1) input{
+    height: 50px;
+    padding: 0 0 0 10px;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+.login > div:nth-of-type(1) > div{
+    position: relative;
+}
+.login > div:nth-of-type(1) > div:nth-of-type(1){
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px 0 0;
+}
+.pwid{
+    display: block;
+    margin: 30px auto;
+    color: black;
     font-size: 12px;
+    font-weight: 700;
 }
-.login_inner > div:last-child{
+.login > div:last-child{
     width: fit-content;
     margin: 0 auto;
     clear: both;
 }
-.login_inner > div:last-child button{
+.login > div:last-child button{
     display: block;
     width: 200px;
     margin: 0 0 10px 0;
     text-align: center;
 }
-.login_inner > div:last-child button:nth-child(1){
-    background: white;
+.login > div:last-child button:nth-child(1){
+    border: 1px solid black;
 }
-.login_inner > div:last-child button:nth-child(2){
+.login > div:last-child button:nth-child(2){
     background: green;
 }
-.login_inner > div:last-child button span{
+.login > div:last-child button span{
     display: block;
     float: left;
     margin: 0 -20px 0 20px;
     font-size: 1.5rem;
 }
-.login_inner > div:last-child button:nth-child(2) span{
-    color: white;
+.login > div:last-child button:nth-child(2) span{
+    color: black;
 }
-.login_inner > div:last-child button:nth-child(3){
+.login > div:last-child button:nth-child(3){
     background: yellow;
 }
-.login_inner > div:last-child button:nth-child(3) span{
+.login > div:last-child button:nth-child(3) span{
     color: black;
     clear: both;
 }
-.login_inner > div:last-child button b{
+.login > div:last-child button b{
     display: block;
     padding: 6px 0 0 0;
 }
@@ -71,4 +76,7 @@
 .pass_log{
     color: #c4c4c4;
     font-size: 12px;
+    margin: 0 0 0 10px;
+    position: absolute;
+    bottom: -20px;
 }
