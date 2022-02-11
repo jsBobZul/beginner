@@ -26,7 +26,7 @@
 }
 .login_inner > button:nth-of-type(2){
     float: right;
-    margin: 0 0 10px 0;
+    margin: 15px 0;
     color: white;
 }
 .login_inner > div:last-child{
@@ -65,4 +65,9 @@
 .login_inner > div:last-child button b{
     display: block;
     padding: 6px 0 0 0;
+}
+.id_log,
+.pass_log{
+    color: #c4c4c4;
+    font-size: 12px;
 }
