@@ -22,7 +22,6 @@
     float: right;
 }
 .login_inner P{
-    margin: 0 0 10px 0;
     color: white;
 }
 .login_inner > button:nth-of-type(2){
