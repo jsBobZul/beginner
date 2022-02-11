@@ -214,12 +214,14 @@ window.onload = function () {
     pwLog.appendChild(pwText);
   });
 
-
-  let logInFocus = function logInFocus(el, el2, el3){
+  let logInFocus = function logInFocus(el,el2,el3){
+    console.log("1");
     el.innerText = "";
     el.style.color = "#c4c4c4";
     if(el2.value !== ""){
+      console.log("2");
       if(!el3.test(el2.value)){
+        console.log("3");
         el.style.color = "red";
         el.innerText = "정확한 값을 입력해주세요.";
         el.appendChild(document.createElement("br"));
@@ -227,9 +229,10 @@ window.onload = function () {
       };
     };
   };
+  console.log(logInFocus);
 
-  kimId.addEventListener("blur", logInFocus(idLog, kimId, idReg));
-  kimPw.addEventListener("blur", logInFocus(pwLog, kimPw, passwordReg));
+  kimId.addEventListener("blur", logInFocus(idLog,kimId,idReg));
+  kimPw.addEventListener("blur", logInFocus(pwLog,kimPw,passwordReg));
 
 
   // kimPw.addEventListener("blur", function(){
