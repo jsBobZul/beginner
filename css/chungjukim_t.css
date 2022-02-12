@@ -6,8 +6,10 @@ html{
 .header_inner > a{
     width: 103px;
 }
-.header_inner > div > a{
-    display: none;
+.header_inner > div{
+    position: absolute;
+    top: 20px;
+    right: 0px;
 }
 nav > div{
     width: 110px;

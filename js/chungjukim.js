@@ -156,16 +156,6 @@ window.onload = function () {
     };
   })();
 
-  // // 로그인 창 열기
-  // const login = document.querySelector('.login');
-  // const loginBt = document.querySelector('.login_button');
-  // const loginClose = document.querySelector('.login_close');
-  // loginBt.addEventListener('click', function(){
-  //   login.classList.add('on');
-  // });
-  // loginClose.addEventListener('click', function(){
-  //   login.classList.remove('on');
-  // });
 
 
 };
