@@ -58,13 +58,17 @@ window.onload = function() {
         });
     });
 
-    // 폼 이벤트
+    //--------- 폼 유효성 검사 및 이벤트----------
+
+    // 대/소문자, 숫자
+    let idReg = RegExp(/^[a-zA-Z0-9]+$/);
+    // 최소 5자, 대문자 하나 이상, 소문자 하나, 숫자 하나 및 특수 문자 하나 이상
+    let passwordReg = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{5,}$/);
+
     const joinGo = document.querySelector("button[type='submit']");
-    // joinGo.addEventListener('click', function(event){
-    //     event.preventDefault();
-    // })
-    // form.onsubmit = function(){
-    //     // event.preventDefault();
-    //     return false;
-    // };
+    joinGo.addEventListener('click', function(event){
+        event.preventDefault();
+    });
+
+
 };
