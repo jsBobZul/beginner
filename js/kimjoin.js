@@ -80,9 +80,16 @@ window.onload = function() {
     // 폰 번호 자동 하이폰
     phone.oninput = function(){
         phone.value = phone.value
-            .replace(/[^0-9]/, '')
+            .replace(/[^0-9]/,"")
             .replace(/^(\d{3,4})(\d{4})$/, `$1-$2`);
     };
+    phone.addEventListener('focus', function(){
+        var reg = (/^[0-9]+/g).test(phone.value);
+        if(!reg){
+            phone.focus();
+            return false;
+        };
+    });
 
 
     const joinGo = document.querySelector("button[type='submit']");
