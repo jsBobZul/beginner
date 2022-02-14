@@ -101,3 +101,17 @@ button[type="submit"]{
 .footer button:hover{
     color: #6667ab;
 }
+
+/* 폼 관련 스타일 */
+.id,
+.password{
+    position: relative;
+}
+.id_log,
+.pass_log{
+    color: #c4c4c4;
+    font-size: 12px;
+    margin: 0 0 0 10px;
+    position: absolute;
+    top: 0px;
+}

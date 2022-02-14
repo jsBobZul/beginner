@@ -61,15 +61,43 @@ window.onload = function() {
 
     //--------- 폼 유효성 검사 및 이벤트----------
 
-    // 아이디
+    // 아이디 대/소문자, 숫자만 가능
     const joinId = document.querySelector('input[placeholder^="아이디"]');
-    // 대/소문자, 숫자
     let idReg = RegExp(/^[a-zA-Z0-9]+$/);
-    // 비밀번호
-    const joinPw = document.querySelector('input[placeholder^="비밀번호"]');
-    // 최소 5자, 대문자 하나 이상, 소문자 하나, 숫자 하나 및 특수 문자 하나 이상
-    let pwReg = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{5,}$/);
+    const idLog = document.querySelector('.id_log');
+    joinId.addEventListener("focus", function() {
+        let idText = document.createTextNode("대/소문자 구분 없이 영어, 숫자만 가능합니다.");
+        idLog.appendChild(idText);
+    });
     
+    // 비밀번호 이벤트 최소 5자, 대문자 하나 이상, 소문자 하나, 숫자 하나 및 특수 문자 하나 이상
+    const joinPw = document.querySelector('input[placeholder^="비밀번호"]');
+    let pwReg = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{5,}$/);
+    const pwLog = document.querySelector('.pass_log');
+      joinPw.addEventListener("focus", function() {
+        let pwText = document.createTextNode("대/소문자,숫자,특수문자 포함한 최소 5자 이상 비밀번호 입력해주세요.");
+        pwLog.appendChild(pwText);
+    });
+        // 아이디, 비밀번호 공통 포커스 이벤트
+        let logInBlur = function logInBlur(log, area, reg) {
+            log.innerText = "";
+            log.style.color = "#c4c4c4";
+            if (area.value !== "") {
+                if (!reg.test(area.value)) {
+                    log.style.color = "red";
+                    log.innerText = "정확한 값을 입력해주세요.";
+                    log.appendChild(document.createElement("br"));
+                    area.focus();
+                };
+            };
+        };
+    
+        joinId.addEventListener("blur", function() {
+            logInBlur(idLog, joinId, idReg);
+        });
+        joinPw.addEventListener("blur", function() {
+            logInBlur(pwLog, joinPw, pwReg);
+        });
 
     // 폰 번호 선택 옵션 넣기
     let phone = document.querySelector("input[type='tel']");
