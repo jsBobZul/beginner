@@ -1,8 +1,8 @@
-window.onload = function() {
+window.onload = function () {
     // 주소검색
     function daumPostcode() {
         new daum.Postcode({
-            oncomplete: function(data) {
+            oncomplete: function (data) {
                 // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
 
                 // 각 주소의 노출 규칙에 따라 주소를 조합한다.
@@ -53,8 +53,8 @@ window.onload = function() {
     postButton.addEventListener('click', daumPostcode);
 
     // 회원가입약관
-    fetch('../회원가입약관').then(function(response){
-        response.text().then(function(text){
+    fetch('../회원가입약관').then(function (response) {
+        response.text().then(function (text) {
             document.querySelector('.join_text').innerHTML = '<textarea readonly="readonly" cols="100" rows="10" style="resize:none; padding:0 0 0 5px;">' + text + '</textarea>';
         });
     });
@@ -65,66 +65,82 @@ window.onload = function() {
     const joinId = document.querySelector('input[placeholder^="아이디"]');
     let idReg = RegExp(/^[a-zA-Z0-9]+$/);
     const idLog = document.querySelector('.id_log');
-    joinId.addEventListener("focus", function() {
+    joinId.addEventListener("focus", function () {
         let idText = document.createTextNode("대/소문자 구분 없이 영어, 숫자만 가능합니다.");
         idLog.appendChild(idText);
     });
     // 아이디 체크
     const idCheck = document.querySelector('input[value="아이디확인"]');
-    idCheck.addEventListener('click', function(){
-        if(!idReg.test(joinId.value)){
+    idCheck.addEventListener('click', function () {
+        if (!idReg.test(joinId.value)) {
             alert('아이디를 확인해주세요!\n대/소문자 구분 없이 영어, 숫자만 가능합니다.');
-        }else{
-            alert('사용 가능한 아이디입니다.');
+        } else {
+            alert(joinId.value + '는 사용 가능한 아이디입니다.');
         }
     });
-    
+
     // 비밀번호 이벤트 최소 5자, 대문자 하나 이상, 소문자 하나, 숫자 하나 및 특수 문자 하나 이상
-    const joinPw = document.querySelector('input[placeholder^="비밀번호"]');
+    const joinPw = document.querySelector('input[placeholder="비밀번호"]');
     let pwReg = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{5,}$/);
     const pwLog = document.querySelector('.pass_log');
-      joinPw.addEventListener("focus", function() {
+    joinPw.addEventListener("focus", function () {
         let pwText = document.createTextNode("대/소문자,숫자,특수문자 포함한 최소 5자 이상 비밀번호 입력해주세요.");
         pwLog.appendChild(pwText);
     });
-        // 아이디, 비밀번호 공통 포커스 이벤트
-        let logInBlur = function logInBlur(log, area, reg) {
-            log.innerText = "";
-            log.style.color = "#c4c4c4";
-            if (area.value !== "") {
-                if (!reg.test(area.value)) {
-                    log.style.color = "red";
-                    log.innerText = "정확한 값을 입력해주세요.";
-                    log.appendChild(document.createElement("br"));
-                    area.focus();
-                };
+    // 아이디, 비밀번호 공통 포커스 이벤트
+    let joinBlur = function logInBlur(log, area, reg) {
+        log.innerText = "";
+        log.style.color = "#c4c4c4";
+        if (area.value !== "") {
+            if (!reg.test(area.value)) {
+                log.style.color = "red";
+                log.innerText = "정확한 값을 입력해주세요.";
+                log.appendChild(document.createElement("br"));
+                area.focus();
             };
         };
-    
-        joinId.addEventListener("blur", function() {
-            logInBlur(idLog, joinId, idReg);
-        });
-        joinPw.addEventListener("blur", function() {
-            logInBlur(pwLog, joinPw, pwReg);
-        });
+    };
+
+    joinId.addEventListener("blur", function () {
+        joinBlur(idLog, joinId, idReg);
+    });
+    joinPw.addEventListener("blur", function () {
+        joinBlur(pwLog, joinPw, pwReg);
+    });
+
+    // 비밀번호 체크
+    const pwCh = document.querySelector('input[placeholder^="비밀번호를 확인"]');
+    const pwChkBt = document.querySelector('input[value^="비밀번호 확인"]');
+    pwChkBt.addEventListener('click', function(){
+        if(joinPw.value !=="" && pwCh.value !==""){
+            if(joinPw.value !== pwCh.value){
+                alert('비밀번호가 다릅니다.\n비밀번호를 정확히 입력해주세요.');
+                return false;
+            }else{
+                alert('같은 비밀번호입니다.');
+            };
+        }else{
+            alert('비밀번호를 입력해주세요.');
+        };
+    });
 
     // 폰 번호 선택 옵션 넣기
     let phone = document.querySelector("input[type='tel']");
-    fetch('../폰번호옵션').then(function(response){
+    fetch('../폰번호옵션').then(function (response) {
         let phoneHead = document.querySelector(".tel > select");
-        response.text().then(function(text){
+        response.text().then(function (text) {
             phoneHead.innerHTML = text;
         });
     });
     // 폰 번호 자동 하이폰
-    phone.oninput = function(){
+    phone.oninput = function () {
         phone.value = phone.value
-            .replace(/[^0-9]/,"")
+            .replace(/[^0-9]/, "")
             .replace(/^(\d{3,4})(\d{4})$/, `$1-$2`);
     };
-    phone.addEventListener('focus', function(){
+    phone.addEventListener('focus', function () {
         var reg = (/^[0-9]+/g).test(phone.value);
-        if(!reg){
+        if (!reg) {
             phone.focus();
             return false;
         };
@@ -132,7 +148,7 @@ window.onload = function() {
 
 
     const joinGo = document.querySelector("button[type='submit']");
-    joinGo.addEventListener('click', function(event){
+    joinGo.addEventListener('click', function (event) {
         event.preventDefault();
     });
 
