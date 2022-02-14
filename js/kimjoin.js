@@ -62,11 +62,13 @@ window.onload = function() {
     //--------- 폼 유효성 검사 및 이벤트----------
 
     // 아이디
+    const joinId = document.querySelector('input[placeholder^="아이디"]');
     // 대/소문자, 숫자
     let idReg = RegExp(/^[a-zA-Z0-9]+$/);
     // 비밀번호
+    const joinPw = document.querySelector('input[placeholder^="비밀번호"]');
     // 최소 5자, 대문자 하나 이상, 소문자 하나, 숫자 하나 및 특수 문자 하나 이상
-    let passwordReg = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{5,}$/);
+    let pwReg = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{5,}$/);
     
 
     // 폰 번호 선택 옵션 넣기
