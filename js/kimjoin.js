@@ -52,6 +52,7 @@ window.onload = function() {
     const postButton = document.querySelector(".daum_post");
     postButton.addEventListener('click', daumPostcode);
 
+    // 회원가입약관
     fetch('../회원가입약관').then(function(response){
         response.text().then(function(text){
             document.querySelector('.join_text').innerHTML = '<textarea readonly="readonly" cols="100" rows="10" style="resize:none; padding:0 0 0 5px;">' + text + '</textarea>';
@@ -66,7 +67,14 @@ window.onload = function() {
     let passwordReg = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{5,}$/);
     let phone = document.querySelector("input[type='tel']");
     
-    phone.oninput = function (){
+    fetch('../폰번호옵션').then(function(response){
+        let phoneHead = document.querySelector(".tel > select");
+        response.text().then(function(text){
+            phoneHead.innerHTML = text;
+        });
+    });
+    
+    phone.oninput = function(){
         phone.value = phone.value
             .replace(/[^0-9]/, '')
             .replace(/^(\d{3,4})(\d{4})$/, `$1-$2`);
