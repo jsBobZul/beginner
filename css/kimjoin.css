@@ -1,1 +1,38 @@
 @charset "UTF-8";
+article{
+    padding: 270px 0 0 0;
+    background: url(../img/kimjoin/김안과_join_logo.svg) no-repeat 50% 90px /400px;
+}
+.inner{
+    width: fit-content;
+    margin: 0 auto;
+}
+.inner > h1{
+    width: fit-content;
+    margin: 0 auto;
+}
+.inner > section:nth-of-type(1) > h2{
+    border: 1px solid;
+    border-bottom: none;
+    text-indent: 5px;
+}
+.inner > section:nth-of-type(1) > div:nth-of-type(2){
+    float: right;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+table *{
+    padding: 15px;
+    border: 1px solid;
+}
+table caption{
+    border-bottom: none;
+}
+th{
+    font-weight: normal;
+}
+.inner > div:nth-of-type(1) > div{
+    float: right;
+}

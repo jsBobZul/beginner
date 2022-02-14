@@ -52,4 +52,10 @@ window.onload = function() {
     const postButton = document.querySelector(".daum_post");
     postButton.addEventListener('click', daumPostcode);
 
+    fetch('../회원가입약관').then(function(response){
+        response.text().then(function(text){
+            document.querySelector('.join_text').innerHTML = '<textarea readonly="readonly" cols="100" rows="10" style="resize:none; padding:0 0 0 5px;">' + text + '</textarea>';
+        });
+    });
+
 };
