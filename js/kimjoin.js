@@ -69,6 +69,15 @@ window.onload = function() {
         let idText = document.createTextNode("대/소문자 구분 없이 영어, 숫자만 가능합니다.");
         idLog.appendChild(idText);
     });
+    // 아이디 체크
+    const idCheck = document.querySelector('input[value="아이디확인"]');
+    idCheck.addEventListener('click', function(){
+        if(!idReg.test(joinId.value)){
+            alert('아이디를 확인해주세요!\n대/소문자 구분 없이 영어, 숫자만 가능합니다.');
+        }else{
+            alert('사용 가능한 아이디입니다.');
+        }
+    });
     
     // 비밀번호 이벤트 최소 5자, 대문자 하나 이상, 소문자 하나, 숫자 하나 및 특수 문자 하나 이상
     const joinPw = document.querySelector('input[placeholder^="비밀번호"]');
