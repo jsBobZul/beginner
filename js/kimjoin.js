@@ -124,6 +124,29 @@ window.onload = function () {
         };
     });
 
+    // 이름체크 이벤트
+    let nameReg = RegExp(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/); // 한글체크
+    const nameLog = document.querySelector('.name_log');
+    const name = document.querySelector('input[placeholder="이름"]');
+    name.addEventListener('focus', function(){
+        if(name.value == ""){
+            nameLog.innerText = "한글 이름만 가능합니다.";
+            nameLog.style.fontSize = "12px";
+            nameLog.style.color = "#a1a1a1";
+            return false;
+        };
+    });
+    name.addEventListener('blur', function(){
+        if(!nameReg.test(name.value)){
+            nameLog.style.color = 'red';
+            name.focus();
+            return false;
+        }else{
+            nameLog.innerText = "";
+            return false;
+        };
+    });
+
     // 폰 번호 선택 옵션 넣기
     let phone = document.querySelector("input[type='tel']");
     fetch('../폰번호옵션').then(function (response) {
