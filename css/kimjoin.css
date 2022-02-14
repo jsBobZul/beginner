@@ -36,3 +36,64 @@ th{
 .inner > div:nth-of-type(1) > div{
     float: right;
 }
+.inner > div:nth-of-type(1) > div > div{
+    float: right;
+}
+.important::before{
+    content: "*";
+    margin: 0 5px 0 0;
+    color: red;
+    vertical-align: middle;
+}
+input[type="button"]{
+    margin: 0 0 0 5px;
+}
+form p{
+    margin: 0 0 5px 0;
+}
+.address *{
+    margin: 0 0 5px 0;
+}
+.address{
+    margin: 15px 0 0 0;
+    padding: 10px;
+    border: 1px solid;
+}
+.check_list{
+    float: right;
+    margin: 20px 0;
+}
+button[type="submit"]{
+    display: block;
+    margin: 0 auto;
+    clear: both;
+    background: #6667ab;
+    color: white;
+    font-size: 1.7rem;
+}
+.footer{
+    width: fit-content;
+    margin: 40px auto 10px;
+}
+.footer button{
+    margin: 0 20px 0 0;
+    position: relative;
+    color: #a1a1a1;
+    font-size: 0.8rem;
+}
+.footer button::before{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: #a1a1a1;
+    position: absolute;
+    left: -10px;
+}
+.footer button:nth-child(1)::before{
+    content: "";
+    display: none;
+}
+.footer button:hover{
+    color: #6667ab;
+}

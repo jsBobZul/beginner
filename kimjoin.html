@@ -36,7 +36,7 @@
                         <td>아이디, 비밀번호, 이름, 전화번호, 이메일, 휴대폰번호, 보호자 정보를 수집합니다.</td>
                     </tr>
                 </table>
-                <div>
+                <div class="clear">
                     <p>개인정보는 회원탈퇴 시까지 보관됩니다.</p>
                     <div>
                         <input type="checkbox" id="check2">
@@ -44,15 +44,15 @@
                     </div>
                 </div>
             </div>
-            <div class="Validation">
-                <form action="#" method="post">
-                    <p>아이디 <input type="text"></p>
-                    <p>비밀번호 <input type="password"></p>
-                    <p>비밀번호 확인 <input type="password"></p>
-                    <p>이름 <input type="text"></p>
-                    <p>이메일 <input type="email"></p>
-                    <p>휴대폰 번호 <input type="tel"><input type="button" value="인증번호받기"></p>
-                    <section>
+            <div>
+                <form action="#" method="post" id="form">
+                    <p class="id important">아이디 <input type="text"><input type="button" value="아이디확인"></p>
+                    <p class="password important">비밀번호 <input type="password"></p>
+                    <p class="password_check important">비밀번호 확인 <input type="password"></p>
+                    <p class="name important">이름 <input type="text"></p>
+                    <p class="email">이메일 <input type="email"></p>
+                    <p class="tel important">휴대폰 번호 <input type="tel"><input type="button" value="인증번호받기"></p>
+                    <section class="address">
                         <h3>주소 입력</h3>
                         <input type="text" id="postcode" placeholder="우편번호">
                         <input type="button" class="daum_post" value="우편번호 찾기"><br>
@@ -82,6 +82,12 @@
                 </form>
             </div>
         </div>
+        <p class="footer">
+            <button>이용약관</button>
+            <button>개인정보처리방침</button>
+            <button>책임의 한계와 법적고지</button>
+            <button>회원정보 고객센터</button>
+        </p>
     </article>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script src="js/kimjoin.js"></script>

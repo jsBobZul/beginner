@@ -58,4 +58,13 @@ window.onload = function() {
         });
     });
 
+    // 폼 이벤트
+    const joinGo = document.querySelector("button[type='submit']");
+    // joinGo.addEventListener('click', function(event){
+    //     event.preventDefault();
+    // })
+    // form.onsubmit = function(){
+    //     // event.preventDefault();
+    //     return false;
+    // };
 };
