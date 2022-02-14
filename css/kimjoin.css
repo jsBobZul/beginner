@@ -66,6 +66,7 @@ form p{
 button[type="submit"]{
     display: block;
     margin: 0 auto;
+    padding: 0 10px;
     clear: both;
     background: #6667ab;
     color: white;
