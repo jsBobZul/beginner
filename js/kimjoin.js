@@ -64,6 +64,14 @@ window.onload = function() {
     let idReg = RegExp(/^[a-zA-Z0-9]+$/);
     // 최소 5자, 대문자 하나 이상, 소문자 하나, 숫자 하나 및 특수 문자 하나 이상
     let passwordReg = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{5,}$/);
+    let phone = document.querySelector("input[type='tel']");
+    
+    phone.oninput = function (){
+        phone.value = phone.value
+            .replace(/[^0-9]/, '')
+            .replace(/^(\d{3,4})(\d{4})$/, `$1-$2`);
+    };
+
 
     const joinGo = document.querySelector("button[type='submit']");
     joinGo.addEventListener('click', function(event){
