@@ -1,4 +1,154 @@
 window.onload = function () {
+
+    // 회원가입약관
+    fetch('../회원가입약관').then(function (response) {
+        response.text().then(function (text) {
+            document.querySelector('.join_text').innerHTML = '<textarea readonly="readonly" cols="100" rows="10" style="resize:none; padding:0 0 0 5px;">' + text + '</textarea>';
+        });
+    });
+
+    //--------- 폼 유효성 검사 및 이벤트----------
+
+    // 아이디 대/소문자, 숫자만 가능
+    const joinId = document.querySelector('input[placeholder^="아이디"]');
+    let idReg = RegExp(/^[a-zA-Z0-9]+$/);
+    const idLog = document.querySelector('.id_log');
+    joinId.addEventListener("focus", function () {
+        let idText = document.createTextNode("대/소문자 구분 없이 영어, 숫자만 가능합니다.");
+        idLog.appendChild(idText);
+    });
+
+    // 아이디 체크
+    const idCheck = document.querySelector('input[value="아이디확인"]');
+    idCheck.addEventListener('click', function () {
+        if (joinId.value !== "") {
+            if (!idReg.test(joinId.value)) {
+                alert('아이디를 확인해주세요!\n대/소문자 구분 없이 영어, 숫자만 가능합니다.');
+            } else {
+                alert(joinId.value + '는 사용 가능한 아이디입니다.');
+            }
+        } else {
+            alert("아이디를 입력해주세요.");
+        };
+    });
+
+    // 비밀번호 이벤트 최소 5자, 대문자 하나 이상, 소문자 하나, 숫자 하나 및 특수 문자 하나 이상
+    const joinPw = document.querySelector('input[placeholder="비밀번호"]');
+    let pwReg = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{5,}$/);
+    const pwLog = document.querySelector('.pass_log');
+    joinPw.addEventListener("focus", function () {
+        let pwText = document.createTextNode("대/소문자,숫자,특수문자 포함한 최소 5자 이상 비밀번호 입력해주세요.");
+        pwLog.appendChild(pwText);
+    });
+
+    // 폼 공통 블러 이벤트
+    let joinBlur = function logInBlur(log, area, reg) {
+        log.innerText = "";
+        log.style.color = "#c4c4c4";
+        if (area.value !== "") {
+            if (!reg.test(area.value)) {
+                log.style.color = "red";
+                log.innerText = "정확한 값을 입력해주세요.";
+                log.appendChild(document.createElement("br"));
+                area.focus();
+            };
+        };
+    };
+
+    joinId.addEventListener("blur", function () {
+        joinBlur(idLog, joinId, idReg);
+    });
+    joinPw.addEventListener("blur", function () {
+        joinBlur(pwLog, joinPw, pwReg);
+    });
+
+    // 비밀번호 체크
+    const pwChk = document.querySelector('input[placeholder^="비밀번호를 확인"]');
+    const pwChkBt = document.querySelector('input[value^="비밀번호 확인"]');
+    pwChkBt.addEventListener('click', function () {
+        if (joinPw.value !== "" && pwChk.value !== "") {
+            if (joinPw.value !== pwChk.value) {
+                alert('비밀번호가 다릅니다.\n비밀번호를 정확히 입력해주세요.');
+            } else {
+                alert('같은 비밀번호입니다.');
+            };
+        } else {
+            alert('비밀번호를 입력해주세요.');
+        };
+    });
+
+    // 이름체크 이벤트
+    let nameReg = RegExp(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/); // 한글체크
+    const nameLog = document.querySelector('.name_log');
+    const name = document.querySelector('input[placeholder="이름"]');
+    name.addEventListener('focus', function () {
+        if (name.value == "") {
+            nameLog.innerText = "한글 이름만 가능합니다.";
+            nameLog.style.fontSize = "12px";
+            nameLog.style.color = "#a1a1a1";
+        };
+    });
+    name.addEventListener("blur", function () {
+        joinBlur(nameLog, name, nameReg);
+    });
+
+    // 이메일 체크 이벤트
+    let emailReg = RegExp(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i); //숫자 (0~9) or 알파벳 (a~z, A~Z) 으로 시작하며 중간에 -_. 문자가 있을 수 있으며 그 후 숫자 (0~9) or 알파벳 (a~z, A~Z)이 올 수도 있고 연달아 올 수도 있고 없을 수도 있다. @ 는 반드시 존재하며 . 도 반드시 존재하고 a~z, A~Z 의 문자가 2,3개 존재하고 i = 대소문자 구분 안한다.
+    const emailLog = document.querySelector('.email_log');
+    const email = document.querySelector('input[type="email"]');
+    email.addEventListener("focus", function () {
+        emailLog.innerText = '이메일을 형식에 맞게 입력해주세요.';
+        emailLog.style.fontSize = "12px";
+        emailLog.style.color = "#a1a1a1";
+        if (email.value !== "") {
+            if (!emailReg.test(email.value)) {
+                emailLog.style.color = "red";
+            };
+        };
+    });
+    email.addEventListener("blur", function () {
+        joinBlur(emailLog, email, emailReg);
+    });
+
+    // 휴대폰 번호 입력 이벤트
+    const phone = document.querySelector("input[type='tel']");
+    let phoneReg = RegExp(/^[0-9]+/g).test(phone.value);
+    const phoneLog = document.querySelector(".phone_log");
+    // 폰 번호 선택 옵션 넣기
+    fetch('../폰번호옵션').then(function (response) {
+        let phoneHead = document.querySelector(".tel > select");
+        response.text().then(function (text) {
+            phoneHead.innerHTML = text;
+        });
+    });
+    // 폰 번호 자동 하이폰
+    phone.oninput = function () {
+        phone.value = phone.value
+            .replace(/[^0-9]/, "")
+            .replace(/^(\d{3,4})(\d{4})$/, `$1-$2`);
+    };
+    // 폰 번호 포커스 블러 이벤트
+    phone.addEventListener('focus', function () {
+        if (!phoneReg) {
+            phone.focus();
+            phoneLog.innerText = "숫자만 입력 가능합니다.";
+            phoneLog.style.fontSize = "12px";
+            phoneLog.style.color = "#a1a1a1";
+        };
+    });
+    phone.addEventListener("blur", function () {
+        phoneLog.innerText = "";
+    });
+    // 휴대폰 인증번호받기
+    const authBtn = document.querySelector("input[value^='인증']");
+    authBtn.addEventListener('click', function () {
+        if (phone.value == "") {
+            alert("휴대폰 번호를 입력해주세요.");
+        } else {
+            alert("현재는 인증이 불가능합니다.");
+        };
+    });
+
     // 주소검색
     function daumPostcode() {
         new daum.Postcode({
@@ -52,157 +202,52 @@ window.onload = function () {
     const postButton = document.querySelector(".daum_post");
     postButton.addEventListener('click', daumPostcode);
 
-    // 회원가입약관
-    fetch('../회원가입약관').then(function (response) {
-        response.text().then(function (text) {
-            document.querySelector('.join_text').innerHTML = '<textarea readonly="readonly" cols="100" rows="10" style="resize:none; padding:0 0 0 5px;">' + text + '</textarea>';
-        });
-    });
-
-    //--------- 폼 유효성 검사 및 이벤트----------
-
-    // 아이디 대/소문자, 숫자만 가능
-    const joinId = document.querySelector('input[placeholder^="아이디"]');
-    let idReg = RegExp(/^[a-zA-Z0-9]+$/);
-    const idLog = document.querySelector('.id_log');
-    joinId.addEventListener("focus", function () {
-        let idText = document.createTextNode("대/소문자 구분 없이 영어, 숫자만 가능합니다.");
-        idLog.appendChild(idText);
-    });
-    // 아이디 체크
-    const idCheck = document.querySelector('input[value="아이디확인"]');
-    idCheck.addEventListener('click', function () {
-        if(joinId.value !==""){
-            if (!idReg.test(joinId.value)) {
-                alert('아이디를 확인해주세요!\n대/소문자 구분 없이 영어, 숫자만 가능합니다.');
-            } else {
-                alert(joinId.value + '는 사용 가능한 아이디입니다.');
-            }
-        }else{
-            alert("아이디를 입력해주세요.");
-        };
-    });
-
-    // 비밀번호 이벤트 최소 5자, 대문자 하나 이상, 소문자 하나, 숫자 하나 및 특수 문자 하나 이상
-    const joinPw = document.querySelector('input[placeholder="비밀번호"]');
-    let pwReg = RegExp(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{5,}$/);
-    const pwLog = document.querySelector('.pass_log');
-    joinPw.addEventListener("focus", function () {
-        let pwText = document.createTextNode("대/소문자,숫자,특수문자 포함한 최소 5자 이상 비밀번호 입력해주세요.");
-        pwLog.appendChild(pwText);
-    });
-
-    // 폼 공통 블러 이벤트
-    let joinBlur = function logInBlur(log, area, reg) {
-        log.innerText = "";
-        log.style.color = "#c4c4c4";
-        if (area.value !== "") {
-            if (!reg.test(area.value)) {
-                log.style.color = "red";
-                log.innerText = "정확한 값을 입력해주세요.";
-                log.appendChild(document.createElement("br"));
-                area.focus();
-            };
-        };
-    };
-
-    joinId.addEventListener("blur", function () {
-        joinBlur(idLog, joinId, idReg);
-    });
-    joinPw.addEventListener("blur", function () {
-        joinBlur(pwLog, joinPw, pwReg);
-    });
-
-    // 비밀번호 체크
-    const pwCh = document.querySelector('input[placeholder^="비밀번호를 확인"]');
-    const pwChkBt = document.querySelector('input[value^="비밀번호 확인"]');
-    pwChkBt.addEventListener('click', function () {
-        if (joinPw.value !== "" && pwCh.value !== "") {
-            if (joinPw.value !== pwCh.value) {
-                alert('비밀번호가 다릅니다.\n비밀번호를 정확히 입력해주세요.');
-            } else {
-                alert('같은 비밀번호입니다.');
-            };
-        } else {
-            alert('비밀번호를 입력해주세요.');
-        };
-    });
-
-    // 이름체크 이벤트
-    let nameReg = RegExp(/[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/); // 한글체크
-    const nameLog = document.querySelector('.name_log');
-    const name = document.querySelector('input[placeholder="이름"]');
-    name.addEventListener('focus', function () {
-        if (name.value == "") {
-            nameLog.innerText = "한글 이름만 가능합니다.";
-            nameLog.style.fontSize = "12px";
-            nameLog.style.color = "#a1a1a1";
-        };
-    });
-    name.addEventListener("blur", function () {
-        joinBlur(nameLog, name, nameReg);
-    });
-
-    // 이메일 체크 이벤트
-    let emailReg = RegExp(/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i); //숫자 (0~9) or 알파벳 (a~z, A~Z) 으로 시작하며 중간에 -_. 문자가 있을 수 있으며 그 후 숫자 (0~9) or 알파벳 (a~z, A~Z)이 올 수도 있고 연달아 올 수도 있고 없을 수도 있다. @ 는 반드시 존재하며 . 도 반드시 존재하고 a~z, A~Z 의 문자가 2,3개 존재하고 i = 대소문자 구분 안한다.
-    const emailLog = document.querySelector('.email_log');
-    const email = document.querySelector('input[type="email"]');
-    email.addEventListener("focus", function () {
-        emailLog.innerText = '이메일을 형식에 맞게 입력해주세요.';
-        emailLog.style.fontSize = "12px";
-        emailLog.style.color = "#a1a1a1";
-        if(email.value !== ""){
-            if (!emailReg.test(email.value)) {
-                emailLog.style.color = "red";
-            };
-        };
-    });
-    email.addEventListener("blur", function () {
-        joinBlur(emailLog, email, emailReg);
-    });
-
-    // 휴대폰 번호 입력 이벤트
-    let phone = document.querySelector("input[type='tel']");
-    let phoneReg = RegExp(/^[0-9]+/g).test(phone.value);
-    let phoneLog = document.querySelector(".phone_log");
-    // 폰 번호 선택 옵션 넣기
-    fetch('../폰번호옵션').then(function (response) {
-        let phoneHead = document.querySelector(".tel > select");
-        response.text().then(function (text) {
-            phoneHead.innerHTML = text;
-        });
-    });
-    // 폰 번호 자동 하이폰
-    phone.oninput = function () {
-        phone.value = phone.value
-        .replace(/[^0-9]/, "")
-        .replace(/^(\d{3,4})(\d{4})$/, `$1-$2`);
-    };
-    // 폰 번호 포커스 블러 이벤트
-    phone.addEventListener('focus', function () {
-        if (!phoneReg) {
-            phone.focus();
-            phoneLog.innerText = "숫자만 입력 가능합니다.";
-            phoneLog.style.fontSize = "12px";
-            phoneLog.style.color = "#a1a1a1";
-        };
-    });
-    phone.addEventListener("blur", function(){
-        phoneLog.innerText = "";
-    });
-    // 휴대폰 인증번호받기
-    const authBtn = document.querySelector("input[value^='인증']");
-    authBtn.addEventListener('click', function(){
-        if(phone.value == ""){
-            alert("휴대폰 번호를 입력해주세요.");
-        }else{
-            alert("현재는 인증이 불가능합니다.");
-        };
-    });
-
     const joinGo = document.querySelector("button[type='submit']");
     joinGo.addEventListener('click', function (event) {
         event.preventDefault();
+        function finalCheck(area, reg, text) {
+            if (area.value !== "") {
+                if (!reg.test(area.value)) {
+                    alert(text + ' 값을 확인해주세요.');
+                    area.focus();
+                };
+            } else {
+                alert(text + '를 입력해주세요.');
+            };
+        };
+        // let f1 = finalCheck(joinId, idReg, '아이디');
+        // let f2 = finalCheck(joinPw, pwReg, '패스워드');
+        // let f3 = finalCheck(name, nameReg, '이름');
+        // let f4 = finalCheck(phone, phoneReg, '휴대폰 번호');
+        // let checkBoxs = document.querySelectorAll('input[type="checkbox"]');
+        // let f5 = (function(){
+        //     if(!checkBoxs.checked) {
+        //         alert("체크박스 모두 동의해주세요.");
+        //     }else{
+        //         return false;
+        //     };
+        // })();
+        // if(f1&&f2&&f3&&f4&&f5){
+        //     alert("현재 가입이 불가능합니다. 고객센터 000-0000");
+        // };
+        finalCheck(joinId, idReg, '아이디');
+        finalCheck(joinPw, pwReg, '패스워드');
+        finalCheck()
+        finalCheck(name, nameReg, '이름');
+        finalCheck(phone, phoneReg, '휴대폰 번호');
+        let checkBoxs = document.querySelectorAll('input[type="checkbox"]');
+        let f5 = (function(){
+            if(!checkBoxs.checked) {
+                alert("체크박스 모두 동의해주세요.");
+            }else{
+                return false;
+            };
+        })();
+        // if(f1&&f2&&f3&&f4&&f5){
+        //     alert("현재 가입이 불가능합니다. 고객센터 000-0000");
+        // };
+
+
     });
 
 
