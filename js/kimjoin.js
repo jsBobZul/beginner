@@ -72,11 +72,15 @@ window.onload = function () {
     // 아이디 체크
     const idCheck = document.querySelector('input[value="아이디확인"]');
     idCheck.addEventListener('click', function () {
-        if (!idReg.test(joinId.value)) {
-            alert('아이디를 확인해주세요!\n대/소문자 구분 없이 영어, 숫자만 가능합니다.');
-        } else {
-            alert(joinId.value + '는 사용 가능한 아이디입니다.');
-        }
+        if(joinId.value !==""){
+            if (!idReg.test(joinId.value)) {
+                alert('아이디를 확인해주세요!\n대/소문자 구분 없이 영어, 숫자만 가능합니다.');
+            } else {
+                alert(joinId.value + '는 사용 가능한 아이디입니다.');
+            }
+        }else{
+            alert("아이디를 입력해주세요.");
+        };
     });
 
     // 비밀번호 이벤트 최소 5자, 대문자 하나 이상, 소문자 하나, 숫자 하나 및 특수 문자 하나 이상
@@ -184,6 +188,11 @@ window.onload = function () {
     });
     phone.addEventListener("blur", function(){
         phoneLog.innerText = "";
+    });
+    // 휴대폰 인증번호받기
+    let 인증버튼 = document.querySelector("button[value^='인증']");
+    인증버튼.addEventListener("click", function(){
+        alert("현재는 인증 할 수 없습니다.");
     });
 
     const joinGo = document.querySelector("button[type='submit']");
