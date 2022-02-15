@@ -2,6 +2,7 @@
 body{
     background: #313133;
     padding: 80px;
+    overflow: hidden;
 }
 header{
     width: 350px;
@@ -10,9 +11,6 @@ header{
     flex-direction: column;
     justify-content: center;
     background: black;
-}
-header.on{
-    left: 0px;
 }
 header a{
     margin: 20px auto;
@@ -23,15 +21,16 @@ header a:hover{
     color: #666ab7;
 }
 /* 메인 */
-main{
+.main_inner{
     width: 1200px;
     height: calc(100vh - 80px);
     margin: 0 auto;
-    position: relative;
-    /* top: 80px;
-    left: 0;
-    transition: left 0.5s ease-out;
-    z-index: 1; */
+    position: absolute;
+    top: 80px;
+    transition: transform 0.5s ease-out;
+}
+.main_inner.on{
+    transform: translate(350px, 0);
 }
 .nav_button{
     width: 100px;
@@ -92,7 +91,7 @@ main{
     width: 50px;
     height: 50px;
     background: white;
-    box-shadow: 2px 2px 6px 0px rgb(0 0 0 / 33%), inset 2px 2px 0px 0px rgb(29 27 54 / 15%);
+    box-shadow: 0px 0px 1px 1px rgb(0 0 0 / 33%), inset 1px 1px 0px 0px rgb(29 27 54 / 15%);
     border-radius: 50%;
     transform: translate(50%, 0);
     position: relative;
@@ -101,7 +100,7 @@ main{
     content: "";
     display: block;
     width: 3px;
-    height: 20px;
+    height: 100%;
     background: #d4d4d4;
     position: absolute;
     left: 50%;

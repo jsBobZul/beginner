@@ -1,8 +1,8 @@
 window.onload = function () {
-    const header = document.querySelector("header");
+    const mainInner = document.querySelector(".main_inner");
     const navBtn = document.querySelector(".nav_button");
     navBtn.addEventListener("click", function(){
-        header.classList.toggle("on");
+        mainInner.classList.toggle("on");
     });
     
     const mainBtn = document.querySelector(".slide_button");
