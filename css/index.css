@@ -102,8 +102,8 @@ footer{
     content: "";
     display: block;
     width: 3px;
-    height: 100%;
-    background: #d4d4d4;
+    height: 10%;
+    background: skyblue;
     position: absolute;
     left: 50%;
 }
