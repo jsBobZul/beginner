@@ -9,13 +9,16 @@ window.onload = function () {
     const mainBtnInner = document.querySelector(".slide_button > span");
     const wrapping = document.querySelector(".wrapping");
     let index = 1;
-    mainBtn.addEventListener("click", function(){
+    let slideEvent = function (){
         wrapping.style.left = `-${index*100}%`;
         mainBtnInner.style.transform = `translate(50%, 0) rotate(${index*120}deg)`;
         index++;
         if(index === 3){
             index = 0;
         };
-    });
+    };
+    let i = 1;
+    mainBtn.addEventListener("click", slideEvent);
+    wrapping.addEventListener("mouseup", slideEvent);
 
 };

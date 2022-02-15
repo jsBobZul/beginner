@@ -2,6 +2,7 @@
 :root{
     --common-height: calc(100vh - 170px);
     --common-width: calc(100vw - 100px);
+    --year-color: #666ab7;
 }
 body{
     background: #313133;
@@ -22,7 +23,7 @@ header a{
     font-size: 30px;
 }
 header a:hover{
-    color: #666ab7;
+    color: var(--year-color);
 }
 /* 메인 */
 .main_inner{
@@ -107,7 +108,7 @@ footer{
     display: block;
     width: 3px;
     height: 10%;
-    background: skyblue;
+    background: var(--year-color);
     position: absolute;
     left: 50%;
 }
