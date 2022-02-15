@@ -147,8 +147,10 @@ window.onload = function () {
         emailLog.innerText = '이메일을 형식에 맞게 입력해주세요.';
         emailLog.style.fontSize = "12px";
         emailLog.style.color = "#a1a1a1";
-        if (!emailReg.test(email.value)) {
-            emailLog.style.color = "red";
+        if(email.value !== ""){
+            if (!emailReg.test(email.value)) {
+                emailLog.style.color = "red";
+            };
         };
     });
     email.addEventListener("blur", function () {
@@ -166,18 +168,22 @@ window.onload = function () {
     // 폰 번호 자동 하이폰
     phone.oninput = function () {
         phone.value = phone.value
-            .replace(/[^0-9]/, "")
-            .replace(/^(\d{3,4})(\d{4})$/, `$1-$2`);
+        .replace(/[^0-9]/, "")
+        .replace(/^(\d{3,4})(\d{4})$/, `$1-$2`);
     };
+    // 폰 번호 포커스 블러 이벤트
+    let phoneLog = document.querySelector(".phone_log");
     phone.addEventListener('focus', function () {
         let reg = (/^[0-9]+/g).test(phone.value);
-        let log = document.querySelector(".phone_log");
         if (!reg) {
             phone.focus();
-            log.innerText = "숫자만 입력 가능합니다.";
-            log.style.fontSize = "12px";
-            log.style.color = "red";
+            phoneLog.innerText = "숫자만 입력 가능합니다.";
+            phoneLog.style.fontSize = "12px";
+            phoneLog.style.color = "#a1a1a1";
         };
+    });
+    phone.addEventListener("blur", function(){
+        phoneLog.innerText = "";
     });
 
     const joinGo = document.querySelector("button[type='submit']");
