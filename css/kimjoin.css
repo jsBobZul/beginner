@@ -115,3 +115,6 @@ button[type="submit"]{
     position: absolute;
     top: 0px;
 }
+input[placeholder]{
+    font-size: 15px;
+}
