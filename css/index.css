@@ -1,4 +1,7 @@
 @charset "UTF-8";
+body{
+    background: #B34D24;
+}
 header{
     width: 350px;
     height: 100vh;
@@ -6,7 +9,12 @@ header{
     flex-direction: column;
     justify-content: center;
     background: black;
-    transform: translate(-350px, 0);
+    position: fixed;
+    left: -350px;
+    transition: left 0.5s ease-out;
+}
+header.on{
+    left: 0px;
 }
 header a{
     margin: 20px auto;
@@ -15,4 +23,21 @@ header a{
 }
 header a:hover{
     color: #666ab7;
+}
+.nav_button{
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    animation: shiver 1s linear infinite alternate-reverse;
+}
+.nav_button:hover{
+    animation: none;
+}
+@keyframes shiver{
+    from{transform: rotate(10deg);}
+    to{transform: rotate(-8deg);}
 }
