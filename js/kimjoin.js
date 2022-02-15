@@ -225,17 +225,18 @@ window.onload = function () {
             pwChk.focus();
         };
     };
-
+    let checkBoxsTure = checkBoxs.forEach(function(eachBox){
+        eachBox.checked = true;
+    });
     function finalChkBox () {
-        if (!checkBoxs.checked) {
+        if (!checkBoxsTure) {
             alert("체크박스 모두 동의해주세요.");
-        } else {
             return false;
         };
     };
     joinGo.addEventListener('click', function (event) {
         event.preventDefault();
-        if (!(VC(joinId, idReg) && VC(joinPw, pwReg) && (joinPw.value == pwChk.value) && VC(name, nameReg) && VC(phone, phoneReg) && (checkboxs.checked))) {
+        if (!(VC(joinId, idReg) && VC(joinPw, pwReg) && (joinPw.value == pwChk.value) && VC(name, nameReg) && VC(phone, phoneReg) && checkBoxsTure)) {
             FC(joinId, idReg, '아이디');
             FC(joinPw, pwReg, '패스워드');
             finalPwChk();
@@ -245,8 +246,6 @@ window.onload = function () {
         } else {
             alert("현재 가입이 불가능합니다. 고객센터 000-0000");
         };
-
-
 
     });
 
