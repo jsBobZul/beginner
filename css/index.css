@@ -1,12 +1,12 @@
 @charset "UTF-8";
 body{
     background: #313133;
-    padding: 80px;
+    padding: 50px 50px 0 50px;
     overflow: hidden;
 }
 header{
     width: 350px;
-    height: 800px;
+    height: calc(100vh - 170px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,33 +23,18 @@ header a:hover{
 /* 메인 */
 .main_inner{
     position: absolute;
-    top: 80px;
+    top: 50px;
     transition: transform 0.5s ease-out;
 }
 .main_inner.on{
     transform: translate(350px, 0);
-}
-.nav_button{
-    width: 100px;
-    height: 100px;
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    animation: shiver 1s linear infinite alternate-reverse;
-    z-index: 2;
-}
-.nav_button:hover{
-    animation: none;
 }
 @keyframes shiver{
     from{transform: rotate(10deg);}
     to{transform: rotate(-8deg);}
 }
 .main_box{
-    width: calc(100vw - 160px);
-    height: calc(100vh - 80px);
+    width: calc(100vw - 100px);
     margin: 0 auto;
     overflow: hidden;
 }
@@ -61,7 +46,7 @@ header a:hover{
 }
 .project{
     width: 25%;
-    height: 800px;
+    height: calc(100vh - 170px);
     float: left;
 }
 .project.a{
@@ -73,6 +58,26 @@ header a:hover{
 .project.c{
     background: yellow;
 }
+/* 푸터 */
+footer{
+    width: calc(100vw - 100px);
+    height: 120px;
+    position: relative;
+}
+.nav_button{
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    animation: shiver 1s linear infinite alternate-reverse;
+    z-index: 2;
+}
+.nav_button:hover{
+    animation: none;
+}
 .slide_button{
     width: 100px;
     height: 100px;
@@ -80,7 +85,7 @@ header a:hover{
     position: absolute;
     border-radius: 50%;
     right: 20px;
-    bottom: 20px;
+    bottom: 10px;
     box-shadow: inset 3px 3px 10px 0px rgb(0 0 0 / 33%), inset 2px 0px 10px 0px #a9a9a9;
 }
 .slide_button > span{
