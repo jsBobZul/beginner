@@ -3,27 +3,30 @@
     width: 800px;
     margin: 0 auto;
     padding: 200px 0 50px 0;
-    border: 1px solid black;
     background: url(../img/chungjukim/login.png) no-repeat 50% 50px /300px;
 }
-.login > div:nth-of-type(1){
+.inner{
+    padding: 50px 0;
+    border: 1px solid #c4c4c4;
+}
+.inner > div:nth-of-type(1){
     width: fit-content;
     margin: 0 auto;
     display: flex;
 }
-.login > div:nth-of-type(1) P{
+.inner > div:nth-of-type(1) P{
     color: black;
 }
-.login > div:nth-of-type(1) input{
+.inner > div:nth-of-type(1) input{
     height: 50px;
     padding: 0 0 0 10px;
-    border: 1px solid black;
+    border: 1px solid #c4c4c4;
     border-radius: 30px;
 }
-.login > div:nth-of-type(1) > div{
+.inner > div:nth-of-type(1) > div{
     position: relative;
 }
-.login > div:nth-of-type(1) > div:nth-of-type(1){
+.inner > div:nth-of-type(1) > div:nth-of-type(1){
     display: flex;
     flex-direction: column;
     margin: 0 30px 0 0;
@@ -35,40 +38,40 @@
     font-size: 12px;
     font-weight: 700;
 }
-.login > div:last-child{
+.inner > div:last-child{
     width: fit-content;
     margin: 0 auto;
     clear: both;
 }
-.login > div:last-child button{
+.inner > div:last-child button{
     display: block;
     width: 200px;
     margin: 0 0 10px 0;
     text-align: center;
 }
-.login > div:last-child button:nth-child(1){
-    border: 1px solid black;
+.inner > div:last-child button:nth-child(1){
+    border: 1px solid #c4c4c4;
 }
-.login > div:last-child button:nth-child(2){
+.inner > div:last-child button:nth-child(2){
     background: green;
 }
-.login > div:last-child button span{
+.inner > div:last-child button span{
     display: block;
     float: left;
     margin: 0 -20px 0 20px;
     font-size: 1.5rem;
 }
-.login > div:last-child button:nth-child(2) span{
+.inner > div:last-child button:nth-child(2) span{
     color: black;
 }
-.login > div:last-child button:nth-child(3){
+.inner > div:last-child button:nth-child(3){
     background: yellow;
 }
-.login > div:last-child button:nth-child(3) span{
+.inner > div:last-child button:nth-child(3) span{
     color: black;
     clear: both;
 }
-.login > div:last-child button b{
+.inner > div:last-child button b{
     display: block;
     padding: 6px 0 0 0;
 }
