@@ -112,7 +112,7 @@ window.onload = function () {
 
     // 휴대폰 번호 입력 이벤트
     const phone = document.querySelector("input[type='tel']");
-    let phoneReg = RegExp(/^[0-9]+/g).test(phone.value);
+    let phoneReg = RegExp(/^[0-9]+/g);
     const phoneLog = document.querySelector(".phone_log");
     // 폰 번호 선택 옵션 넣기
     fetch('../폰번호옵션').then(function (response) {
@@ -129,7 +129,7 @@ window.onload = function () {
     };
     // 폰 번호 포커스 블러 이벤트
     phone.addEventListener('focus', function () {
-        if (!phoneReg) {
+        if (!phoneReg.test(phone.value)) {
             phone.focus();
             phoneLog.innerText = "숫자만 입력 가능합니다.";
             phoneLog.style.fontSize = "12px";
@@ -201,18 +201,13 @@ window.onload = function () {
     // 우편찾기 클릭 이벤트
     const postButton = document.querySelector(".daum_post");
     postButton.addEventListener('click', daumPostcode);
-    
+
     // 최종 가입 이벤트
     let checkBoxs = document.querySelectorAll('input[type="checkbox"]');
     let checkBoxsChk = document.querySelectorAll('input[type="checkbox"]:checked');
     const joinGo = document.querySelector("button[type='submit']");
 
     let VC = function valueCheck(area, reg) {
-        // if(reg.test(area.value)){
-        //     return true;
-        // }else{
-        //     return false;
-        // };
         return reg.test(area.value);
     };
     let FC = function finalCheck(area, reg, text) {
@@ -225,21 +220,22 @@ window.onload = function () {
             alert(text + '를 입력해주세요.');
         };
     };
-    function finalPwChk () {
+
+    function finalPwChk() {
         if (joinPw.value !== pwChk.value) {
             alert('비밀번호 확인을 진행해주세요.');
             pwChk.focus();
         };
     };
-    let checkBoxsTure = function(){
-        if(checkBoxs.length === checkBoxsChk.length){
+    let checkBoxsTure = function () {
+        if (checkBoxs.length === checkBoxsChk.length) {
             return true;
-        }else if(checkBoxs.length !== checkBoxsChk.length){
+        } else if (checkBoxs.length !== checkBoxsChk.length) {
             return false;
         };
     };
-    console.log(checkBoxsTure());
-    function finalChkBox () {
+
+    function finalChkBox() {
         if (!checkBoxsTure()) {
             alert("체크박스 모두 동의해주세요.");
             return false;
@@ -247,34 +243,17 @@ window.onload = function () {
     };
     joinGo.addEventListener('click', function (event) {
         event.preventDefault();
-        // if (!(VC(joinId, idReg) && VC(joinPw, pwReg) && (joinPw.value == pwChk.value) && VC(name, nameReg) && VC(phone, phoneReg) && checkBoxsTure())) {
-        //     console.log("작동");
-        //     //     FC(joinId, idReg, '아이디');
-        //     //     FC(joinPw, pwReg, '패스워드');
-        //     //     finalPwChk();
-        //     //     FC(name, nameReg, '이름');
-        //     //     FC(phone, phoneReg, '휴대폰 번호');
-        //     // checkBoxsTure();
-        //     // finalChkBox();
-        // } else {
-        //     console.log("wkwe");
-        //     alert("현재 가입이 불가능합니다. 고객센터 000-0000");
-        // };
-        if (!(VC(joinId, idReg) && VC(joinPw, pwReg) && (joinPw.value == pwChk.value) && VC(name, nameReg) && VC(phone, phoneReg))) {
-            console.log("작동");
-            //     FC(joinId, idReg, '아이디');
-            //     FC(joinPw, pwReg, '패스워드');
-            //     finalPwChk();
-            //     FC(name, nameReg, '이름');
-            //     FC(phone, phoneReg, '휴대폰 번호');
-            // checkBoxsTure();
-            // finalChkBox();
+        if (!(VC(joinId, idReg) && VC(joinPw, pwReg) && (joinPw.value == pwChk.value) && VC(name, nameReg) && VC(phone, phoneReg) && checkBoxsTure())) {
+            FC(joinId, idReg, '아이디');
+            FC(joinPw, pwReg, '패스워드');
+            finalPwChk();
+            FC(name, nameReg, '이름');
+            FC(phone, phoneReg, '휴대폰 번호');
+            checkBoxsTure();
+            finalChkBox();
         } else {
-            console.log("wkwe");
-            // alert("현재 가입이 불가능합니다. 고객센터 000-0000");
+            alert("현재 가입이 불가능합니다. 고객센터 000-0000");
         };
-
     });
-
 
 };
