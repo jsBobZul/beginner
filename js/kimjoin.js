@@ -161,8 +161,11 @@ window.onload = function () {
         joinBlur(emailLog, email, emailReg);
     });
 
-    // 폰 번호 선택 옵션 넣기
+    // 휴대폰 번호 입력 이벤트
     let phone = document.querySelector("input[type='tel']");
+    let phoneReg = RegExp(/^[0-9]+/g).test(phone.value);
+    let phoneLog = document.querySelector(".phone_log");
+    // 폰 번호 선택 옵션 넣기
     fetch('../폰번호옵션').then(function (response) {
         let phoneHead = document.querySelector(".tel > select");
         response.text().then(function (text) {
@@ -176,10 +179,8 @@ window.onload = function () {
         .replace(/^(\d{3,4})(\d{4})$/, `$1-$2`);
     };
     // 폰 번호 포커스 블러 이벤트
-    let phoneLog = document.querySelector(".phone_log");
     phone.addEventListener('focus', function () {
-        let reg = (/^[0-9]+/g).test(phone.value);
-        if (!reg) {
+        if (!phoneReg) {
             phone.focus();
             phoneLog.innerText = "숫자만 입력 가능합니다.";
             phoneLog.style.fontSize = "12px";
@@ -190,9 +191,13 @@ window.onload = function () {
         phoneLog.innerText = "";
     });
     // 휴대폰 인증번호받기
-    let 인증버튼 = document.querySelector("button[value^='인증']");
-    인증버튼.addEventListener("click", function(){
-        alert("현재는 인증 할 수 없습니다.");
+    const authBtn = document.querySelector("input[value^='인증']");
+    authBtn.addEventListener('click', function(){
+        if(phone.value == ""){
+            alert("휴대폰 번호를 입력해주세요.");
+        }else{
+            alert("현재는 인증이 불가능합니다.");
+        };
     });
 
     const joinGo = document.querySelector("button[type='submit']");
