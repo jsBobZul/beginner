@@ -204,9 +204,15 @@ window.onload = function () {
     
     // 최종 가입 이벤트
     let checkBoxs = document.querySelectorAll('input[type="checkbox"]');
+    let checkBoxsChk = document.querySelectorAll('input[type="checkbox"]:checked');
     const joinGo = document.querySelector("button[type='submit']");
 
     let VC = function valueCheck(area, reg) {
+        // if(reg.test(area.value)){
+        //     return true;
+        // }else{
+        //     return false;
+        // };
         return reg.test(area.value);
     };
     let FC = function finalCheck(area, reg, text) {
@@ -225,26 +231,47 @@ window.onload = function () {
             pwChk.focus();
         };
     };
-    let checkBoxsTure = checkBoxs.forEach(function(eachBox){
-        eachBox.checked = true;
-    });
+    let checkBoxsTure = function(){
+        if(checkBoxs.length === checkBoxsChk.length){
+            return true;
+        }else if(checkBoxs.length !== checkBoxsChk.length){
+            return false;
+        };
+    };
+    console.log(checkBoxsTure());
     function finalChkBox () {
-        if (!checkBoxsTure) {
+        if (!checkBoxsTure()) {
             alert("체크박스 모두 동의해주세요.");
             return false;
         };
     };
     joinGo.addEventListener('click', function (event) {
         event.preventDefault();
-        if (!(VC(joinId, idReg) && VC(joinPw, pwReg) && (joinPw.value == pwChk.value) && VC(name, nameReg) && VC(phone, phoneReg) && checkBoxsTure)) {
-            FC(joinId, idReg, '아이디');
-            FC(joinPw, pwReg, '패스워드');
-            finalPwChk();
-            FC(name, nameReg, '이름');
-            FC(phone, phoneReg, '휴대폰 번호');
-            finalChkBox();
+        // if (!(VC(joinId, idReg) && VC(joinPw, pwReg) && (joinPw.value == pwChk.value) && VC(name, nameReg) && VC(phone, phoneReg) && checkBoxsTure())) {
+        //     console.log("작동");
+        //     //     FC(joinId, idReg, '아이디');
+        //     //     FC(joinPw, pwReg, '패스워드');
+        //     //     finalPwChk();
+        //     //     FC(name, nameReg, '이름');
+        //     //     FC(phone, phoneReg, '휴대폰 번호');
+        //     // checkBoxsTure();
+        //     // finalChkBox();
+        // } else {
+        //     console.log("wkwe");
+        //     alert("현재 가입이 불가능합니다. 고객센터 000-0000");
+        // };
+        if (!(VC(joinId, idReg) && VC(joinPw, pwReg) && (joinPw.value == pwChk.value) && VC(name, nameReg) && VC(phone, phoneReg))) {
+            console.log("작동");
+            //     FC(joinId, idReg, '아이디');
+            //     FC(joinPw, pwReg, '패스워드');
+            //     finalPwChk();
+            //     FC(name, nameReg, '이름');
+            //     FC(phone, phoneReg, '휴대폰 번호');
+            // checkBoxsTure();
+            // finalChkBox();
         } else {
-            alert("현재 가입이 불가능합니다. 고객센터 000-0000");
+            console.log("wkwe");
+            // alert("현재 가입이 불가능합니다. 고객센터 000-0000");
         };
 
     });
