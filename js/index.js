@@ -6,11 +6,12 @@ window.onload = function () {
     });
     
     const mainBtn = document.querySelector(".slide_button");
+    const mainBtnInner = document.querySelector(".slide_button > span");
     const wrapping = document.querySelector(".wrapping");
     let index = 1;
     mainBtn.addEventListener("click", function(){
         wrapping.style.left = `-${index*100}%`;
-        mainBtn.style.transform = `rotate(${index*120}deg)`;
+        mainBtnInner.style.transform = `translate(50%, 0) rotate(${index*120}deg)`;
         index++;
         if(index === 3){
             index = 0;
