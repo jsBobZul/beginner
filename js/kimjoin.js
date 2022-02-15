@@ -201,51 +201,51 @@ window.onload = function () {
     // 우편찾기 클릭 이벤트
     const postButton = document.querySelector(".daum_post");
     postButton.addEventListener('click', daumPostcode);
-
+    
+    // 최종 가입 이벤트
+    let checkBoxs = document.querySelectorAll('input[type="checkbox"]');
     const joinGo = document.querySelector("button[type='submit']");
+
+    let VC = function valueCheck(area, reg) {
+        return reg.test(area.value);
+    };
+    let FC = function finalCheck(area, reg, text) {
+        if (area.value !== "") {
+            if (!reg.test(area.value)) {
+                alert(text + ' 값을 확인해주세요.');
+                area.focus();
+            };
+        } else {
+            alert(text + '를 입력해주세요.');
+        };
+    };
+    function finalPwChk () {
+        if (joinPw.value !== pwChk.value) {
+            alert('비밀번호 확인을 진행해주세요.');
+            pwChk.focus();
+        };
+    };
+
+    function finalChkBox () {
+        if (!checkBoxs.checked) {
+            alert("체크박스 모두 동의해주세요.");
+        } else {
+            return false;
+        };
+    };
     joinGo.addEventListener('click', function (event) {
         event.preventDefault();
-        function finalCheck(area, reg, text) {
-            if (area.value !== "") {
-                if (!reg.test(area.value)) {
-                    alert(text + ' 값을 확인해주세요.');
-                    area.focus();
-                };
-            } else {
-                alert(text + '를 입력해주세요.');
-            };
+        if (!(VC(joinId, idReg) && VC(joinPw, pwReg) && (joinPw.value == pwChk.value) && VC(name, nameReg) && VC(phone, phoneReg) && (checkboxs.checked))) {
+            FC(joinId, idReg, '아이디');
+            FC(joinPw, pwReg, '패스워드');
+            finalPwChk();
+            FC(name, nameReg, '이름');
+            FC(phone, phoneReg, '휴대폰 번호');
+            finalChkBox();
+        } else {
+            alert("현재 가입이 불가능합니다. 고객센터 000-0000");
         };
-        // let f1 = finalCheck(joinId, idReg, '아이디');
-        // let f2 = finalCheck(joinPw, pwReg, '패스워드');
-        // let f3 = finalCheck(name, nameReg, '이름');
-        // let f4 = finalCheck(phone, phoneReg, '휴대폰 번호');
-        // let checkBoxs = document.querySelectorAll('input[type="checkbox"]');
-        // let f5 = (function(){
-        //     if(!checkBoxs.checked) {
-        //         alert("체크박스 모두 동의해주세요.");
-        //     }else{
-        //         return false;
-        //     };
-        // })();
-        // if(f1&&f2&&f3&&f4&&f5){
-        //     alert("현재 가입이 불가능합니다. 고객센터 000-0000");
-        // };
-        finalCheck(joinId, idReg, '아이디');
-        finalCheck(joinPw, pwReg, '패스워드');
-        finalCheck()
-        finalCheck(name, nameReg, '이름');
-        finalCheck(phone, phoneReg, '휴대폰 번호');
-        let checkBoxs = document.querySelectorAll('input[type="checkbox"]');
-        let f5 = (function(){
-            if(!checkBoxs.checked) {
-                alert("체크박스 모두 동의해주세요.");
-            }else{
-                return false;
-            };
-        })();
-        // if(f1&&f2&&f3&&f4&&f5){
-        //     alert("현재 가입이 불가능합니다. 고객센터 000-0000");
-        // };
+
 
 
     });
