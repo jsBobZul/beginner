@@ -16,7 +16,6 @@ window.onload = function () {
         if(index === 3){
             index = 0;
         };
-
     });
 
 };
