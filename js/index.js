@@ -17,7 +17,6 @@ window.onload = function () {
             index = 0;
         };
     };
-    let i = 1;
     mainBtn.addEventListener("click", slideEvent);
     wrapping.addEventListener("mouseup", slideEvent);
 
