@@ -12,7 +12,7 @@ article{
     margin: 0 auto;
 }
 .inner > section:nth-of-type(1) > h2{
-    border: 1px solid;
+    border: 1px solid #c4c4c4;
     border-bottom: none;
     text-indent: 5px;
 }
@@ -25,7 +25,7 @@ table{
 }
 table *{
     padding: 15px;
-    border: 1px solid;
+    border: 1px solid #c4c4c4;
 }
 table caption{
     border-bottom: none;
@@ -60,7 +60,7 @@ form p{
 .address{
     margin: 15px 0 0 0;
     padding: 10px;
-    border: 1px solid;
+    border: 1px solid #c4c4c4;
 }
 .check_list{
     float: right;
@@ -82,7 +82,7 @@ button[type="submit"]{
 .footer button{
     margin: 0 20px 0 0;
     position: relative;
-    color: #a1a1a1;
+    color: #c4c4c4;
     font-size: 0.8rem;
 }
 .footer button::before{
@@ -90,7 +90,7 @@ button[type="submit"]{
     display: block;
     width: 1px;
     height: 100%;
-    background: #a1a1a1;
+    background: #c4c4c4;
     position: absolute;
     left: -10px;
 }
@@ -116,5 +116,6 @@ button[type="submit"]{
     top: 0px;
 }
 input[placeholder]{
+    border: 1px solid #c4c4c4;
     font-size: 15px;
 }

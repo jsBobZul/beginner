@@ -3,7 +3,7 @@ window.onload = function () {
     // 회원가입약관
     fetch('../회원가입약관').then(function (response) {
         response.text().then(function (text) {
-            document.querySelector('.join_text').innerHTML = '<textarea readonly="readonly" cols="100" rows="10" style="resize:none; padding:0 0 0 5px;">' + text + '</textarea>';
+            document.querySelector('.join_text').innerHTML = '<textarea readonly="readonly" cols="100" rows="10" style="resize:none; padding:0 0 0 5px; border:1px solid #c4c4c4">' + text + '</textarea>';
         });
     });
 
