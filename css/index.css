@@ -83,6 +83,18 @@ header a:hover{
     bottom: 20px;
     box-shadow: inset 3px 3px 10px 0px rgb(0 0 0 / 33%), inset 2px 0px 10px 0px #a9a9a9;
 }
+.slide_button::before{
+    content: "클릭";
+    display: block;
+    animation: opacity 1.5s infinite;
+    position: absolute;
+    top: 0px;
+    left: 32px;
+}
+@keyframes opacity{
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
 .slide_button > span{
     display: block;
     width: 50px;
