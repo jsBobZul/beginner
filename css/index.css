@@ -1,4 +1,8 @@
 @charset "UTF-8";
+:root{
+    --common-height: calc(100vh - 170px);
+    --common-width: calc(100vw - 100px);
+}
 body{
     background: #313133;
     padding: 50px 50px 0 50px;
@@ -6,7 +10,7 @@ body{
 }
 header{
     width: 350px;
-    height: calc(100vh - 170px);
+    height: var(--common-height);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +38,7 @@ header a:hover{
     to{transform: rotate(-8deg);}
 }
 .main_box{
-    width: calc(100vw - 100px);
+    width: var(--common-width);
     margin: 0 auto;
     overflow: hidden;
 }
@@ -46,7 +50,7 @@ header a:hover{
 }
 .project{
     width: 25%;
-    height: calc(100vh - 170px);
+    height: var(--common-height);
     float: left;
 }
 .project.a{
@@ -60,7 +64,7 @@ header a:hover{
 }
 /* 푸터 */
 footer{
-    width: calc(100vw - 100px);
+    width: var(--common-width);
     height: 120px;
     position: relative;
 }
