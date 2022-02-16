@@ -112,7 +112,7 @@ window.onload = function () {
 
     // 휴대폰 번호 입력 이벤트
     const phone = document.querySelector("input[type='tel']");
-    let phoneReg = RegExp(/^[0-9]+/g);
+    let phoneReg = RegExp(/[^0-9]/g);
     const phoneLog = document.querySelector(".phone_log");
     // 폰 번호 선택 옵션 넣기
     fetch('../폰번호옵션').then(function (response) {

@@ -48,7 +48,7 @@ header button:hover{
     width: 400%;
     position: relative;
     left: 0;
-    transition: left 1s;
+    transition: left 0.1s;
 }
 .project{
     width: 25%;
@@ -105,8 +105,8 @@ footer{
     background: var(--button-color);
     box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset 2px 2px 2.5px 0px rgb(185 167 167 / 34%);
     border-radius: 50%;
-    transform: translate(50%, 0);
     position: relative;
+    left: 25px;
 }
 .slide_button > span::after{
     content: "";
