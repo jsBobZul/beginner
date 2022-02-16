@@ -62,13 +62,12 @@ window.onload = function () {
         };
     });
 
-
-    // let globalBtn = document.querySelectorAll('header > button'); // 글로벌 네비게이션 슬라이드 동기화
-    // for(let i = 0; i <  globalBtn.length; i++){
-    //     globalBtn[i].addEventListener('click', function(){
-    //         wrapping.style.left = `-${i*100}%`;
-    //         mainBtnInner.style.transform = `rotate(${i*90}deg)`;
-    //     });
-    // };
+    let globalBtn = document.querySelectorAll('header > button'); // 글로벌 네비게이션 슬라이드 동기화
+    for(let i = 0; i <  globalBtn.length; i++){
+        globalBtn[i].addEventListener('click', function(){
+            wrapping.style.left = `-${i*100}%`;
+            mainBtnInner.style.transform = `rotate(${i*90}deg)`;
+        });
+    };
 
 };

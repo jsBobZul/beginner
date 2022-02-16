@@ -15,23 +15,27 @@ header{
     height: var(--common-height);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     background: black;
+    padding: 160px 0 20px 0;
 }
-/* header button{
-    margin: 20px auto;
+header button{
     color: white;
     font-size: 30px;
 }
 header button:hover{
     color: var(--year-color);
-} */
-header a{
-    margin: 20px auto;
-    color: white;
-    font-size: 30px;
 }
-header a:hover{
+.link{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.link a{
+    color: white;
+    font-size: 14px;
+}
+.link a:hover{
     color: var(--year-color);
 }
 /* 메인 */
