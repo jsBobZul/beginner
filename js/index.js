@@ -44,6 +44,7 @@ window.onload = function () {
         };
     };
     mainBtn.addEventListener("click", slideRightEvent); // 메인 버튼 클릭 시 슬라이드 동작
+    // 슬라이드 이벤트
     let moveSlide
     wrapping.addEventListener("mousedown", function(e){
         moveSlide = e.offsetX;
