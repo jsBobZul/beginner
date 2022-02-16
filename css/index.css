@@ -18,12 +18,20 @@ header{
     justify-content: center;
     background: black;
 }
-header button{
+/* header button{
     margin: 20px auto;
     color: white;
     font-size: 30px;
 }
 header button:hover{
+    color: var(--year-color);
+} */
+header a{
+    margin: 20px auto;
+    color: white;
+    font-size: 30px;
+}
+header a:hover{
     color: var(--year-color);
 }
 /* 메인 */

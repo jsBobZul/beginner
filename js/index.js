@@ -19,10 +19,10 @@ window.onload = function () {
     wrapping.ondragstart = function(){ //다른 요소 드래그 방지
         return false;
     };
-    
+
     let slideRightEvent = function (){
         wrapping.style.left = `-${index*100}%`;
-        mainBtnInner.style.transform = `rotate(${index*90}deg)`;
+        // mainBtnInner.style.transform = `rotate(${index*90}deg)`;
         rotate = index*90;
         index++;
         if(index === 4){
@@ -63,12 +63,12 @@ window.onload = function () {
     });
 
 
-    let globalBtn = document.querySelectorAll('header > button'); // 글로벌 네비게이션 슬라이드 동기화
-    for(let i = 0; i <  globalBtn.length; i++){
-        globalBtn[i].addEventListener('click', function(){
-            wrapping.style.left = `-${i*100}%`;
-            mainBtnInner.style.transform = `rotate(${i*90}deg)`;
-        });
-    };
+    // let globalBtn = document.querySelectorAll('header > button'); // 글로벌 네비게이션 슬라이드 동기화
+    // for(let i = 0; i <  globalBtn.length; i++){
+    //     globalBtn[i].addEventListener('click', function(){
+    //         wrapping.style.left = `-${i*100}%`;
+    //         mainBtnInner.style.transform = `rotate(${i*90}deg)`;
+    //     });
+    // };
 
 };
