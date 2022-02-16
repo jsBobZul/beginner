@@ -11,11 +11,15 @@ window.onload = function () {
     const mainBtnInner = document.querySelector(".slide_button > span");
     const wrapping = document.querySelector(".wrapping");
     const project = document.querySelector(".project");
-
+    
     // 메인 슬라이드 구현
     let index = 1;
     let rotate = 90;
-
+    
+    wrapping.ondragstart = function(){ //다른 요소 드래그 방지
+        return false;
+    };
+    
     let slideRightEvent = function (){
         wrapping.style.left = `-${index*100}%`;
         mainBtnInner.style.transform = `rotate(${index*90}deg)`;
