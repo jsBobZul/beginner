@@ -22,7 +22,7 @@ window.onload = function () {
 
     let slideRightEvent = function (){
         wrapping.style.left = `-${index*100}%`;
-        // mainBtnInner.style.transform = `rotate(${index*90}deg)`;
+        mainBtnInner.style.transform = `rotate(${index*90}deg)`;
         rotate = index*90;
         index++;
         if(index === 4){
@@ -48,6 +48,10 @@ window.onload = function () {
         };
     };
     mainBtn.addEventListener("click", slideRightEvent); // 메인 버튼 클릭 시 슬라이드 동작
+    mainBtn.addEventListener("contextmenu", function(event){
+        event.preventDefault();
+        slideLeftEvent();
+    });
     // 슬라이드 이벤트
     let moveSlide
     wrapping.addEventListener("mousedown", function(e){
