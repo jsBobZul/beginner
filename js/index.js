@@ -22,7 +22,7 @@ window.onload = function () {
 
     let slideRightEvent = function (){
         wrapping.style.left = `-${index*100}%`;
-        mainBtnInner.style.transform = `rotate(${index*90}deg)`;
+        // mainBtnInner.style.transform = `rotate(${index*90}deg)`;
         mainBtnInner.style.webkitTransform = `rotate(${index*90}deg)`;
         rotate = index*90;
         index++;
@@ -41,7 +41,7 @@ window.onload = function () {
         if(responeSlide >= 0){
             rotate = rotate-90;
             wrapping.style.left = `${-responeSlide}%`;
-            mainBtnInner.style.transform = `rotate(${rotate}deg)`;
+            // mainBtnInner.style.transform = `rotate(${rotate}deg)`;
             mainBtnInner.style.webkitTransform = `rotate(${rotate}deg)`;
             index--;
             if(index < 0){
@@ -72,7 +72,7 @@ window.onload = function () {
     for(let i = 0; i <  globalBtn.length; i++){
         globalBtn[i].addEventListener('click', function(){
             wrapping.style.left = `-${i*100}%`;
-            mainBtnInner.style.transform = `rotate(${i*90}deg)`;
+            // mainBtnInner.style.transform = `rotate(${i*90}deg)`;
             mainBtnInner.style.webkitTransform = `rotate(${i*90}deg)`;
         });
     };
