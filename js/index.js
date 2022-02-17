@@ -21,6 +21,9 @@ window.onload = function () {
     };
 
     let slideRightEvent = function (){
+        if(index === 0){
+            index = 1;
+        };
         wrapping.style.left = `-${index*100}%`;
         mainBtnInner.style.webkitTransform = `rotate(${index*90}deg)`;
         rotate = index*90;
