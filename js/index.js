@@ -26,7 +26,7 @@ window.onload = function () {
         rotate = index*90;
         index++;
         if(index === 4){
-            index = 0;
+            index = 3;
         };
     };
     
