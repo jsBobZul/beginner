@@ -65,16 +65,23 @@ window.onload = function () {
             slideLeftEvent();
         };
     });
+    let moveSlide2
     wrapping.addEventListener("touchstart", function(e){
-        moveSlide = e.offsetX;
+        console.log("터치");
+        console.log(Touch.length);
+        moveSlide2 = e.targetTouches[0].clientX;
+        console.log(`터치 : ${moveSlide2}`);
     });
     wrapping.addEventListener("touchend", function(e){
-        let moveEvent = moveSlide - e.offsetX;
+        console.log("터치 끝")
+        console.log(Touch.length);
+        let moveEvent = moveSlide2 - e.changedTouches[0].clientX;
         if(moveEvent > 0){
             slideRightEvent();
         }else if(moveEvent < 0){
             slideLeftEvent();
         };
+        console.log(`터치 끝 : ${moveEvent}`);
     });
 
     let globalBtn = document.querySelectorAll('header > button'); // 글로벌 네비게이션 슬라이드 동기화
