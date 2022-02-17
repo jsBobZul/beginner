@@ -79,6 +79,12 @@ header button:hover{
 .project.c{
     background: yellow;
 }
+.project_inner{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: white;
+}
 /* 푸터 */
 footer{
     width: var(--common-width);
