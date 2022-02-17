@@ -1,4 +1,5 @@
 window.onload = function () {
+    alert('좀 바껴라!!!');
 
     // 회원가입약관
     fetch('../text/jointext.html#text').then(function (response) {
