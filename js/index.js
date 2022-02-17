@@ -22,7 +22,6 @@ window.onload = function () {
 
     let slideRightEvent = function (){
         wrapping.style.left = `-${index*100}%`;
-        // mainBtnInner.style.transform = `rotate(${index*90}deg)`;
         mainBtnInner.style.webkitTransform = `rotate(${index*90}deg)`;
         rotate = index*90;
         index++;
@@ -41,7 +40,6 @@ window.onload = function () {
         if(responeSlide >= 0){
             rotate = rotate-90;
             wrapping.style.left = `${-responeSlide}%`;
-            // mainBtnInner.style.transform = `rotate(${rotate}deg)`;
             mainBtnInner.style.webkitTransform = `rotate(${rotate}deg)`;
             index--;
             if(index < 0){
@@ -67,12 +65,22 @@ window.onload = function () {
             slideLeftEvent();
         };
     });
+    wrapping.addEventListener("touchstart", function(e){
+        moveSlide = e.offsetX;
+    });
+    wrapping.addEventListener("touchend", function(e){
+        let moveEvent = moveSlide - e.offsetX;
+        if(moveEvent > 0){
+            slideRightEvent();
+        }else if(moveEvent < 0){
+            slideLeftEvent();
+        };
+    });
 
     let globalBtn = document.querySelectorAll('header > button'); // 글로벌 네비게이션 슬라이드 동기화
     for(let i = 0; i <  globalBtn.length; i++){
         globalBtn[i].addEventListener('click', function(){
             wrapping.style.left = `-${i*100}%`;
-            // mainBtnInner.style.transform = `rotate(${i*90}deg)`;
             mainBtnInner.style.webkitTransform = `rotate(${i*90}deg)`;
         });
     };
