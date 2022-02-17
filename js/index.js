@@ -23,6 +23,7 @@ window.onload = function () {
     let slideRightEvent = function (){
         wrapping.style.left = `-${index*100}%`;
         mainBtnInner.style.transform = `rotate(${index*90}deg)`;
+        mainBtnInner.style.webkitTransform = `rotate(${index*90}deg)`;
         rotate = index*90;
         index++;
         if(index === 4){
@@ -41,6 +42,7 @@ window.onload = function () {
             rotate = rotate-90;
             wrapping.style.left = `${-responeSlide}%`;
             mainBtnInner.style.transform = `rotate(${rotate}deg)`;
+            mainBtnInner.style.webkitTransform = `rotate(${rotate}deg)`;
             index--;
             if(index < 0){
                 index=1;
@@ -71,6 +73,7 @@ window.onload = function () {
         globalBtn[i].addEventListener('click', function(){
             wrapping.style.left = `-${i*100}%`;
             mainBtnInner.style.transform = `rotate(${i*90}deg)`;
+            mainBtnInner.style.webkitTransform = `rotate(${i*90}deg)`;
         });
     };
 
