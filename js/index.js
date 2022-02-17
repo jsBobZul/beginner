@@ -65,7 +65,7 @@ window.onload = function () {
             slideLeftEvent();
         };
     });
-    
+
     let moveSlide2 // 모바일 슬라이드 이벤트
     wrapping.addEventListener("touchstart", function(e){
         moveSlide2 = e.targetTouches[0].clientX;
