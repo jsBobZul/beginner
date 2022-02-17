@@ -45,9 +45,6 @@ window.onload = function () {
             wrapping.style.left = `${-responeSlide}%`;
             mainBtnInner.style.webkitTransform = `rotate(${rotate}deg)`;
             index--;
-            if(index < 0){
-                index=1;
-            };
         };
     };
     mainBtn.addEventListener("click", slideRightEvent); // 메인 버튼 클릭 시 슬라이드 동작

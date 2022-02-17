@@ -60,7 +60,7 @@ header button:hover{
     width: 400%;
     position: relative;
     left: 0;
-    transition: left 0.1s;
+    transition: left 0.099s;
 }
 .project{
     width: 25%;
