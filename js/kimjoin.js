@@ -1,7 +1,7 @@
 window.onload = function () {
 
     // 회원가입약관
-    fetch('../회원가입약관').then(function (response) {
+    fetch('../회원가입약관.txt').then(function (response) {
         response.text().then(function (text) {
             document.querySelector('.join_text').innerHTML = '<textarea readonly="readonly" cols="100" rows="10" style="resize:none; padding:0 0 0 5px; border:1px solid #c4c4c4">' + text + '</textarea>';
         });
@@ -115,7 +115,7 @@ window.onload = function () {
     let phoneReg = RegExp(/[^0-9]/g);
     const phoneLog = document.querySelector(".phone_log");
     // 폰 번호 선택 옵션 넣기
-    fetch('../폰번호옵션').then(function (response) {
+    fetch('../폰번호옵션.txt').then(function (response) {
         let phoneHead = document.querySelector(".tel > select");
         response.text().then(function (text) {
             phoneHead.innerHTML = text;
