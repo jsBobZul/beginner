@@ -2,7 +2,7 @@ window.onload = function () {
     alert('좀 바껴라!!!');
 
     // 회원가입약관
-    fetch('../text/jointext.html#text').then(function (response) {
+    fetch('https://jsbobzul.github.io/portfolio/text/jointext.html#text').then(function (response) {
         response.text().then(function (text) {
             document.querySelector('.join_text').innerHTML = '<textarea readonly="readonly" cols="100" rows="10" style="resize:none; padding:0 0 0 7px; border:1px solid #c4c4c4">' + text + '</textarea>';
         });
