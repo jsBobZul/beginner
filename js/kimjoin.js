@@ -1,5 +1,5 @@
 window.onload = function () {
-    alert('좀 바껴라!!!');
+    alert('바뀜?');
 
     // 회원가입약관
     fetch('https://jsbobzul.github.io/portfolio/text/개인정보보호').then(function (response) {
