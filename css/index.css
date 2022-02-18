@@ -4,12 +4,15 @@
     --common-width: calc(100vw - 100px);
     --year-color: #666ab7;
     --button-color: #2B3036;
+    --text-color: #43434f;
+    --back-color: #fbfbfb;
 }
 body{
     background: #353A40;
     padding: 50px 50px 0 50px;
     overflow: hidden;
 }
+/* 헤더 */
 header{
     width: 350px;
     height: var(--common-height);
@@ -66,24 +69,28 @@ header button:hover{
     width: 25%;
     height: var(--common-height);
     float: left;
-}
-.project.me{
-    background: var(--year-color);
-}
-.project.a{
-    background: blue;
-}
-.project.b{
-    background: red;
-}
-.project.c{
-    background: yellow;
+    background: var(--back-color);
 }
 .project_inner{
     width: 1200px;
     height: 100%;
     margin: 0 auto;
-    background: white;
+    padding: 50px 0 0 0;
+}
+/* 첫 번째 슬라이드 */
+.project_inner.a > section:nth-of-type(1) h2{
+    color: var(--year-color);
+    font-size: 50px;
+    font-weight: 700;
+}
+.project_inner.a > section:nth-of-type(1) > p{
+    color: var(--back-color);
+    text-shadow: -1px 0 var(--text-color), 0 1px var(--text-color), 1px 0 var(--text-color), 0 -1px var(--text-color);
+    font-size: 40px;
+}
+.project_inner.a > section:nth-of-type(1) > div p{
+    color: var(--text-color);
+    font-size: 20px;
 }
 /* 푸터 */
 footer{
