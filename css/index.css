@@ -133,6 +133,9 @@ header button:hover{
 .project_inner.b .sub_h::after{
     width: 360px;
 }
+.project_inner.b > section > section:nth-of-type(1){
+    margin: 50px 0;
+}
 .project_inner.b > section > section:nth-of-type(1) li{
     list-style: inside;
 }
@@ -142,6 +145,10 @@ header button:hover{
 }
 .project_inner.b > section > section:nth-of-type(1) a > span{
     vertical-align: middle;
+}
+.project_inner.b > section > section:nth-of-type(2) div{
+    width: 550px;
+    word-break: keep-all;
 }
 /* 푸터 */
 footer{
