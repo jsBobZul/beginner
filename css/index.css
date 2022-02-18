@@ -116,7 +116,7 @@ header button:hover{
 .project_inner.a > section:nth-of-type(2){
     height: 225px;
     background: url(../img/index/stack.png) no-repeat 100% 0;
-    margin: 60px 0 0 0;
+    margin: 80px 0;
 }
 .sub_h.time::after{
     width: 280px;
