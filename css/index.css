@@ -10,9 +10,6 @@
 *{
     color: var(--text-color);
 }
-textarea{
-    resize: none;
-}
 body{
     background: #353A40;
     padding: 50px 50px 0 50px;
