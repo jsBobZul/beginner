@@ -99,6 +99,18 @@ header button:hover{
     color: var(--text-color);
     font-size: 20px;
 }
+.sub_h{
+    color: var(--back-color);
+    text-shadow: -1px 0 5px var(--year-color), 0 1px 5px var(--year-color), 1px 0 5px var(--year-color), 0 -1px 5px var(--year-color);
+    font-size: 40px;
+}
+.sub_h::after{
+    content: "";
+    display: block;
+    width: 180px;
+    height: 1px;
+    background: var(--year-color);
+}
 /* 푸터 */
 footer{
     width: var(--common-width);
