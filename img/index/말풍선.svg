@@ -1,0 +1,15 @@
+<svg width="572" height="312" viewBox="0 0 572 312" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="170" cy="198" rx="170" ry="95" fill="#2F305E"/>
+<path d="M46.8002 297.859L48.6738 255.177L84.7011 278.14L46.8002 297.859Z" fill="#2F305E"/>
+<rect x="53" y="179" width="30" height="30" rx="15" fill="white"/>
+<rect x="104" y="179" width="30" height="30" rx="15" fill="white"/>
+<rect x="155" y="179" width="30" height="30" rx="15" fill="white"/>
+<rect x="206" y="179" width="30" height="30" rx="15" fill="white"/>
+<rect x="257" y="179" width="30" height="30" rx="15" fill="white"/>
+<ellipse cx="462" cy="95" rx="100" ry="95" fill="#2F305E"/>
+<rect width="132" height="30" transform="translate(396 80)" fill="#2F305E"/>
+<path d="M396 95C396 86.7157 402.716 80 411 80V80C419.284 80 426 86.7157 426 95V95C426 103.284 419.284 110 411 110V110C402.716 110 396 103.284 396 95V95Z" fill="white"/>
+<path d="M447 95C447 86.7157 453.716 80 462 80V80C470.284 80 477 86.7157 477 95V95C477 103.284 470.284 110 462 110V110C453.716 110 447 103.284 447 95V95Z" fill="white"/>
+<path d="M498 95C498 86.7157 504.716 80 513 80V80C521.284 80 528 86.7157 528 95V95C528 103.284 521.284 110 513 110V110C504.716 110 498 103.284 498 95V95Z" fill="white"/>
+<path d="M555.252 182.22L513.41 173.583L541.811 141.666L555.252 182.22Z" fill="#2F305E"/>
+</svg>
