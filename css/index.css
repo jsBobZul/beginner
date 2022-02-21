@@ -179,7 +179,35 @@ header button:hover{
     width: 550px;
     word-break: keep-all;
 }
-
+/* 네 번째 슬라이드 */
+.project.d{
+    background: var(--back-color) url(../img/index/열라면.png) no-repeat 120% 0;
+}
+.project_inner.d > section h2{
+    color: var(--year-color);
+    font-size: 50px;
+    font-weight: 700;
+}
+.project_inner.d .sub_h::after{
+    width: 360px;
+}
+.project_inner.d > section > section:nth-of-type(1){
+    margin: 50px 0;
+}
+.project_inner.d > section > section:nth-of-type(1) li{
+    list-style: inside;
+}
+.project_inner.d > section > section:nth-of-type(1) a{
+    color: var(--text-color);
+    font-size: 10px;
+}
+.project_inner.d > section > section:nth-of-type(1) a > span{
+    vertical-align: middle;
+}
+.project_inner.d > section > section:nth-of-type(2) div{
+    width: 550px;
+    word-break: keep-all;
+}
 /* 푸터 */
 footer{
     width: var(--common-width);
