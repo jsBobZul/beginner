@@ -8,7 +8,7 @@ header{
     width: 100%;
     height: 100vh;
     padding: 80px 0;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -100%;
     z-index: 1;
@@ -38,9 +38,11 @@ header button{
 .wrapping{
     width: 100%;
     position: static;
+    overflow: initial;
 }
 .project{
     width: 100%;
+    height: 100%;
     padding: 10px;
     float: none;
 }
@@ -55,10 +57,67 @@ header button{
 .project_inner.a > section:nth-of-type(1) > p{
     font-size: 22px;
 }
+.project_inner.a > section:nth-of-type(2){
+    height: 435px;
+    margin: 10px 0;
+    background: url(../img/index/stack.png) no-repeat 50% 100% /300px;
+}
+.sub_h ~ ul{
+    width: 100%;
+    word-break: keep-all;
+}
 
+/* 두 번째 슬라이드 */
+.project.b{
+    background-size: cover;
+    background-blend-mode: color-dodge;
+}
+.project_inner.b .sub_h::after{
+    width: 95%;
+}
+.project_inner.b > section > section:nth-of-type(2) div{
+    width: 100%;
+}
+
+/* 세 번째 슬라이드 */
+.project.c{
+    padding: 10px 10px 0;
+}
+.project_inner.c section{
+    background: var(--back-color);
+    opacity: 0.95;
+}
+.project_inner.c .sub_h::after{
+    width: 90%;
+}
+.project_inner.c > section > section:nth-of-type(2) div{
+    width: 100%;
+}
+.project.c::after{
+    content: "";
+    display: block;
+    width: 100vw;
+    height: 30px;
+    background: var(--back-color);
+}
+
+/* 네 번째 슬라이드 */
+.project.d{
+    background: var(--back-color) url(../img/index/열라면m.png) no-repeat 100% 0%;
+    /* margin: 0 0 70px 0; */
+}
+.project_inner.d{
+    padding: 95px 10px 10px;
+}
+.project_inner.d .sub_h::after{
+    width: 90%;
+}
+.project_inner.d > section > section:nth-of-type(2) div{
+    width: 100%;
+}
 /* 푸터 */
 footer{
-    height: 100%;
+    height: 70px;
     position: static;
 }
 .nav_button{
