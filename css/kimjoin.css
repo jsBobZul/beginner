@@ -4,7 +4,7 @@ article{
     background: url(../img/kimjoin/김안과_join_logo.svg) no-repeat 50% 90px /400px;
 }
 .inner{
-    width: 768px;
+    width: 767px;
     margin: 0 auto;
 }
 .inner > h1{
@@ -124,6 +124,10 @@ input[placeholder]{
     html{
         font-size: 12px;
     }
+    .inner > h1{
+        margin: 10px auto;
+        font-size: 15px;
+    }
     article{
         min-width: 320px;
         padding: 110px 0 0 0;
@@ -131,23 +135,28 @@ input[placeholder]{
     }
     .inner{
         width: 100%;
-        min-width: 320px;
+        padding: 0 10px;
     }
     form{
         margin: 20px 0 0 0;
     }
+    form > p{
+        margin: 10px 0;
+    }
     .join_text > textarea{
         width: 100%;
-        min-width: 320px;
     }
     input[placeholder]{
         width: 50%;
     }
     input[type="password"]{
-        width: 40%;
+        width: 100%;
     }
     input[type="tel"]{
         width: 32%;
+    }
+    input[type="button"]{
+        margin: 10px 0 0 0;
     }
     .footer button{
         margin: 0 5px 0 0;
