@@ -4,7 +4,7 @@ article{
     background: url(../img/kimjoin/김안과_join_logo.svg) no-repeat 50% 90px /400px;
 }
 .inner{
-    width: fit-content;
+    width: 768px;
     margin: 0 auto;
 }
 .inner > h1{
@@ -118,4 +118,41 @@ button[type="submit"]{
 input[placeholder]{
     border: 1px solid #c4c4c4;
     font-size: 15px;
+}
+
+@media screen and (max-width:767px) {
+    html{
+        font-size: 12px;
+    }
+    article{
+        min-width: 320px;
+        padding: 110px 0 0 0;
+        background: url(../img/kimjoin/김안과_join_logo.svg) no-repeat 50% 60px /150px;
+    }
+    .inner{
+        width: 100%;
+        min-width: 320px;
+    }
+    form{
+        margin: 20px 0 0 0;
+    }
+    .join_text > textarea{
+        width: 100%;
+        min-width: 320px;
+    }
+    input[placeholder]{
+        width: 50%;
+    }
+    input[type="password"]{
+        width: 40%;
+    }
+    input[type="tel"]{
+        width: 32%;
+    }
+    .footer button{
+        margin: 0 5px 0 0;
+    }
+    .footer button::before{
+        display: none;
+    }
 }
