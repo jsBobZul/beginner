@@ -29,7 +29,6 @@ header button{
     position: static;
 }
 .main_inner.on{
-    /* transform: translate(0, 0); */
     transform: none;
 }
 .main_box{
@@ -42,7 +41,19 @@ header button{
 }
 .project{
     width: 100%;
+    padding: 10px;
     float: none;
+}
+/* 첫 번째 슬라이드 */
+.project_inner.a{
+    padding: 0;
+}
+.project_inner.a > section:nth-of-type(1){
+    background: var(--back-color) url(../img/index/말풍선.svg) no-repeat 50% 50% /cover;
+    background-blend-mode: color-burn;
+}
+.project_inner.a > section:nth-of-type(1) > p{
+    font-size: 22px;
 }
 
 /* 푸터 */
@@ -54,6 +65,8 @@ footer{
     width: 50px;
     height: 50px;
     position: fixed;
+    left: 5px;
+    animation: none;
 }
 .slide_button{
     display: none;
