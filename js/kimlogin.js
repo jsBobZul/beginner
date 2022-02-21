@@ -45,6 +45,12 @@ window.onload = function() {
         logInBlur(pwLog, kimPw, passwordReg);
     });
 
+    // 아이디/비밀번호 찾기
+    const pwId = document.querySelector(".pwid");
+    pwId.addEventListener('click', function(){
+        alert('찾을 아이디, 비밀번호가 없습니다.');
+    });
+
     //   로그인 버튼 클릭 이벤트
     const logins = document.querySelectorAll(".logins > button");
 
