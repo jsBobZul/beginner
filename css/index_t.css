@@ -2,3 +2,80 @@
 html{
     font-size: 14px;
 }
+.project_inner{
+    width: 100%;
+}
+/* 첫 번째 슬라이드 */
+.project_inner.a{
+    padding: 55px 10px 10px;
+}
+.project_inner.a > section:nth-of-type(1){
+    background: url(../img/index/말풍선.svg) no-repeat 100% 0 /300px;
+}
+.project_inner.a > section:nth-of-type(1) h1{
+    font-size: 30px;
+}
+.project_inner.a > section:nth-of-type(1) > p{
+    font-size: 25px;
+}
+.project_inner.a > section:nth-of-type(1) > div p{
+    font-size: 15px;
+}
+.sub_h{
+    font-size: 20px;
+    -webkit-text-stroke: 1px var(--year-color);
+}
+.sub_h::after{
+    width: 100px;
+}
+.sub_h ~ ul{
+    width: 400px;
+    word-break: keep-all;
+}
+.project_inner.a > section:nth-of-type(2){
+    height: 225px;
+    background: url(../img/index/stack.png) no-repeat 100% 0 /250px;
+    margin: 80px 0;
+}
+.sub_h.time::after{
+    width: 150px;
+}
+/* 두 번째 슬라이드 */
+.project.b{
+    background:var(--back-color) url(../img/index/초록누리t.png) no-repeat 100% 0;
+}
+.project_inner.b{
+    padding: 55px 10px 10px;
+}
+.project_inner.b > section h2{
+    font-size: 30px;
+}
+.project_inner.b > section > section:nth-of-type(2) div{
+    width: 450px;
+}
+/* 세 번째 슬라이드 */
+.project.c{
+    background: var(--back-color) url(../img/index/김안과t.png) no-repeat 100% 0;
+}
+.project_inner.c{
+    padding: 55px 10px 10px;
+}
+.project_inner.c > section h2{
+    font-size: 30px;
+}
+.project_inner.c > section > section:nth-of-type(2) div{
+    width: 450px;
+}
+/* 네 번째 슬라이드 */
+.project.d{
+    background: var(--back-color) url(../img/index/열라면t.png) no-repeat 100% 0;
+}
+.project_inner.d{
+    padding: 55px 10px 10px;
+}
+.project_inner.d > section h2{
+    font-size: 30px;
+}
+.project_inner.d > section > section:nth-of-type(2) div{
+    width: 60%;
+}

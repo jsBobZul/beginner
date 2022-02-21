@@ -1,0 +1,16 @@
+@charset "utf-8";
+body{
+    padding: 0;
+    overflow: initial;
+}
+header{
+    position: fixed;
+    height: 200px;
+    z-index: 1;
+}
+.main_inner{
+    position: static;
+}
+footer{
+    display: none;
+}
