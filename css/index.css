@@ -77,8 +77,9 @@ header button:hover{
 .project{
     width: 25%;
     height: var(--common-height);
-    float: left;
     background: var(--back-color);
+    float: left;
+    overflow: auto;
 }
 .project_inner{
     width: 1200px;
