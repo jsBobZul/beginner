@@ -1,87 +1,78 @@
 window.onload = function () {
     const mainInner = document.querySelector(".main_inner");
     const navBtn = document.querySelector(".nav_button");
+    const header = document.querySelector("header");
 
     // grobal Nav 이벤트
-    navBtn.addEventListener("click", function(){
+    navBtn.addEventListener("click", function () {
         mainInner.classList.toggle("on");
     });
-    
+    navBtn.addEventListener("click", function () {
+        header.classList.toggle("on");
+    });
+
     const mainBtn = document.querySelector(".slide_button");
     const mainBtnInner = document.querySelector(".slide_button > span");
     const wrapping = document.querySelector(".wrapping");
     const project = document.querySelector(".project");
-    
+
     // 메인 슬라이드 구현
     let index = 1;
     let rotate = 90;
-    
-    wrapping.ondragstart = function(){ //다른 요소 드래그 방지
+
+    wrapping.ondragstart = function () { //다른 요소 드래그 방지
         return false;
     };
 
-    let slideRightEvent = function (){
-        if(index === 0){
+    let slideRightEvent = function () {
+        if (index === 0) {
             index = 1;
         };
         wrapping.style.left = `-${index*100}%`;
         mainBtnInner.style.webkitTransform = `rotate(${index*90}deg)`;
-        rotate = index*90;
+        rotate = index * 90;
         index++;
-        if(index === 4){
+        if (index === 4) {
             index = 3;
         };
     };
-    
-    let slideLeftEvent = function (){
+
+    let slideLeftEvent = function () {
         let wrappingLeft = window.getComputedStyle(wrapping).left;
         let projectWidth = window.getComputedStyle(project).width;
         let numReg = RegExp(/[^0-9]/g);
         let wLeft = wrappingLeft.replace(numReg, ""); //숫자 변환
         let pWidth = projectWidth.replace(numReg, ""); //숫자 변환
-        let responeSlide = (wLeft/pWidth-1)*100;
-        if(responeSlide >= 0){
-            rotate = rotate-90;
+        let responeSlide = (wLeft / pWidth - 1) * 100;
+        if (responeSlide >= 0) {
+            rotate = rotate - 90;
             wrapping.style.left = `${-responeSlide}%`;
             mainBtnInner.style.webkitTransform = `rotate(${rotate}deg)`;
             index--;
         };
     };
     mainBtn.addEventListener("click", slideRightEvent); // 메인 버튼 클릭 시 슬라이드 동작
-    mainBtn.addEventListener("contextmenu", function(event){
+    mainBtn.addEventListener("contextmenu", function (event) {
         event.preventDefault();
         slideLeftEvent();
     });
-    
+
     let moveSlide // 슬라이드 이벤트
-    wrapping.addEventListener("mousedown", function(e){
+    wrapping.addEventListener("mousedown", function (e) {
         moveSlide = e.offsetX;
     });
-    wrapping.addEventListener("mouseup", function(e){
+    wrapping.addEventListener("mouseup", function (e) {
         let moveEvent = moveSlide - e.offsetX;
-        if(moveEvent > 0){
+        if (moveEvent > 0) {
             slideRightEvent();
-        }else if(moveEvent < 0){
-            slideLeftEvent();
-        };
-    });
-
-    let moveSlide2 // 모바일 슬라이드 이벤트
-    wrapping.addEventListener("touchstart", function(e){
-        moveSlide2 = e.targetTouches[0].clientX;
-    });
-    wrapping.addEventListener("touchend", function(e){
-        let moveEvent = moveSlide2 - e.changedTouches[0].clientX;
-        if(moveEvent > 0){
-            slideRightEvent();
-        }else if(moveEvent < 0){
+        } else if (moveEvent < 0) {
             slideLeftEvent();
         };
     });
 
     let globalBtn = document.querySelectorAll('header > button'); // 글로벌 네비게이션 슬라이드 동기화
-    for(let i = 0; i <  globalBtn.length; i++){
-        globalBtn[i].addEventListener('click', function(){
+    for (let i = 0; i < globalBtn.length; i++) {
+        globalBtn[i].addEventListener('click', function () {
             wrapping.style.left = `-${i*100}%`;
             mainBtnInner.style.webkitTransform = `rotate(${i*90}deg)`;
         });

@@ -1,16 +1,48 @@
 @charset "utf-8";
 body{
+    min-width: 320px;
     padding: 0;
     overflow: initial;
 }
 header{
-    position: fixed;
-    height: 200px;
+    width: 100%;
+    height: 100vh;
+    padding: 80px 0;
+    position: absolute;
+    top: 0;
+    left: -100%;
     z-index: 1;
+    transition: left 0.5s linear;
 }
+header.on{
+    left: 0;
+}
+header button{
+    font-size: 15px;
+}
+.link a{
+    font-size: 12px;
+}
+
+/* 메인 */
 .main_inner{
     position: static;
 }
+.main_inner.on{
+    /* transform: translate(0, 0); */
+    transform: none;
+}
+
+/* 푸터 */
 footer{
+    height: 100%;
+    position: static;
+}
+.nav_button{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+}
+.slide_button{
     display: none;
 }
