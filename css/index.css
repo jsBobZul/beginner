@@ -72,7 +72,7 @@ header button:hover{
     width: 400%;
     position: relative;
     left: 0;
-    transition: left 0.099s;
+    transition: left 0.09s;
 }
 .project{
     width: 25%;
@@ -85,7 +85,7 @@ header button:hover{
     width: 1200px;
     height: 100%;
     margin: 0 auto;
-    padding: 55px 0 0 0;
+    padding: 35px 0 0 0;
 }
 /* 첫 번째 슬라이드 */
 .project_inner.a > section:nth-of-type(1){
@@ -123,7 +123,7 @@ header button:hover{
 .project_inner.a > section:nth-of-type(2){
     height: 225px;
     background: url(../img/index/stack.png) no-repeat 100% 0;
-    margin: 80px 0;
+    margin: 40px 0;
 }
 .sub_h.time::after{
     width: 280px;
@@ -144,7 +144,7 @@ header button:hover{
     width: 360px;
 }
 .project_inner.b > section > section:nth-of-type(1){
-    margin: 50px 0;
+    margin: 30px 0;
 }
 .project_inner.b > section > section:nth-of-type(1) li{
     list-style: inside;
@@ -202,7 +202,7 @@ header button:hover{
     width: 360px;
 }
 .project_inner.d > section > section:nth-of-type(1){
-    margin: 50px 0;
+    margin: 30px 0;
 }
 .project_inner.d > section > section:nth-of-type(1) li{
     list-style: inside;
