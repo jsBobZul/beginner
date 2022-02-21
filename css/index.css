@@ -123,7 +123,7 @@ header button:hover{
 }
 /* 두 번째 슬라이드 */
 .project.b{
-    background:var(--back-color) url(../img/index/초록누리.png) no-repeat 100% 0;
+    background:var(--back-color) url(../img/index/초록누리.png) no-repeat 110% 0;
 }
 .project_inner.b > section h2{
     color: var(--year-color);
@@ -150,6 +150,36 @@ header button:hover{
     width: 550px;
     word-break: keep-all;
 }
+/* 세 번째 슬라이드 */
+.project.c{
+    background: var(--back-color) url(../img/index/김안과.png) no-repeat 120% 0;
+}
+.project_inner.c > section h2{
+    color: var(--year-color);
+    font-size: 50px;
+    font-weight: 700;
+}
+.project_inner.c .sub_h::after{
+    width: 360px;
+}
+.project_inner.c > section > section:nth-of-type(1){
+    margin: 50px 0;
+}
+.project_inner.c > section > section:nth-of-type(1) li{
+    list-style: inside;
+}
+.project_inner.c > section > section:nth-of-type(1) a{
+    color: var(--text-color);
+    font-size: 10px;
+}
+.project_inner.c > section > section:nth-of-type(1) a > span{
+    vertical-align: middle;
+}
+.project_inner.c > section > section:nth-of-type(2) div{
+    width: 550px;
+    word-break: keep-all;
+}
+
 /* 푸터 */
 footer{
     width: var(--common-width);
