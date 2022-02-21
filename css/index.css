@@ -128,6 +128,9 @@ header button:hover{
 .sub_h.time::after{
     width: 280px;
 }
+.project_inner > section:last-child{
+    padding: 0 0 10px 0;
+}
 /* 두 번째 슬라이드 */
 .project.b{
     background:var(--back-color) url(../img/index/초록누리.png) no-repeat 100% 0;
