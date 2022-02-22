@@ -125,7 +125,7 @@ window.onload = function () {
     phone.oninput = function () {
         phone.value = phone.value
             .replace(/[^0-9]/, "")
-            .replace(/^(\d{3,4})(\d{4})$/, `$1-$2`);
+            .replace(/^(\d{3,4})(\d{4})$/, "$1-$2");
     };
     // 폰 번호 포커스 블러 이벤트
     phone.addEventListener('focus', function () {
