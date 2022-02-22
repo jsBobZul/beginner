@@ -1,10 +1,7 @@
 window.addEventListener('DOMContentLoaded', function(){
     var moveBt1 = document.querySelector(".header_inner > div > button:nth-child(1)");
-    // console.log(moveBt1);
     var moveBt2 = document.querySelector(".header_inner > div > button:nth-child(2)");
-    // console.log(moveBt2);
     var body = document.querySelector("body");
-    // console.log(body);
     var article2 = document.querySelector(".article2");
 
     var move = function (el) {
