@@ -57,7 +57,7 @@ header button{
     font-size: 22px;
 }
 .project_inner.a > section:nth-of-type(2){
-    height: 485px;
+    height: 465px;
     margin: 10px 0;
     background: url(../img/index/stack.png) no-repeat 50% 100% /300px;
 }
@@ -65,11 +65,16 @@ header button{
     width: 100%;
     word-break: keep-all;
 }
+.project_inner.a > section:last-child{
+    padding: 10px 0 30px;
+}
 
 /* 두 번째 슬라이드 */
 .project.b{
-    background-size: cover;
-    background-blend-mode: color-dodge;
+    background:var(--back-color) url(../img/index/초록누리m.png) no-repeat 0% 0%;
+}
+.project_inner.b > section h2 {
+    background: var(--back-color);
 }
 .project_inner.b .sub_h::after{
     width: 95%;
