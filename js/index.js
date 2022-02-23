@@ -21,7 +21,8 @@ window.onload = function () {
     let index = 1;
     let rotate = 360/projects.length;
     const x = 360/projects.length
-
+    let numReg = RegExp(/[^0-9]/g);
+    let ccc = mainBtnInner.style.boxShadow;
     wrapping.ondragstart = function () { //다른 요소 드래그 방지
         return false;
     };
@@ -37,12 +38,25 @@ window.onload = function () {
         if (index === projects.length) {
             index = projects.length-1;
         };
+        let aaa = mainBtnInner.style.getPropertyValue('transform');
+        console.log(aaa);
+        let bbb = aaa.replace(numReg, "");
+        console.log(bbb);
+        // if(0 <= bbb < 90){
+        //     ccc = 
+        // }else if(90 <= bbb < 180){
+
+        // }else if(180 <= bbb < 270){
+
+        // }else{
+
+        // };
     };
 
     let slideLeftEvent = function () {
         let wrappingLeft = window.getComputedStyle(wrapping).left;
         let projectWidth = window.getComputedStyle(project).width;
-        let numReg = RegExp(/[^0-9]/g);
+        // let numReg = RegExp(/[^0-9]/g);
         let wLeft = wrappingLeft.replace(numReg, ""); //숫자 변환
         let pWidth = projectWidth.replace(numReg, ""); //숫자 변환
         let responeSlide = (wLeft / pWidth - 1) * 100;
