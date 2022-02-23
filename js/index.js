@@ -70,11 +70,20 @@ window.onload = function () {
         };
     });
 
-    let globalBtn = document.querySelectorAll('header > button'); // 글로벌 네비게이션 슬라이드 동기화
+    let globalBtn = document.querySelectorAll('header button'); // 글로벌 네비게이션 슬라이드 동기화
+    let projects = document.querySelectorAll('.project');
+    function move(el){
+        scroll(0,el)
+    };
     for (let i = 0; i < globalBtn.length; i++) {
         globalBtn[i].addEventListener('click', function () {
-            wrapping.style.left = `-${i*100}%`;
-            mainBtnInner.style.webkitTransform = `rotate(${i*90}deg)`;
+            if(window.innerWidth >= 768){
+                wrapping.style.left = `-${i*100}%`;
+                mainBtnInner.style.webkitTransform = `rotate(${i*90}deg)`;
+            }else{
+                alert("띵동~ 이동되었습니다.");
+                move(projects[i].offsetTop);
+            };
         });
     };
 
