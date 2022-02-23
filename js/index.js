@@ -3,19 +3,19 @@ window.onload = function () {
     const navBtn = document.querySelector(".nav_button");
     const navBtnSpan = document.querySelector(".nav_button > span");
     const header = document.querySelector("header");
-
+    const mainBtn = document.querySelector(".slide_button");
+    const mainBtnInner = document.querySelector(".slide_button > span");
+    const wrapping = document.querySelector(".wrapping");
+    const project = document.querySelector(".project");
+    let projects = document.querySelectorAll('.project');
+    let globalBtn = document.querySelectorAll('header button');
+    
     // grobal Nav 이벤트
     navBtn.addEventListener("click", function () {
         mainInner.classList.toggle("on");
         header.classList.toggle("on");
         navBtnSpan.classList.toggle("on");
     });
-
-    const mainBtn = document.querySelector(".slide_button");
-    const mainBtnInner = document.querySelector(".slide_button > span");
-    const wrapping = document.querySelector(".wrapping");
-    const project = document.querySelector(".project");
-    let projects = document.querySelectorAll('.project');
 
     // 메인 슬라이드 구현
     let index = 1;
@@ -37,7 +37,7 @@ window.onload = function () {
             index = projects.length-1;
         };
     };
-    
+
     let slideLeftEvent = function () {
         let wrappingLeft = window.getComputedStyle(wrapping).left;
         let projectWidth = window.getComputedStyle(project).width;
@@ -71,7 +71,7 @@ window.onload = function () {
         };
     });
 
-    let globalBtn = document.querySelectorAll('header button'); // 글로벌 네비게이션 슬라이드 동기화
+    // 글로벌 네비게이션 슬라이드 동기화
     function move(el){
         scroll(0,el)
     };
