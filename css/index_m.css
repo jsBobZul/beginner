@@ -141,3 +141,6 @@ footer{
 .slide_button{
     display: none;
 }
+footer > div > p{
+    display: none;
+}

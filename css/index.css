@@ -246,14 +246,16 @@ footer{
 .nav_button > span.on{
     transform: rotate(140deg);
 }
+footer > div{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
 .slide_button{
     width: 100px;
     height: 100px;
     background: var(--button-color);
-    position: absolute;
     border-radius: 50%;
-    right: 20px;
-    bottom: 10px;
     box-shadow: inset 2px 2px 5px 2px rgb(0 0 0 / 73%), inset -3px -3px 1px -1px #ffffff2e;
 }
 .slide_button > span{
@@ -274,4 +276,10 @@ footer{
     background: var(--year-color);
     position: absolute;
     left: 50%;
+}
+footer > div > p{
+    display: inline;
+    color: #353A40;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 var(--text-color), 0 -1px var(--text-color), 1px 1px 3px white;
+    vertical-align: top;
 }
