@@ -22,7 +22,6 @@ window.onload = function () {
     let rotate = 360/projects.length;
     const x = 360/projects.length
     let numReg = RegExp(/[^0-9]/g);
-    let ccc = mainBtnInner.style.boxShadow;
     wrapping.ondragstart = function () { //다른 요소 드래그 방지
         return false;
     };
@@ -39,18 +38,14 @@ window.onload = function () {
             index = projects.length-1;
         };
         let aaa = mainBtnInner.style.getPropertyValue('transform');
-        console.log(aaa);
-        let bbb = aaa.replace(numReg, "");
-        console.log(bbb);
-        // if(0 <= bbb < 90){
-        //     ccc = 
-        // }else if(90 <= bbb < 180){
-
-        // }else if(180 <= bbb < 270){
-
-        // }else{
-
-        // };
+        let bbb = Number(aaa.replace(numReg, ""));
+        if(bbb <= 90){
+            mainBtnInner.style.boxShadow = `1.5px -1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset 2px -2px 2.5px 0px rgb(185 167 167 / 34%)`;
+        }else if(bbb <= 180){
+            mainBtnInner.style.boxShadow = `-1.5px -1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset -2px -2px 2.5px 0px rgb(185 167 167 / 34%)`;
+        }else if(bbb <= 270){
+            mainBtnInner.style.boxShadow = `-1.5px 1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset -2px 2px 2.5px 0px rgb(185 167 167 / 34%)`;
+        };
     };
 
     let slideLeftEvent = function () {
@@ -65,6 +60,18 @@ window.onload = function () {
             wrapping.style.left = `${-responeSlide}%`;
             mainBtnInner.style.transform = `rotate(${rotate}deg)`;
             index--;
+            let aaa = mainBtnInner.style.getPropertyValue('transform');
+            let bbb = Number(aaa.replace(numReg, ""));
+            if(1 < bbb <= 90){
+                mainBtnInner.style.boxShadow = `1.5px -1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset 2px -2px 2.5px 0px rgb(185 167 167 / 34%)`;
+            }else if(1 < bbb <= 180){
+                mainBtnInner.style.boxShadow = `-1.5px -1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset -2px -2px 2.5px 0px rgb(185 167 167 / 34%)`;
+            }else if(1 < bbb <= 270){
+                mainBtnInner.style.boxShadow = `-1.5px 1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset -2px 2px 2.5px 0px rgb(185 167 167 / 34%)`;
+            }else if(bbb == 0){
+                console.log(123);
+                mainBtnInner.style.boxShadow = `1.5px 1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset 2px 2px 2.5px 0px rgb(185 167 167 / 34%)`;
+            };
         };
     };
     mainBtn.addEventListener("click", slideRightEvent); // 메인 버튼 클릭 시 슬라이드 동작
