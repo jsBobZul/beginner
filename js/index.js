@@ -19,7 +19,8 @@ window.onload = function () {
 
     // 메인 슬라이드 구현
     let index = 1;
-    let rotate = 90;
+    let rotate = 360/projects.length;
+    const x = 360/projects.length
 
     wrapping.ondragstart = function () { //다른 요소 드래그 방지
         return false;
@@ -30,8 +31,8 @@ window.onload = function () {
             index = 1;
         };
         wrapping.style.left = `-${index*100}%`;
-        mainBtnInner.style.webkitTransform = `rotate(${index*90}deg)`;
-        rotate = index * 90;
+        mainBtnInner.style.webkitTransform = `rotate(${index*x}deg)`;
+        rotate = index * x;
         index++;
         if (index === projects.length) {
             index = projects.length-1;
@@ -46,12 +47,13 @@ window.onload = function () {
         let pWidth = projectWidth.replace(numReg, ""); //숫자 변환
         let responeSlide = (wLeft / pWidth - 1) * 100;
         if (responeSlide >= 0) {
-            rotate = rotate - 90;
+            rotate = rotate - x;
             wrapping.style.left = `${-responeSlide}%`;
             mainBtnInner.style.webkitTransform = `rotate(${rotate}deg)`;
             index--;
         };
     };
+
     mainBtn.addEventListener("click", slideRightEvent); // 메인 버튼 클릭 시 슬라이드 동작
     mainBtn.addEventListener("contextmenu", function (event) {
         event.preventDefault();
