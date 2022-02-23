@@ -59,10 +59,6 @@ header button:hover{
 .main_inner.on{
     transform: translate(350px, 0);
 }
-@keyframes shiver{
-    from{transform: rotate(10deg);}
-    to{transform: rotate(-8deg);}
-}
 .main_box{
     width: var(--common-width);
     margin: 0 auto;
@@ -229,15 +225,26 @@ footer{
     height: 100px;
     background: var(--button-color);
     border-radius: 50%;
-    color: white;
     position: absolute;
     left: 20px;
     bottom: 10px;
-    animation: shiver 1s linear infinite alternate-reverse;
     z-index: 2;
+    box-shadow: inset 2px 2px 5px 2px rgb(0 0 0 / 73%), inset -3px -3px 1px -1px #ffffff2e;
 }
-.nav_button:hover{
-    animation: none;
+.nav_button > span{
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 11px 0 0 0;
+    background: var(--button-color);
+    border-radius: 50%;
+    position: relative;
+    left: 25px;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset 2px 2px 2.5px 0px rgb(185 167 167 / 34%);
+    color: var(--year-color);
+}
+.nav_button > span.on{
+    transform: rotate(140deg);
 }
 .slide_button{
     width: 100px;
@@ -254,10 +261,10 @@ footer{
     width: 50px;
     height: 50px;
     background: var(--button-color);
-    box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset 2px 2px 2.5px 0px rgb(185 167 167 / 34%);
     border-radius: 50%;
     position: relative;
     left: 25px;
+    box-shadow: 1.5px 1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset 2px 2px 2.5px 0px rgb(185 167 167 / 34%);
 }
 .slide_button > span::after{
     content: "";

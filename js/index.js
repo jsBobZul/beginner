@@ -1,14 +1,14 @@
 window.onload = function () {
     const mainInner = document.querySelector(".main_inner");
     const navBtn = document.querySelector(".nav_button");
+    const navBtnSpan = document.querySelector(".nav_button > span");
     const header = document.querySelector("header");
 
     // grobal Nav 이벤트
     navBtn.addEventListener("click", function () {
         mainInner.classList.toggle("on");
-    });
-    navBtn.addEventListener("click", function () {
         header.classList.toggle("on");
+        navBtnSpan.classList.toggle("on");
     });
 
     const mainBtn = document.querySelector(".slide_button");
