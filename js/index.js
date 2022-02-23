@@ -31,7 +31,7 @@ window.onload = function () {
             index = 1;
         };
         wrapping.style.left = `-${index*100}%`;
-        mainBtnInner.style.webkitTransform = `rotate(${index*x}deg)`;
+        mainBtnInner.style.transform = `rotate(${index*x}deg)`;
         rotate = index * x;
         index++;
         if (index === projects.length) {
@@ -49,11 +49,10 @@ window.onload = function () {
         if (responeSlide >= 0) {
             rotate = rotate - x;
             wrapping.style.left = `${-responeSlide}%`;
-            mainBtnInner.style.webkitTransform = `rotate(${rotate}deg)`;
+            mainBtnInner.style.transform = `rotate(${rotate}deg)`;
             index--;
         };
     };
-
     mainBtn.addEventListener("click", slideRightEvent); // 메인 버튼 클릭 시 슬라이드 동작
     mainBtn.addEventListener("contextmenu", function (event) {
         event.preventDefault();
@@ -81,7 +80,7 @@ window.onload = function () {
         globalBtn[i].addEventListener('click', function () {
             if(window.innerWidth >= 768){
                 wrapping.style.left = `-${i*100}%`;
-                mainBtnInner.style.webkitTransform = `rotate(${i*90}deg)`;
+                mainBtnInner.style.transform = `rotate(${i*90}deg)`;
             }else{
                 alert("띵동~ 이동되었습니다.");
                 move(projects[i].offsetTop);
