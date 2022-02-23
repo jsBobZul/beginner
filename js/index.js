@@ -15,6 +15,7 @@ window.onload = function () {
     const mainBtnInner = document.querySelector(".slide_button > span");
     const wrapping = document.querySelector(".wrapping");
     const project = document.querySelector(".project");
+    let projects = document.querySelectorAll('.project');
 
     // 메인 슬라이드 구현
     let index = 1;
@@ -32,11 +33,11 @@ window.onload = function () {
         mainBtnInner.style.webkitTransform = `rotate(${index*90}deg)`;
         rotate = index * 90;
         index++;
-        if (index === 4) {
-            index = 3;
+        if (index === projects.length) {
+            index = projects.length-1;
         };
     };
-
+    
     let slideLeftEvent = function () {
         let wrappingLeft = window.getComputedStyle(wrapping).left;
         let projectWidth = window.getComputedStyle(project).width;
@@ -71,7 +72,6 @@ window.onload = function () {
     });
 
     let globalBtn = document.querySelectorAll('header button'); // 글로벌 네비게이션 슬라이드 동기화
-    let projects = document.querySelectorAll('.project');
     function move(el){
         scroll(0,el)
     };
