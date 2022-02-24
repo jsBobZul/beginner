@@ -4,7 +4,7 @@ window.onload = function () {
     const navBtnSpan = document.querySelector(".nav_button span");
     const header = document.querySelector("header");
     const mainBtn = document.querySelector(".slide_button");
-    const mainBtnInner = document.querySelector(".slide_button > span");
+    const mainBtnInner = document.querySelector(".slide_button span");
     const wrapping = document.querySelector(".wrapping");
     const project = document.querySelector(".project");
     let projects = document.querySelectorAll('.project');
@@ -37,21 +37,11 @@ window.onload = function () {
         if (index === projects.length) {
             index = projects.length-1;
         };
-        let aaa = mainBtnInner.style.getPropertyValue('transform');
-        let bbb = Number(aaa.replace(numReg, ""));
-        if(bbb <= 90){ // 슬라이드 버튼 그림자 개선
-            mainBtnInner.style.boxShadow = `1.5px -1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset 2px -2px 2.5px 0px rgb(185 167 167 / 34%)`;
-        }else if(bbb <= 180){
-            mainBtnInner.style.boxShadow = `-1.5px -1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset -2px -2px 2.5px 0px rgb(185 167 167 / 34%)`;
-        }else if(bbb <= 270){
-            mainBtnInner.style.boxShadow = `-1.5px 1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset -2px 2px 2.5px 0px rgb(185 167 167 / 34%)`;
-        };
     };
 
     let slideLeftEvent = function () {
         let wrappingLeft = window.getComputedStyle(wrapping).left;
         let projectWidth = window.getComputedStyle(project).width;
-        // let numReg = RegExp(/[^0-9]/g);
         let wLeft = wrappingLeft.replace(numReg, ""); //숫자 변환
         let pWidth = projectWidth.replace(numReg, ""); //숫자 변환
         let responeSlide = (wLeft / pWidth - 1) * 100;
@@ -60,17 +50,6 @@ window.onload = function () {
             wrapping.style.left = `${-responeSlide}%`;
             mainBtnInner.style.transform = `rotate(${rotate}deg)`;
             index--;
-            let aaa = mainBtnInner.style.getPropertyValue('transform');
-            let bbb = Number(aaa.replace(numReg, ""));
-            if(bbb == 0){ //슬라이드 버튼 그림자 개선
-                mainBtnInner.style.boxShadow = `1.5px 1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset 2px 2px 2.5px 0px rgb(185 167 167 / 34%)`;
-            }else if(bbb <= 90){
-                mainBtnInner.style.boxShadow = `1.5px -1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset 2px -2px 2.5px 0px rgb(185 167 167 / 34%)`;
-            }else if(bbb <= 180){
-                mainBtnInner.style.boxShadow = `-1.5px -1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset -2px -2px 2.5px 0px rgb(185 167 167 / 34%)`;
-            }else if(bbb <= 270){
-                mainBtnInner.style.boxShadow = `-1.5px 1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset -2px 2px 2.5px 0px rgb(185 167 167 / 34%)`;
-            };
         };
     };
     mainBtn.addEventListener("click", slideRightEvent); // 메인 버튼 클릭 시 슬라이드 동작
