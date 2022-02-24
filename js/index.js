@@ -62,15 +62,14 @@ window.onload = function () {
             index--;
             let aaa = mainBtnInner.style.getPropertyValue('transform');
             let bbb = Number(aaa.replace(numReg, ""));
-            if(1 < bbb <= 90){
-                mainBtnInner.style.boxShadow = `1.5px -1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset 2px -2px 2.5px 0px rgb(185 167 167 / 34%)`;
-            }else if(1 < bbb <= 180){
-                mainBtnInner.style.boxShadow = `-1.5px -1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset -2px -2px 2.5px 0px rgb(185 167 167 / 34%)`;
-            }else if(1 < bbb <= 270){
-                mainBtnInner.style.boxShadow = `-1.5px 1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset -2px 2px 2.5px 0px rgb(185 167 167 / 34%)`;
-            }else if(bbb == 0){
-                console.log(123);
+            if(bbb == 0){
                 mainBtnInner.style.boxShadow = `1.5px 1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset 2px 2px 2.5px 0px rgb(185 167 167 / 34%)`;
+            }else if(bbb <= 90){
+                mainBtnInner.style.boxShadow = `1.5px -1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset 2px -2px 2.5px 0px rgb(185 167 167 / 34%)`;
+            }else if(bbb <= 180){
+                mainBtnInner.style.boxShadow = `-1.5px -1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset -2px -2px 2.5px 0px rgb(185 167 167 / 34%)`;
+            }else if(bbb <= 270){
+                mainBtnInner.style.boxShadow = `-1.5px 1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset -2px 2px 2.5px 0px rgb(185 167 167 / 34%)`;
             };
         };
     };
