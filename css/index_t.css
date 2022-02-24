@@ -7,7 +7,7 @@ html{
 }
 /* 첫 번째 슬라이드 */
 .project_inner.a{
-    padding: 55px 10px 10px;
+    padding: 35px 10px 10px;
 }
 .project_inner.a > section:nth-of-type(1){
     background: url(../img/index/말풍선.svg) no-repeat 100% 0 /300px;
@@ -35,7 +35,7 @@ html{
 .project_inner.a > section:nth-of-type(2){
     height: 225px;
     background: url(../img/index/stack.png) no-repeat 100% 0 /250px;
-    margin: 80px 0;
+    margin:0;
 }
 .sub_h.time::after{
     width: 150px;
@@ -45,7 +45,7 @@ html{
     background:var(--back-color) url(../img/index/초록누리t.png) no-repeat 100% 0;
 }
 .project_inner.b{
-    padding: 55px 10px 10px;
+    padding: 35px 10px 10px;
 }
 .project_inner.b > section h2{
     font-size: 30px;
@@ -58,7 +58,7 @@ html{
     background: var(--back-color) url(../img/index/김안과t.png) no-repeat 100% 0;
 }
 .project_inner.c{
-    padding: 55px 10px 10px;
+    padding: 35px 10px 10px;
 }
 .project_inner.c > section h2{
     font-size: 30px;
@@ -71,7 +71,7 @@ html{
     background: var(--back-color) url(../img/index/열라면t.png) no-repeat 100% 0;
 }
 .project_inner.d{
-    padding: 55px 10px 10px;
+    padding: 35px 10px 10px;
 }
 .project_inner.d > section h2{
     font-size: 30px;
