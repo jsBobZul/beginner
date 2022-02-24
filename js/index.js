@@ -39,7 +39,7 @@ window.onload = function () {
         };
         let aaa = mainBtnInner.style.getPropertyValue('transform');
         let bbb = Number(aaa.replace(numReg, ""));
-        if(bbb <= 90){
+        if(bbb <= 90){ // 슬라이드 버튼 그림자 개선
             mainBtnInner.style.boxShadow = `1.5px -1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset 2px -2px 2.5px 0px rgb(185 167 167 / 34%)`;
         }else if(bbb <= 180){
             mainBtnInner.style.boxShadow = `-1.5px -1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset -2px -2px 2.5px 0px rgb(185 167 167 / 34%)`;
@@ -62,7 +62,7 @@ window.onload = function () {
             index--;
             let aaa = mainBtnInner.style.getPropertyValue('transform');
             let bbb = Number(aaa.replace(numReg, ""));
-            if(bbb == 0){
+            if(bbb == 0){ //슬라이드 버튼 그림자 개선
                 mainBtnInner.style.boxShadow = `1.5px 1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset 2px 2px 2.5px 0px rgb(185 167 167 / 34%)`;
             }else if(bbb <= 90){
                 mainBtnInner.style.boxShadow = `1.5px -1.5px 1.5px 1.5px rgb(0 0 0 / 43%), inset 2px -2px 2.5px 0px rgb(185 167 167 / 34%)`;
