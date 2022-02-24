@@ -91,6 +91,18 @@ window.onload = function () {
             slideLeftEvent();
         };
     });
+    let moveSlide2// 태블릿 슬라이드 이벤트
+    wrapping.addEventListener("touchstart", function(e){
+        moveSlide2 = e.targetTouches[0].clientX;
+    });
+    wrapping.addEventListener("touchend", function (e) {
+        let moveEvent = moveSlide2 - e.changedTouches[0].clientX;
+        if (moveEvent > 0) {
+            slideRightEvent();
+        } else if (moveEvent < 0) {
+            slideLeftEvent();
+        };
+    });
 
     // 글로벌 네비게이션 슬라이드 동기화
     function move(el){
