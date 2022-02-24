@@ -114,7 +114,7 @@ window.onload = function () {
                 wrapping.style.left = `-${i*100}%`;
                 mainBtnInner.style.transform = `rotate(${i*90}deg)`;
             }else{
-                alert("띵동~ 이동되었습니다.");
+                alert("띵동! 이동되었습니다.");
                 move(projects[i].offsetTop);
             };
         });
