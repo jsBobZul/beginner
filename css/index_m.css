@@ -131,12 +131,13 @@ footer{
     left: 5px;
     box-shadow: inset 2px 2px 5px 2px rgb(0 0 0 / 73%), inset -3px -1px 1px -1px #ffffff2e, -0.5px -0.5px 1px 4px #353a40;
 }
-.nav_button > span{
+.nav_button span{
     width: 25px;
     height: 25px;
     padding: 4px 0 0 0;
+    color: white;
     font-size: 10px;
-    left: 13px;
+    font-weight: 100;
 }
 .slide_button{
     display: none;

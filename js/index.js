@@ -1,7 +1,7 @@
 window.onload = function () {
     const mainInner = document.querySelector(".main_inner");
     const navBtn = document.querySelector(".nav_button");
-    const navBtnSpan = document.querySelector(".nav_button > span");
+    const navBtnSpan = document.querySelector(".nav_button span");
     const header = document.querySelector("header");
     const mainBtn = document.querySelector(".slide_button");
     const mainBtnInner = document.querySelector(".slide_button > span");
