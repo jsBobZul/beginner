@@ -110,8 +110,7 @@ header button{
 
 /* 네 번째 슬라이드 */
 .project.d{
-    background: var(--back-color) url(../img/index/열라면m.png) no-repeat 100% 0%;
-    /* margin: 0 0 70px 0; */
+    background: var(--back-color) url(../img/index/열라면m.png) no-repeat 100% -17px;
 }
 .project_inner.d{
     padding: 95px 10px 10px;
