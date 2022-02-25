@@ -23,6 +23,14 @@ header button{
 .link a{
     font-size: 15px;
 }
+.sub_h::after{
+    width: 100%;
+}
+.view{
+    margin: 0 0 0 5px;
+    padding: 3px 5px;
+    font-size: 10px;
+}
 
 /* 메인 */
 .main_inner{
@@ -79,9 +87,6 @@ header button{
 .project_inner.b > section h2 {
     background: var(--back-color);
 }
-.project_inner.b .sub_h::after{
-    width: 95%;
-}
 .project_inner.b > section > section:nth-of-type(2) div{
     width: 100%;
 }
@@ -94,9 +99,6 @@ header button{
 .project_inner.c section{
     background: var(--back-color);
     opacity: 0.95;
-}
-.project_inner.c .sub_h::after{
-    width: 90%;
 }
 .project_inner.c > section > section:nth-of-type(2) div{
     width: 100%;
@@ -115,9 +117,6 @@ header button{
 }
 .project_inner.d{
     padding: 95px 10px 10px;
-}
-.project_inner.d .sub_h::after{
-    width: 90%;
 }
 .project_inner.d > section > section:nth-of-type(2) div{
     width: 100%;

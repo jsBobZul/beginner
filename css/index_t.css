@@ -5,6 +5,11 @@ html{
 .project_inner{
     width: 100%;
 }
+.view{
+    margin: 0 0 0 15px;
+    padding: 5px 10px;
+    font-size: 12px;
+}
 /* 첫 번째 슬라이드 */
 .project_inner.a{
     padding: 35px 10px 10px;
@@ -24,9 +29,6 @@ html{
 .sub_h{
     font-size: 20px;
     -webkit-text-stroke: 1px var(--year-color);
-}
-.sub_h::after{
-    width: 100px;
 }
 .sub_h ~ ul{
     width: 400px;
