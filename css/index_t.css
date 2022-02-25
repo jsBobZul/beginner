@@ -55,7 +55,7 @@ html{
 }
 /* 세 번째 슬라이드 */
 .project.c{
-    background: var(--back-color) url(../img/index/김안과t.png) no-repeat 100% 0;
+    background: var(--back-color) url(../img/index/김안과t.png) no-repeat 460px 0;
 }
 .project_inner.c{
     padding: 35px 10px 10px;

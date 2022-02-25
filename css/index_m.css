@@ -88,6 +88,7 @@ header button{
 
 /* 세 번째 슬라이드 */
 .project.c{
+    background: var(--back-color) url(../img/index/김안과m.png) no-repeat 100% 0;
     padding: 10px 10px 0;
 }
 .project_inner.c section{
