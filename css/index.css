@@ -69,7 +69,7 @@ header button:hover{
     width: 400%;
     position: relative;
     left: 0;
-    transition: left 0.09s;
+    transition: left 0.08s;
 }
 .project{
     width: 25%;
@@ -114,7 +114,7 @@ header button:hover{
 .sub_h::after{
     content: "";
     display: block;
-    width: 180px;
+    width: 108%;
     height: 1px;
     background: var(--year-color);
 }
@@ -122,9 +122,6 @@ header button:hover{
     height: 225px;
     background: url(../img/index/stack.png) no-repeat 100% 0;
     margin: 40px 0;
-}
-.sub_h.time::after{
-    width: 280px;
 }
 .project_inner > section:last-child{
     padding: 0 0 10px 0;
@@ -138,14 +135,12 @@ header button:hover{
     font-size: 50px;
     font-weight: 700;
 }
-.project_inner.b .sub_h::after{
-    width: 300px;
-}
 .project_inner.b > section > section:nth-of-type(1){
     margin: 30px 0;
 }
 .view{
     display: inline-block;
+    margin: 0 0 0 30px;
     padding: 5px 15px;
     border: 1px solid var(--button-color);
     text-align: center;
@@ -178,9 +173,6 @@ header button:hover{
     font-size: 50px;
     font-weight: 700;
 }
-.project_inner.c .sub_h::after{
-    width: 340px;
-}
 .project_inner.c > section > section:nth-of-type(1){
     margin: 30px 0;
 }
@@ -206,9 +198,6 @@ header button:hover{
     color: var(--year-color);
     font-size: 50px;
     font-weight: 700;
-}
-.project_inner.d .sub_h::after{
-    width: 390px;
 }
 .project_inner.d > section > section:nth-of-type(1){
     margin: 30px 0;

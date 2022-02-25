@@ -18,7 +18,7 @@ window.onload = function () {
     });
 
     // 메인 슬라이드 구현
-    let index = 1;
+    let index = 0;
     let rotate = 360/projects.length;
     const x = 360/projects.length
     let numReg = RegExp(/[^0-9]/g);
@@ -27,18 +27,17 @@ window.onload = function () {
     };
 
     let slideRightEvent = function () {
-        if (index === 0) {
-            index = 1;
-        };
+        console.log(index);
+        index++;
+        if (index === projects.length) {
+                index = projects.length-1;
+            };
         wrapping.style.left = `-${index*100}%`;
         mainBtnInner.style.transform = `rotate(${index*x}deg)`;
         rotate = index * x;
-        index++;
-        if (index === projects.length) {
-            index = projects.length-1;
+            console.log(index);
         };
-    };
-
+    
     let slideLeftEvent = function () {
         let wrappingLeft = window.getComputedStyle(wrapping).left;
         let projectWidth = window.getComputedStyle(project).width;
@@ -51,6 +50,7 @@ window.onload = function () {
             mainBtnInner.style.transform = `rotate(${rotate}deg)`;
             index--;
         };
+        console.log(index);
     };
     mainBtn.addEventListener("click", slideRightEvent); // 메인 버튼 클릭 시 슬라이드 동작
     mainBtn.addEventListener("contextmenu", function (event) {
