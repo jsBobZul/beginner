@@ -45,3 +45,8 @@ button:hover{
     margin: 0px;
     overflow: hidden;
 }
+@media screen and (min-width:1921px) {
+    body{
+        max-width: 1920px;
+    }
+}
