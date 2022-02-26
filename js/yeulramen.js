@@ -52,7 +52,7 @@ window.onload = function () {
                 },
                 observeSlideChildren: true,
             });
-        } swiper2();
+        }; swiper2();
         var swiper3 = new Swiper('.slide3', {
             observer: true,
             observeParents: true,
