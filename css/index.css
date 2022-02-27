@@ -136,7 +136,7 @@ header button:hover{
 }
 /* 두 번째 슬라이드 */
 .project.b{
-    background:var(--back-color) url(../img/index/초록누리.png) no-repeat 1131px 100%;
+    background:var(--back-color) url(../img/index/초록누리.png) no-repeat 100%;
 }
 .project_inner.b > section h2{
     color: var(--year-color);
@@ -174,7 +174,7 @@ header button:hover{
 }
 /* 세 번째 슬라이드 */
 .project.c{
-    background: var(--back-color) url(../img/index/김안과.png) no-repeat 1168px 100%;
+    background: var(--back-color) url(../img/index/김안과.png) no-repeat 100%;
 }
 .project_inner.c > section h2{
     color: var(--year-color);
@@ -200,7 +200,7 @@ header button:hover{
 }
 /* 네 번째 슬라이드 */
 .project.d{
-    background: var(--back-color) url(../img/index/열라면.png) no-repeat 1097px 100%;
+    background: var(--back-color) url(../img/index/열라면.png) no-repeat 100%;
 }
 .project_inner.d > section h2{
     color: var(--year-color);
