@@ -30,12 +30,10 @@ window.onload = function () {
 
   // 비어있는 a태그 이동 막기
   var aTag = document.querySelectorAll('a[href="#"]');
-  (function(i){
     for(var i = 0; i < aTag.length; i++){
       aTag[i].onclick = function(){
         return false;
       };
     };
-  })();
 
 };
