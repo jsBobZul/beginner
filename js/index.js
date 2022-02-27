@@ -27,7 +27,6 @@ window.onload = function () {
     };
 
     let slideRightEvent = function () {
-        console.log(index);
         index++;
         if (index === projects.length) {
                 index = projects.length-1;
@@ -35,7 +34,6 @@ window.onload = function () {
         wrapping.style.left = `-${index*100}%`;
         mainBtnInner.style.transform = `rotate(${index*x}deg)`;
         rotate = index * x;
-            console.log(index);
         };
     
     let slideLeftEvent = function () {
@@ -50,7 +48,6 @@ window.onload = function () {
             mainBtnInner.style.transform = `rotate(${rotate}deg)`;
             index--;
         };
-        console.log(index);
     };
     mainBtn.addEventListener("click", slideRightEvent); // 메인 버튼 클릭 시 슬라이드 동작
     mainBtn.addEventListener("contextmenu", function (event) {
