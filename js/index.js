@@ -79,6 +79,9 @@ window.onload = function () {
             slideLeftEvent();
         };
     });
+    wrapping.addEventListener("mousemove", function(event){ //글자 드래그 막기
+        event.preventDefault();
+    });
 
     // 글로벌 네비게이션 슬라이드 동기화
     function move(el){

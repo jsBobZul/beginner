@@ -1,6 +1,6 @@
-window.addEventListener('DOMContentLoaded', function(){
-  alert("현재 서브페이지 중 시력교정, 로그인, 회원가입 페이지만 열립니다.");
-});
+// window.addEventListener('DOMContentLoaded', function(){
+//   alert("현재 서브페이지 중 시력교정, 로그인, 회원가입 페이지만 열립니다.");
+// });
 
 window.onload = function () {
   // 스와이퍼
