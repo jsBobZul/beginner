@@ -3,7 +3,7 @@ window.onload = function () {
     // 회원가입약관
     fetch('https://jsbobzul.github.io/portfolio/text/개인정보보호').then(function (response) {
         response.text().then(function (text) {
-            document.querySelector('.join_text').innerHTML = '<textarea readonly="readonly" cols="107" rows="10" style="resize:none; padding:0 0 0 7px; border:1px solid #c4c4c4; border-right:double #c4c4c4; border-bottom:2px double #c4c4c4;">' + text + '</textarea>';
+            document.querySelector('.join_text').innerHTML = '<textarea readonly="readonly" rows="10" style="width:100%; padding:0 0 0 7px; border:1px solid #c4c4c4; border-right:double #c4c4c4; border-bottom:2px double #c4c4c4; resize:none;">' + text + '</textarea>';
         });
     });
 

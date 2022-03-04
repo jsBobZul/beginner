@@ -143,9 +143,6 @@ input[placeholder]{
     form > p{
         margin: 10px 0;
     }
-    .join_text > textarea{
-        width: 100%;
-    }
     input[placeholder]{
         width: 50%;
     }
