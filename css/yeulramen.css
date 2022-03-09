@@ -1,12 +1,14 @@
 @charset "UTF-8";
 @import url('yeulramen_ie.css');
 body{
+    margin: 0 auto;
     background: black;
 }
 
 /* 헤더 */
 header{
     width: 100vw;
+    max-width: 1920px;
     background:black url(../img/yeulramen/오뚜기logo.png) no-repeat 20px 3px;
     position: fixed;
     top: 0;
