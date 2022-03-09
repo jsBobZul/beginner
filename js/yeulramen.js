@@ -1,3 +1,4 @@
+var browser = navigator.userAgent;
 window.addEventListener('DOMContentLoaded', function(){
     var moveBt1 = document.querySelector(".header_inner > div > button:nth-child(1)");
     var moveBt2 = document.querySelector(".header_inner > div > button:nth-child(2)");
@@ -23,7 +24,6 @@ window.addEventListener('DOMContentLoaded', function(){
         move(article2.offsetTop-10);
     });
     // IE 호환
-    var browser = navigator.userAgent;
     if (browser.match(/Trident/)){
         moveBt1.addEventListener("click", function() {
             moveIe(body.offsetTop);
@@ -88,7 +88,9 @@ window.onload = function () {
             slide2.classList.add("on");
             slideBt1.classList.remove("on");
             slideBt2.classList.add("on");
-            swiper2();
+            if (browser.match(/Trident/)){
+                swiper2();
+            };
         };
         slideBt1.addEventListener('click', slideBt1On);
         slideBt2.addEventListener('click', slideBt2On);
