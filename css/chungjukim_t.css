@@ -5,11 +5,7 @@ html{
 /* 헤더 */
 .header_inner > a{
     width: 103px;
-}
-.header_inner > div{
-    position: absolute;
-    top: 20px;
-    right: 0px;
+    margin: 0 40px 0 0;
 }
 nav > div{
     width: 110px;
