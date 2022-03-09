@@ -258,6 +258,14 @@ footer{
 .nav_button span.on{
     transform: rotate(140deg);
 }
+footer > a{
+    padding: 10px;
+    color: var(--back-color);
+    border: 1px solid var(--back-color);
+    position: absolute;
+    top: 25%;
+    left: 17%;
+}
 footer > div{
     position: absolute;
     right: 20px;
