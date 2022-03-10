@@ -43,7 +43,8 @@
     <script>
         let aTag = document.querySelectorAll('a[href="#"]');
         aTag.forEach(function(tagEach){
-            tagEach.addEventListener('click', function(){
+            tagEach.addEventListener('click', function(e){
+                e.preventDefault();
                 alert('준비 중 입니다.');
             });
         });
