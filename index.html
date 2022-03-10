@@ -1,193 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" media="all and (max-width:1323px)" href="css/index_t.css">
-    <link rel="stylesheet" media="all and (max-width:767px)" href="css/index_m.css">
-    <title>포트폴리오</title>
+    <title>포트폴리오 허브</title>
+    <style>
+        article{
+            width: fit-content;
+            margin: 300px auto;
+            text-align: center;
+        }
+        .inner{
+            width: 1200px;
+            display: flex;
+            justify-content: center;
+        }
+        a{
+            display: block;
+            margin: 0 20px;
+            padding: 50px;
+            border: 1px solid;
+            box-sizing: content-box;
+            color: black;
+            text-decoration: none;
+        }
+    </style>
 </head>
-
 <body>
-    <header>
-        <div class="link">
-            <a href="greennuri.html" title="초록누리 리뉴얼 바로가기" target="_blank">초록누리</a>
-            <a href="chungjukim.html" title="김안과 리뉴얼 바로가기" target="_blank">청주 김안과</a>
-            <a href="yeulramen.html" title="열라면 프로모션 바로가기" target="_blank">열라면X노제</a>
+    <article>
+        <h1>한주성의 포트폴리오</h1>
+        <div class="inner">
+            <a href="beginner/index.html">입문</a>
+            <a href="#">주니어</a>
         </div>
-        <div>
-            <button>page1</button>
-            <button>page2</button>
-            <button>page3</button>
-            <button>page4</button>
-        </div>
-    </header>
-    <main>
-        <div class="main_inner">
-            <div class="main_box">
-                <div class="wrapping clear">
-                    <div class="project a">
-                        <div class="project_inner a">
-                            <section>
-                                <h1>Not knowing is painful,<br>knowing is fun!</h1>
-                                <p>Web publisher Han ju sung</p>
-                                <div>
-                                    <p>모르면 괴롭고 알면 즐겁다.</p>
-                                    <p>이슈를 즐기는 한주성입니다.</p>
-                                </div>
-                            </section>
-                            <section>
-                                <h2 class="sub_h">SKILL</h2>
-                                <ul>
-                                    <li>웹표준, 웹 접근성, SEO를 고려해 시멘틱 마크업합니다.</li>
-                                    <li>주어진 디자인과 한치의 오차도 없이 옮기려고 노력합니다.</li>
-                                    <li>CSS Media Query를 사용하여 반응형 웹을 만들 수 있습니다.</li>
-                                    <li>ie9, ie10, ie11, 사파리, 파이어폭스, 엣지 , 크롬 등 크로스 브라우징 가능합니다.</li>
-                                    <li>순수 javascript를 이용하여 DOM컨트롤, 이벤트, 데이터 파싱 등을 수행합니다.</li>
-                                </ul>
-                            </section>
-                            <section>
-                                <h2 class="sub_h time">TIME-LINE</h2>
-                                <p>21.09.27 ~ 22.02.23 이지 컴퓨터 디자인 학원 웹디자인&웹퍼블리셔 과정 수료</p>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="project c">
-                        <div class="project_inner c">
-                            <section>
-                                <h2>Project소개</h2>
-                                <section>
-                                    <h3 class="sub_h">청주 김안과 리뉴얼</h3>
-                                    <a href="chungjukim.html" target="_blank" title="김안과(청주) 바로가기" class="view">
-                                        보러가기
-                                    </a>
-                                    <ul>
-                                        <li>메인 페이지 영상 화질 개선했습니다.</li>
-                                        <li>헤더 스크롤 이벤트를 넣어 헤더가 영상을 가리지 않도록 개선했습니다.</li>
-                                        <li>UX를 생각하여 전공의들의 정보를 메인 페이지에 넣었습니다.</li>
-                                        <li>김안과의 위치를 바로 알 수 있게 카카오MAP API를 이용했습니다.</li>
-                                        <li>로그인, 회원가입 폼의 유효성 검사를 통해 실제 서비스처럼 만들었습니다.</li>
-                                        <li>크롬, ie11, ios사파리, 파이어폭스 크로스 브라우징 했습니다.</li>
-                                        <li>서브 페이지 中 [시력교정, 로그인, 회원가입] 페이지 열립니다.</li>
-                                        <li>반응형 웹으로 모바일, 태블릿, PC 최적화 했습니다.</li>
-                                        <li>청주 김안과는 피그마로 레이아웃만 잡고 바로 코딩했습니다.</li>
-                                    </ul>
-                                </section>
-                                <section>
-                                    <h3 class="sub_h">COMMENT</h3>
-                                    <div>
-                                        <p>김안과 페이지를 모바일에서 열 때, PC에서 열 때, 스크롤을 내리다가 새로고침할 때 등
-                                            여러 가지 경우의 수를 생각하여 최적화하였습니다.</p>
-                                        <p>회원가입 폼의 경우 아이디를 입력하지 않았을 때, 체크 박스 하나 안했을 때 등
-                                            세세한 경우의 수를 생각하여 최적화하였습니다.</p>
-                                        <p>WEB PAGE에서 UX가 중요하다고 생각합니다. 항상 처음 방문한 것 처럼
-                                            여러 가지 상황을 만들어 집요하게 만들어냅니다.</p>
-                                        <p>모든 게 수월하진 않았지만, 어느 순간 해결책이 떠오르고 실제로 해결되었을 때
-                                            너무 재밌고 즐겁습니다. 앞으로도 이슈를 즐기는 사람이 되고자 합니다.</p>
-                                    </div>
-                                </section>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="project b">
-                        <div class="project_inner b">
-                            <section>
-                                <h2>Project소개</h2>
-                                <section>
-                                    <h3 class="sub_h">초록누리 리뉴얼</h3>
-                                    <a href="greennuri.html" target="_blank" title="초록누리 바로가기" class="view">
-                                        보러가기
-                                    </a>
-                                    <ul>
-                                        <li>최대한 HTML, CSS로 작성했습니다.</li>
-                                        <li>크롬 플러그인 open wax, wave를 이용해 웹 접근성 글로벌 AA기준을 맞췄습니다.</li>
-                                        <li>UX를 생각하여 메인 페이지 디자인을 개선하였습니다.</li>
-                                        <li>Javascript를 이용하여 Tab접근성을 개선했습니다.</li>
-                                        <li>ie(11,10,9), ios사파리, 크롬, 파이어폭스, 엣지 크로스 브라우징 했습니다.</li>
-                                        <li>반응형 웹으로 모바일, 태블릿, PC 최적화 했습니다.</li>
-                                        <li>서브 페이지는 열리지 않습니다.</li>
-                                    </ul>
-                                    <a href="https://www.figma.com/proto/auqXhe94TUEHYxuWabg9no/%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%EC%97%B0%EC%8A%B5?node-id=0%3A1" target="_blank" title="초록누리 피그마">
-                                        <span class="material-icons-outlined">
-                                            link
-                                        </span>
-                                        초록누리 피그마
-                                    </a>
-                                </section>
-                                <section>
-                                    <h3 class="sub_h">COMMENT</h3>
-                                    <div>
-                                        <p>javascript를 쓰지 않고 html, css로만 해결하고 싶었습니다. 탭 포커스 이벤트, a태그 이벤트 막기에만 자바스크립트가 들어가고 버튼이나 슬라이드는 html,
-                                            css로 만들어봤습니다. ie9에서 classlist, add, remove 속성이 작동하지 않아 DOM컨트롤에 애먹었습니다.</p>
-                                        <p>처음에는 ie9에서 지원되는 classname, '+', '-'를 이용해 컨트롤하려 했지만, '-'를 사용하면 엘리멘트에 모든 클래스가 사라졌습니다.</p>
-                                        <p>어떻게 해야할지 도저히 해결책이 보이지않아 제이쿼리를 사용했었습니다. 바닐라 자바스크립트로만 프로젝트를 만들고 싶었는데 어쩔 수 없다고 생각했습니다.</p>
-                                        <p>항상 마음 속에 담아두고 다른 일을 하던 중 마음을 비우고 구글에 검색하니 ‘classlist’ 라이브러리가 저를 반겨주었습니다. 엄청 반갑고 기쁜 마음으로 해당 라이브러리를
-                                            적용하였고, 찰떡처럼 동작하는 웹 사이트를 보며 큰 만족감을 느꼈습니다. 앞으로도 끝까지 해결하는 사람이 되고 싶습니다.</p>
-                                    </div>
-                                </section>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="project d">
-                        <div class="project_inner d">
-                            <section>
-                                <h2>Project소개</h2>
-                                <section>
-                                    <h3 class="sub_h">열라면X노제 프로모션</h3>
-                                    <a href="yeulramen.html" target="_blank" title="열라면 바로가기" class="view">
-                                        보러가기
-                                    </a>
-                                    <ul>
-                                        <li>열라면이 가진 장점, 특별한 레시피가 잘 보이도록 했습니다.</li>
-                                        <li>헤더에 스크롤 이벤트를 걸어 언제든지 Recipe를 볼 수 있도록 했습니다.</li>
-                                        <li>Z세대가 많이 보는 유튜브를 페이지에 노출시켜 마케팅 효과를 노렸습니다.</li>
-                                        <li>ie(11,10,9), 크롬, 파이어폭스, 엣지, 안드로이드, ios사파리 크로스 브라우징 했습니다.</li>
-                                        <li>반응형 웹으로 PC, 태블릿, 모바일 화면 최적화 했습니다.</li>
-                                    </ul>
-                                    <a href="https://www.figma.com/proto/auqXhe94TUEHYxuWabg9no/%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%EC%97%B0%EC%8A%B5?node-id=0%3A1" target="_blank" title="열라면 피그마">
-                                        <span class="material-icons-outlined">
-                                            link
-                                        </span>
-                                        열라면 피그마
-                                    </a>
-                                </section>
-                                <section>
-                                    <h3 class="sub_h">COMMENT</h3>
-                                    <div>
-                                        <p>우리 집에 순두부열라면 열풍이 불면서 프로모션 페이지를 만들면 어떨까 생각했습니다.</p>
-                                        <p>처음에는 GD웹에 프로모션 페이지를 참고하며 만들고 있었는데 네이버에 검색해보니 열라면과 노제님이 콜라보한 프로모션 페이지를 발견하게 되었습니다. 스우파를 뒤늦게 보던 중이라 반가운 마음으로 재밌게 작업했습니다.</p>
-                                        <p>프로모션 페이지 배경에 여러 애니메이션을 넣어 와우 포인트를 넣으려 했습니다. 현 트렌드에 맞지 않게 구리다는 피드백을 받아 구현하진 않았지만 js에 대한 이해도가 높아진 경험이었습니다.</p>
-                                        <p>ie9까지 크로스 브라우징을 마치고, 2월 8일에 안되는 것 있는지 전체적으로 점검을 했습니다. 갑자기 ie에선 헤더 버튼 스크롤 이벤트가 발동하지 않았습니다. 분명히 저번 주까진 됐었는데 왜 안되지? 멘붕이 왔습니다. 진정하고 MDN에 검색해보니 scroll() 함수의 ie 지원이 2월 3일부로 끝난다는 문서를 발견했습니다. 그래서 현재 ie에서는 ‘부드러운 이동’이벤트가 발생하지 않습니다.</p>
-                                    </div>
-                                </section>
-                            </section>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <button class="nav_button">
-            <div><span>NAV</span></div>
-        </button>
-        <a href="portfolio.pdf">
-            PDF로 보기
-        </a>
-        <div>
-            <p>버튼에 마우스 왼쪽 또는 오른쪽 클릭 해보세요.</p>
-            <button class="slide_button">
-                <div><span></span></div>
-            </button>
-        </div>
-    </footer>
-    <script src="js/index.js"></script>
+    </article>
+    <script>
+        let aTag = document.querySelectorAll('a[href="#"]');
+        aTag.forEach(function(tagEach){
+            tagEach.addEventListener('click', function(){
+                alert('준비 중 입니다.');
+            });
+        });
+    </script>
 </body>
-
 </html>
