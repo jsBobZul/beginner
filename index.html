@@ -5,7 +5,8 @@
     <meta name="robots" content="noindex">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>포트폴리오 허브</title>
+    <link rel="icon" type="image/x-icon" href="beginner/img/favicon.ico">
+    <title>단계별 포트폴리오</title>
     <style>
         body{
             display: flex;
@@ -15,6 +16,32 @@
         article{
             padding: 20vh 0 0 0;
             text-align: center;
+        }
+        h1{
+            display: block;
+            width: 0;
+            height: 2rem;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            transition: all 5s linear;
+        }
+        h1.on{
+            width: 100%;
+        }
+        span{
+            display: inline-block;
+            width: 2px;
+            height: 1.3rem;
+            background: black;
+            animation: display 0.8s linear infinite;
+        }
+        @keyframes display{
+            to{
+                opacity: 0;
+            }
+            from{
+                opacity: 1;
+            }
         }
         .inner{
             width: 1200px;
@@ -34,20 +61,22 @@
 </head>
 <body>
     <article>
-        <h1>한주성의 포트폴리오</h1>
+        <h1>한주성의 포트폴리오<span></span></h1>
         <div class="inner">
             <a href="beginner/index.html">입문</a>
             <a href="#">주니어</a>
         </div>
     </article>
     <script>
-        let aTag = document.querySelectorAll('a[href="#"]');
-        aTag.forEach(function(tagEach){
-            tagEach.addEventListener('click', function(e){
-                e.preventDefault();
-                alert('준비 중 입니다.');
+        window.onload = function(){
+            let aTag = document.querySelectorAll('a[href="#"]');
+            aTag.forEach(function(tagEach){
+                tagEach.addEventListener('click', function(e){
+                    e.preventDefault();
+                    alert('준비 중 입니다.');
+                });
             });
-        });
+        };
     </script>
 </body>
 </html>
