@@ -115,7 +115,7 @@ window.onload = function () {
     let phoneReg = RegExp(/[^0-9]/g);
     const phoneLog = document.querySelector(".phone_log");
     // 폰 번호 선택 옵션 넣기
-    fetch('https://jsbobzul.github.io/portfolio/text/폰번호옵션').then(function (response) {
+    fetch('https://jsbobzul.github.io/portfolios/text/폰번호옵션').then(function (response) {
         let phoneHead = document.querySelector(".tel > select");
         response.text().then(function (text) {
             phoneHead.innerHTML = text;
