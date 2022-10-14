@@ -27,7 +27,7 @@ window.onload = function () {
         return false;
     };
 
-    const LOOPFLAG = true;
+    // const LOOPFLAG = true;
     //=======================loop 시 사용========================
     const cloenTime = 100;
     let firstClone = firstProject.cloneNode(true);
@@ -133,14 +133,20 @@ window.onload = function () {
     function move(el){
         scroll(0,el)
     };
+    let globalBtnNum;
     for (let i = 0; i < globalBtn.length; i++) {
         globalBtn[i].addEventListener('click', function () {
+            if(globalBtnNum <= projects.length){
+                globalBtnNum = i + 1;
+            }else{
+                globalBtnNum = projects.length - 1;
+            };
             if(window.innerWidth >= 768){
-                wrapping.style.left = `-${i*100}%`;
+                wrapping.style.left = `-${globalBtnNum*100}%`;
                 mainBtnInner.style.transform = `rotate(${i*90}deg)`;
             }else{
                 alert("띵동! 이동되었습니다.");
-                move(projects[i].offsetTop);
+                move(projects[globalBtnNum].offsetTop);
             };
         });
     };
