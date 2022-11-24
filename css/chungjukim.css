@@ -43,7 +43,7 @@ nav > div{
 .menu > a{
     color: white;
 }
-.menu .cancel{
+.menu.cancel a{
     text-decoration: line-through;
 }
 .header_inner > div >a{
