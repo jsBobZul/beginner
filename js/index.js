@@ -49,7 +49,7 @@ window.onload = function () {
   const screenSpeed = () => wrapping.style.transition = `top ${screenTime}s ${screenSpeedType}`;
   screenSpeed();
 
-  let slideDownEvent = () => { //slideRightEvent
+  const slideDownEvent = () => { //slideRightEvent
     screenSpeed();
     rotate = index * x;
     mainBtnInner.style.transform = `rotate(${rotate}deg)`;
@@ -64,7 +64,7 @@ window.onload = function () {
     }
   };
 
-  let slideTopEvent = () => { //slideLeftEvent
+  const slideTopEvent = () => { //slideLeftEvent
     screenSpeed();
     index--;
     wrapping.style.top = `-${index}00%`;
@@ -75,7 +75,7 @@ window.onload = function () {
         wrapping.style.top = `-${projects.length - 2}00%`;
         index = projects.length - 2;
       }, cloenTime);
-    }
+    };
     mainBtnInner.style.transform = `rotate(${rotate}deg)`;
   };
   //=======================/loop 시 사용===========================
@@ -104,10 +104,21 @@ window.onload = function () {
   //     };
   //};
   //=======================/loop 해제 시 사용========================
+  let RCnum = 0;
+  const rightClick = () =>{
+    RCnum++;
+    if(RCnum == 1){
+      slideTopEvent();
+      setTimeout(() => {
+        RCnum = 0;
+      }, cloenTime);
+    };
+  };
+
   mainBtn.addEventListener("click", slideDownEvent); // 메인 버튼 클릭 시 슬라이드 동작
   mainBtn.addEventListener("contextmenu", function (event) {
-    slideTopEvent();
     event.preventDefault();
+    rightClick();
   });
 
   let moveSlide; // 슬라이드 이벤트
